@@ -1,0 +1,7 @@
+class DealsController < ApplicationController
+
+
+
+
+
+end
