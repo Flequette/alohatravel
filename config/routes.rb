@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
 
-  get 'deals', to: 'deals#index'
+  resources :deals
 
 
   root to: 'pages#home'
