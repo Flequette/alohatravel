@@ -1,6 +1,5 @@
 class ReviewsController < ApplicationController
 
-
   def index
 
   end
@@ -28,7 +27,5 @@ class ReviewsController < ApplicationController
 
   end
 
-
-  private
 
 end

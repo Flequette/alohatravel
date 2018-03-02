@@ -20,7 +20,4 @@ class ProfilesController < ApplicationController
   end
 
 
-  private
-
-
 end
