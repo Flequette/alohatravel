@@ -19,24 +19,22 @@
 .banner p {
   font-size: 25px;
   font-weight: lighter;
-  color: rgb(255, 255, 255);
-  opacity: 0.9;
-  margin-bottom: 120px;
+  margin-bottom: 140px;
 }
 
 .btn-medium {
   color: #F9F9F9;
   border: 1px solid #F9F9F9;
   padding: 10px 15px;
-  border-radius: 3px;
+  border-radius: 2px;
   border-width: medium;
   font-weight: lighter;
   font-size: 20px;
-  opacity: 0.9;
+  opacity: 1;
 }
 
 .btn-medium:hover {
-  opacity: 1;
+  opacity: 0.8;
   text-decoration: none;
   color: #F9F9F9;
 }
