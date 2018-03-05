@@ -3,15 +3,10 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 70px;
+  height: 50vh;
   padding: 0px 50px;
   color: rgba(0,0,0,0.3);
-  background-color: #1a3855;
-}
-
-.footer-links {
-  display: flex;
-  align-items: center;
+  background-color: #50E3C2;
 }
 
 .footer-links a {
@@ -25,8 +20,4 @@
 .footer-links a:hover {
   opacity: 1;
   color: #F9F9F9;
-}
-
-.footer .fa-heart {
-  color: #D23333;
 }

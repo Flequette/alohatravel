@@ -1,0 +1,52 @@
+.joinus {
+  color: white;
+  text-align: center;
+  height: 60vh;
+  /* if you have a 70px navbar => height: calc(100vh - 70px); */
+  background-size: cover !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.8;
+}
+
+#mailchimp {
+  color: #3D6392;
+  padding: 15px 15px;
+}
+
+#mailchimp input {
+    border: medium none;
+    color: #404040;
+    font-size: 14px;
+    margin-bottom: 10px;
+    padding: 8px 10px;
+    width: 350px;
+    border-radius: 2px;
+    opacity: 0.8;
+  }
+
+#mailchimp input.email {
+  background: #F9F9F9;
+  opacity: 0.6;
+}
+
+#mailchimp input[type="submit"] {
+  color: #404040;
+  border: 1px solid #50E3C2;
+  padding: 10px 10px;
+  border-radius: 50px;
+  font-weight: lighter;
+  opacity: 1;
+  font-size: 14px;
+  width: 80px;
+  margin-top: 20px;
+  background: #50E3C2;
+}
+
+#mailchimp input[type="submit"]:hover {
+  opacity: 0.8;
+  text-decoration: none;
+  color: #404040;
+}
+
