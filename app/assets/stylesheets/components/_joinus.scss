@@ -7,7 +7,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  opacity: 0.8;
+}
+
+.joinus-content h4{
+  font-size: 28px;
 }
 
 #mailchimp {
@@ -23,7 +26,6 @@
     padding: 8px 10px;
     width: 350px;
     border-radius: 2px;
-    opacity: 0.8;
   }
 
 #mailchimp input.email {
@@ -37,7 +39,6 @@
   padding: 10px 10px;
   border-radius: 50px;
   font-weight: lighter;
-  opacity: 1;
   font-size: 14px;
   width: 80px;
   margin-top: 20px;
@@ -48,5 +49,21 @@
   opacity: 0.8;
   text-decoration: none;
   color: #404040;
+}
+
+.socials {
+  align-items: center;
+  padding: 10px 10px;
+
+}
+.socials a {
+  color: #F9F9F9;
+  text-decoration: none;
+  font-size: 24px;
+   padding: 0px 15px;
+
+}
+.socials a:hover {
+  opacity: 0.7;
 }
 

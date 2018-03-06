@@ -7,7 +7,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  opacity: 0.8;
 }
 
 .banner h1 {
@@ -20,6 +19,7 @@
   font-size: 25px;
   font-weight: lighter;
   margin-bottom: 140px;
+  opacity: 0.8;
 }
 
 .btn-medium {
@@ -34,7 +34,7 @@
 }
 
 .btn-medium:hover {
-  opacity: 0.8;
+  opacity: 0.6;
   text-decoration: none;
   color: #F9F9F9;
 }
