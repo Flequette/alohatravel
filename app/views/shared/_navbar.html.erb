@@ -37,7 +37,10 @@
           </ul>
         </div>
       </div>
+
     <% else %>
+      <%= link_to "Voyageur", "#", class: "navbar-wagon-item navbar-wagon-link" %>
+      <%= link_to "Local", "#", class: "navbar-wagon-item navbar-wagon-link" %>
       <!-- Login link (when logged out) -->
       <%= link_to t(".sign_in", default: "Login"), new_user_session_path, class: "navbar-wagon-item navbar-wagon-link" %>
     <% end %>
