@@ -1,13 +1,17 @@
-<h1>Les Deals</h1>
+<div class="container">
 
-<%= link_to "Add a Deal", new_deal_path %>
+  <h1>Les Deals</h1>
 
-<% @deals.each do |deal| %>
-  <h4><%= deal.name %></h4>
-  <p><%= deal.description %></p>
-  <p><%= deal.location %></p>
-  <p><%= deal.price %></p>
-  <%= link_to "More", deal_path(deal) %>
-  <%= link_to "Delete", deal_path(deal), method: :delete, data: { confirm: "Ar you sure?" } %>
+  <%= link_to "Add a Deal", new_deal_path %>
 
-<% end %>
+  <% @deals.each do |deal| %>
+    <h4><%= deal.name %></h4>
+    <p><%= deal.description %></p>
+    <p><%= deal.location %></p>
+    <p><%= deal.price %></p>
+    <%= link_to "More", deal_path(deal) %>
+    <%= link_to "Delete", deal_path(deal), method: :delete, data: { confirm: "Ar you sure?" } %>
+
+  <% end %>
+
+</div>
