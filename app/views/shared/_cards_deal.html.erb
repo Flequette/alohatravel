@@ -1,0 +1,35 @@
+<div class="deals text-center">
+  <div class="row">
+    <div class="col-xs-6">
+      <div class="row">
+        <% @deals.each do |d| %>
+          <%= link_to deal_path(d) do %>
+            <div class="col-xs-12 col-md-6">
+              <div class="deals-card" style='background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url("<%= image_path "banner.jpg" r.photo, height: 300, width: 400, crop: :fill %>");'>
+                <div class="deals-card-photo">
+                  <h2><%= d.deal.name %></h2>
+                  <p><%= d.deal.description %></p>
+                  <p><%= d.deal.location %></p>
+                  <p><%= d.deal.price %></p>
+                </div>
+                <div class="deals-card-description">
+                  <h2><%= d.deal.name %></h2>
+                  <p><%= d.deal.description %></p>
+                  <p><%= d.deal.location %></p>
+                  <p><%= d.deal.price %></p>
+                </div>
+                <div class="deals-card-icon">
+
+                </div>
+                <!-- Avatar du créateur
+                <img class="card-user" src="https://kitt.lewagon.com/placeholder/users/tgenaitay">
+                <a class="card-link" href="#" ></a>
+              -->
+              </div>
+            </div>
+          <% end %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

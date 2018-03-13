@@ -9,12 +9,21 @@ class DealsController < ApplicationController
   end
 
   def new
-    @deal = Deal.new
+    if current_user
+      @deal = Deal.new
+    else
+      redirect_to new_user_session_path
+    end
   end
 
   def create
-    deal = Deal.create(deal_params)
-    redirect_to deals_path
+    @deal = Deal.new(deal_params)
+    @deal.profile = current_user.profile
+    if @deal.save
+      redirect_to deal_path(@deal)
+    else
+      render :new
+    end
   end
 
   def edit
@@ -22,7 +31,11 @@ class DealsController < ApplicationController
 
   def update
     @deal.update(deal_params)
-    redirect_to deals_path
+    if @deal.update(deal_params)
+      redirect_to deal_path(@deal)
+    else
+      render :new
+    end
   end
 
   def destroy
