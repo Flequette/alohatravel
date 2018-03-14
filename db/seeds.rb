@@ -8,16 +8,18 @@
 
 require 'faker'
 
+Booking.destroy_all
 Deal.destroy_all
 Profile.destroy_all
-Booking.destroy_all
+User.destroy_all
+
 
 p "creation user"
-user = User.create!(
+user = User.new(
     email: "user@hotmail.fr",
     password: "123456"
 )
-
+user.save!
 p "user created"
 
 p "creation profile"
@@ -56,6 +58,7 @@ p "creation deal"
     puts "Deal created"
 end
 
+p "creation booking"
 n = 1
 users = []
 10.times do
@@ -77,16 +80,25 @@ users = []
     n += 1
 end
 
+p "booking created"
+
+p "creation test"
+
 (5..20).to_a.sample.times do
     p = users.sample.profile
+    puts p
     c = Deal.all.sample
+    puts c
     b = Booking.create!(
         start_date: Faker::Date.between(14.days.ago, 7.days.ago),
         end_date: Faker::Date.between(6.days.ago, 1.days.ago),
-        statut: "En cours",
+        status: "En cours",
         message: Faker::Seinfeld.quote,
         profile: p,
-        deal: c
+        deal: c,
     )
+    puts b
 end
+
+p "test created"
 
