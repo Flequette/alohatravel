@@ -13,16 +13,14 @@ Profile.destroy_all
 Booking.destroy_all
 
 p "creation user"
-
 user = User.create!(
     email: "user@hotmail.fr",
     password: "123456"
 )
 
-p "fin user"
+p "user created"
 
 p "creation profile"
-
 profile = Profile.new(
     first_name: Faker::Name.first_name,
     last_name: Faker::Name.last_name,
