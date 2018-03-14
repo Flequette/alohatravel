@@ -12,10 +12,16 @@ Deal.destroy_all
 Profile.destroy_all
 Booking.destroy_all
 
+p "creation user"
+
 user = User.create!(
     email: "user@hotmail.fr",
     password: "123456"
 )
+
+p "fin user"
+
+p "creation profile"
 
 profile = Profile.new(
     first_name: Faker::Name.first_name,
@@ -37,13 +43,13 @@ photo_deal_list = [
   "https://unsplash.com/photos/mS1pAG_bi5Y",
   ]
 
+p "creation deal"
 5.times do
     deal = Deal.create!(
       name: "Floating Village",
       description: "blabla",
       location: "Cambodge",
       price: 15,
-      photo: "png",
       profile: profile
     )
 

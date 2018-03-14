@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users
 
-  get 'home_local', to: 'pages#home_local'
 
   resources :deals do
     resources :bookings, only: [:show, :create, :edit, :update, :destroy]
