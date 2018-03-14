@@ -4,7 +4,7 @@ class PagesController < ApplicationController
   def home
   end
 
-  def home_local
+  def local
   end
 
 end
