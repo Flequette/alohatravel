@@ -1,7 +1,6 @@
+
 <h1>Les Deals</h1>
-
 <%= link_to "Add a Deal", new_deal_path %>
-
 <% @deals.each do |deal| %>
   <h4><%= deal.name %></h4>
   <p><%= deal.description %></p>
@@ -9,5 +8,4 @@
   <p><%= deal.price %></p>
   <%= link_to "More", deal_path(deal) %>
   <%= link_to "Delete", deal_path(deal), method: :delete, data: { confirm: "Ar you sure?" } %>
-
 <% end %>
