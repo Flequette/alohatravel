@@ -1,6 +1,7 @@
 // Specific CSS for your home-page
 .value {
   padding: 50px 30px;
+  background-color: white;
 }
 
 .value-card {
@@ -24,10 +25,11 @@
 }
 
 .experience {
-  margin-top: 50px;
-  margin-bottom: 80px;
-  margin-right: 50px;
-  margin-left: 50px;
+  padding-top: 50px;
+  padding-bottom: 80px;
+  padding-right: 50px;
+  padding-left: 50px;
+  background-color: white;
 }
 
 .experience-title h4 {
@@ -62,10 +64,9 @@
   font-weight: lighter;
 }
 
-
 .review {
-  background-color: white;
   padding: 30px 30px;
+  background-color: white;
 }
 
 .review-card {
@@ -85,6 +86,7 @@
 .review-avatar-large {
   width: 70px;
   border-radius: 50%;
+  border: #50E3C2 1px solid;
 }
 
 .fb-like {
