@@ -16,7 +16,7 @@
     <div class="value-card">
       <div class="col-xs-12 col-sm-6 col-md-4 ">
         <div class="value-icon">
-          <%=image_tag 'night-camping.png', width:100, height:100  %>
+          <%=image_tag 'flaticon/night-camping.png', width:100, height:100  %>
         </div>
         <h4>Vivez comme un local</h4>
         <p>Laissez-vous tenter par les bons plans recommandés par des expats sur place.</p>
@@ -26,7 +26,7 @@
     <div class="value-card">
       <div class="col-xs-12 col-sm-6 col-md-4">
         <div class="value-icon">
-          <%=image_tag 'worldwide.png', width:100, height:100  %>
+          <%=image_tag 'flaticon/worldwide.png', width:100, height:100  %>
         </div>
         <h4>Appartenez à une communauté</h4>
         <p>Profitez de cette grande communauté de voyageurs. Et partagez vos moments avec les autres AloHa Traveler.</p>
@@ -36,7 +36,7 @@
     <div class="value-card">
       <div class="col-xs-12 col-sm-6 col-md-4">
         <div class="value-icon">
-          <%=image_tag 'wallet.png', width:100, height:100  %>
+          <%=image_tag 'flaticon/wallet.png', width:100, height:100  %>
         </div>
         <h4>Economisez autrement</h4>
         <p>Gagnez du temps en trouvant tous les plans authentiques qui feront de votre voyage un moment unique.</p>
@@ -70,7 +70,7 @@
     <div class="experience-card text-left">
       <div class="col-xs-12 col-sm-5 col-md-6 offset-md-3">
         <div class="experience-icon">
-          <%=image_tag '1.Profilebis.png', width:400 %>
+          <%=image_tag 'experience/1.Profilebis.png', width:400 %>
         </div>
       </div>
     </div>
@@ -80,7 +80,7 @@
     <div class="experience-card">
       <div class="col-xs-12 col-sm-5 col-md-6 offset-md-3">
         <div class="experience-icon2 text-right">
-          <%=image_tag '2.Plansbis.png', width:400  %>
+          <%=image_tag 'experience/2.Plansbis.png', width:400  %>
         </div>
       </div>
     </div>
@@ -113,30 +113,33 @@
     <div class="experience-card text-left">
       <div class="col-xs-12 col-sm-5 col-md-6 offset-md-3">
         <div class="experience-icon">
-          <%=image_tag '3.Bookingbis.png', width:400 %>
+          <%=image_tag 'experience/3.Bookingbis.png', width:400 %>
         </div>
       </div>
     </div>
   </div>
 </div>
 
+<!-- Joinus bloc -->
+<%= render "shared/joinus" %>
 
 <!-- Reviews bloc -->
 <div class="review text-center">
+  <div class="experience-title">
+    <h4>Ils parlent de nous</h4>
+  </div>
   <div class="row text-center">
     <div class="review-icon">
-      <%=image_tag 'whatsup.png', height:30 %>
-      <%=image_tag 'whatsup.png', height:30 %>
-      <%=image_tag 'whatsup.png', height:30 %>
-      <%=image_tag 'whatsup.png', height:30 %>
-      <%=image_tag 'whatsup.png', height:30 %>
+      <%=image_tag 'flaticon/whatsup.png', height:30 %>
+      <%=image_tag 'flaticon/whatsup.png', height:30 %>
+      <%=image_tag 'flaticon/whatsup.png', height:30 %>
     </div>
 
   </div>
   <div class="row text-center">
     <div class="review-card">
       <div class="col-xs-12 col-sm-6 col-md-4 ">
-      <%=image_tag 'margaux.jpg', class: "review-avatar-large"%>
+      <%=image_tag 'avatar/margaux.jpg', class: "review-avatar-large"%>
       <div class="review-content ">
         <p>"J'ai testé plusieurs des plans recommandés au Brésil. Génial !!!"</p>
       </div>
@@ -145,7 +148,7 @@
 
     <div class="review-card">
       <div class="col-xs-12 col-sm-6 col-md-4 ">
-      <%=image_tag 'hu.jpg', class: "review-avatar-large"%>
+      <%=image_tag 'avatar/adri.png', class: "review-avatar-large"%>
       <div class="review-content ">
         <p>"Nous avons rencontré des gens incroybales lors de notre trek au Cambodge. Nous étions qu'avec un local."</p>
       </div>
@@ -154,7 +157,7 @@
 
     <div class="review-card">
       <div class="col-xs-12 col-sm-6 col-md-4 ">
-      <%=image_tag 'clo.jpg', class: "review-avatar-large"%>
+      <%=image_tag 'avatar/clo.jpg', class: "review-avatar-large"%>
       <div class="review-content ">
         <p>"J'ai passé 1 journée avec un expat qui m'a emmené voir des temples cachés en Birmanie. Incroyable!"</p>
       </div>
@@ -163,5 +166,4 @@
   </div>
 </div>
 
-<!-- Joinus bloc -->
-<%= render "shared/joinus" %>
+
