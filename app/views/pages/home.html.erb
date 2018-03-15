@@ -1,16 +1,16 @@
+<!-- Banner bloc -->
 <%= render "shared/banner" %>
 
+<!-- Product value bloc -->
 <div class="value text-center">
-
   <div class="row text-center">
-
     <div class="value-card">
       <div class="col-xs-12 col-sm-6 col-md-4 ">
         <div class="value-icon">
           <%=image_tag 'night-camping.png', width:100, height:100  %>
         </div>
         <h4>Vivez comme un local</h4>
-        <p>Laissez-vous tenter par les bons plans recommandés par des expats et locaux sur place.</p>
+        <p>Laissez-vous tenter par les bons plans recommandés par des expats sur place.</p>
       </div>
     </div>
 
@@ -33,14 +33,86 @@
         <p>Gagnez du temps en trouvant tous les plans authentiques qui feront de votre voyage un moment unique.</p>
       </div>
     </div>
-
   </div>
 </div>
 
+<!-- Instagram bloc -->
 <%= render "shared/cards_instagram" %>
 
-<%= render "shared/experience" %>
+<!-- Experience bloc -->
+<div class="experience text-center">
+  <div class="experience-title">
+    <h4>L'expérience AloHa Travel</h4>
+  </div>
 
+  <div class="row">
+    <div class="experience-card text-right">
+      <div class="col-xs-12 col-sm-5 col-md-6">
+        <div class="experience-nb ">
+          <h1>1</h1>
+        </div>
+        <div class="experience-content">
+          <h4>Je créé mon profil</h4>
+          <p>Je renseigne mes informations en quelques clics. Un profil complet suscite la confiance des membres de la communauté.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="experience-card text-left">
+      <div class="col-xs-12 col-sm-5 col-md-6 offset-md-3">
+        <div class="experience-icon">
+          <%=image_tag '1.Profil.png', width:250, height:187 %>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row text-left">
+    <div class="experience-card">
+      <div class="col-xs-12 col-sm-5 col-md-6 offset-md-3">
+        <div class="experience-icon2 text-right">
+          <%=image_tag '2.Plans.png', width:250, height:187  %>
+        </div>
+      </div>
+    </div>
+
+    <div class="experience-card">
+      <div class="col-xs-12 col-sm-5 col-md-6 ">
+        <div class="experience-nb ">
+          <h1>2</h1>
+        </div>
+        <div class="experience-content">
+          <h4>Je géolocalise les plans autour de moi</h4>
+          <p>Je renseigne les infos concernant le bon plan que je souhaite partager avec la communauté.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="experience-card text-right">
+      <div class="col-xs-12 col-sm-5 col-md-6 ">
+        <div class="experience-nb">
+          <h1>3</h1>
+        </div>
+        <div class="experience-content">
+          <h4>Je réserve le plan fait pour moi</h4>
+          <p>Je selectionne les dates et nombre de voyageurs avant de réserver et de profiter de ce moment unique.</p>
+        </div>
+      </div>
+    </div>
+    <div class="experience-card text-left">
+      <div class="col-xs-12 col-sm-5 col-md-6 offset-md-3">
+        <div class="experience-icon">
+          <%=image_tag '3.Booking.png', width:250, height:187 %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Reviews bloc -->
 <div class="review text-center">
   <div class="row text-center">
     <div class="review-icon">
@@ -57,7 +129,7 @@
       <div class="col-xs-12 col-sm-6 col-md-4 ">
       <%=image_tag 'margaux.jpg', class: "review-avatar-large"%>
       <div class="review-content ">
-        <p>"J'ai partagé plusieurs plans à Siem Reap (Cambodge), qui m'ont permis de rencontrer des voyageurs et de gagner de l'argent."</p>
+        <p>"J'ai testé plusieurs des plans recommandés au Brésil. Génial !!!"</p>
       </div>
       </div>
     </div>
@@ -66,7 +138,7 @@
       <div class="col-xs-12 col-sm-6 col-md-4 ">
       <%=image_tag 'hu.jpg', class: "review-avatar-large"%>
       <div class="review-content ">
-        <p>"J'ai beaucoup aimé m'occuper des voyageurs qui ont réservé mon activité. On est un peu sa propre agence de voyage."</p>
+        <p>"Nous avons rencontré des gens incroybales lors de notre trek au Cambodge. Nous étions qu'avec un local."</p>
       </div>
       </div>
     </div>
@@ -75,11 +147,12 @@
       <div class="col-xs-12 col-sm-6 col-md-4 ">
       <%=image_tag 'clo.jpg', class: "review-avatar-large"%>
       <div class="review-content ">
-        <p>"A tester!! ça ne prend pas beaucoup de temps en fonction des plans partagés et ça permet de partager son expérience."</p>
+        <p>"J'ai passé 1 journée avec un expat qui m'a emmené voir des temples cachés en Birmanie. Incroyable!"</p>
       </div>
       </div>
     </div>
   </div>
 </div>
 
+<!-- Joinus bloc -->
 <%= render "shared/joinus" %>
