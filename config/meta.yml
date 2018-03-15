@@ -1,0 +1,5 @@
+meta_product_name: "Aloha Travel"
+meta_title: "Aloha Travel - Be different"
+meta_description: "Stop traveling and start discovering. Begin your travel bucket list with our network of locals"
+meta_image: "photometa.png"                       # should exist in `app/assets/images/`
+
