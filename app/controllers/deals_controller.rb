@@ -47,7 +47,7 @@ class DealsController < ApplicationController
   private
 
   def deal_params
-    params.require(:deal).permit(:name, :description, :location, :price, :photo)
+    params.require(:deal).permit(:name, :description, :address, :city, :zip_code, :country_code, :price, :photo)
   end
 
   def set_deal

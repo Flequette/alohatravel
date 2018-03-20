@@ -28,7 +28,39 @@
   padding: 30px 50px;
 }
 
-.deals-content p{
+.deals-content p {
   font-size: 14px;
   color: #404040
 }
+
+.newdeal-banner {
+  color: white;
+  text-align: center;
+  height: 50vh;
+  /* if you have a 70px navbar => height: calc(100vh - 70px); */
+  background-size: cover !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 10px;
+  position: relative;
+}
+
+.newdeal-content {
+  position: absolute;
+  bottom: 10px;
+  left: 150px;
+}
+
+.form {
+
+}
+
+.form-control {
+  font-size: 10px;
+  font-weight: lighter;
+}
+
+
+
+
