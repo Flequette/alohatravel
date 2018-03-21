@@ -3,11 +3,15 @@
     <div class="col-xs-12 col-sm-4 col-md-4 col-md-offset-4 col-sm-offset-4">
       <%= simple_form_for @deal do |f| %>
         <div class="form">
-          <p><%= f.input :name, class: "form-control", placeholder: "Eva Lecocq" %></p>
-          <p><%= f.input :description, class: "form-control", placeholder: "Une belle description suscitera l'envie des Aloha Travelers" %></p>
-          <p><%= f.input :address, class: "form-control", placeholder: "rue Royale 59800 Lille" %></p>
-          <p><%= f.input :price, class: "form-control", placeholder: "15" %></p>
-          <p><%= f.input :zip_code, class: "form-control", placeholder: "62" %></p>
+          <p><%= f.input :name, class: "form-control" %></p>
+          <p><%= f.input :description, class: "form-control" %></p>
+          <p><%= f.input :address, class: "form-control" %></p>
+          <p><%= f.input :city, class: "form-control" %></p>
+          <p><%= f.input :zip_code, class: "form-control" %></p>
+          <p><%= f.input :inhabitant, class: "form-control" %></p>
+          <p><%= f.input :activity_type, class: "form-control" %></p>
+          <p><%= f.input :time, class: "form-control" %></p>
+          <p><%= f.input :price, class: "form-control" %></p>
           <p><%= f.input :photo %></p>
           <p><%= f.input :photo_cache, as: :hidden %></p>
         </div>
