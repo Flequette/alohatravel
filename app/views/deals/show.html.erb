@@ -30,7 +30,7 @@
         <div class="row">
           <div class="resume-content text-left">
               <%=image_tag 'flaticon/geoloc2.png', width:20, height:20  %>
-              <strong><%= @deal.address %></strong>
+              <strong><%= @deal.city %>, <%= @deal.country %></strong>
           </div>
         </div>
 
@@ -38,14 +38,14 @@
           <div class="resume-icon text-center">
             <div class="col-xs-4 col-sm-3 col-md-2">
               <%=image_tag 'activity_type/nature.png', width:40, height:40  %>
-              <p>Trek</p>
+              <p><%= @deal.activity_type %></p>
             </div>
           </div>
 
           <div class="resume-icon text-center">
             <div class="col-xs-4 col-sm-3 col-md-2">
               <%=image_tag 'activity_type/time.png', width:40, height:40  %>
-              <p>2 jours</p>
+              <p><%= @deal.time %></p>
             </div>
           </div>
 
@@ -72,11 +72,7 @@
     </div>
     <div class="col-xs-12 col-sm-8 col-md-8">
       <div class="desc-content">
-        <b>Suivez les traces de la réunification. Photographiez les sites historiques dans l'épicentre de la guerre froide, comme la Potsdamer Platz et la porte de Brandebourg, les bâtiments du Reichstag et l’iconique tour de télévision de Berlin.</b>
-
-        Explorez la ville, de l’ancienne frontière entre Berlin-Est et Ouest, comme le mur de Berlin, l’historique Porte de Brandebourg et autres monuments, anciens et plus récents. Durant 3 heures, vous apprendrez à maîtriser les éléments les plus exigeants de la photographie.
-
-        Que vous soyez débutant, amateur, ou que vous ayez des années d'expérience, vous trouverez l’inspiration avec notre photographe. Vous capturerez des rues, monuments que vous appréciez mais aussi les différentes lumières ou le passage flou des bateaux sur la Spree.
+        <p><%= @deal.description %></p>
       </div>
     </div>
   </div>
@@ -90,7 +86,7 @@
     </div>
     <div class="col-xs-12 col-sm-8 col-md-8">
       <div class="desc-content">
-        <p>Trek</p>
+        <p><%= @deal.activity_type %></p>
       </div>
     </div>
   </div>
@@ -135,7 +131,7 @@
     </div>
     <div class="col-xs-12 col-sm-8 col-md-8">
       <div class="desc-content">
-        <p>Siem Reap, Cambodge</p>
+        <p><%= @deal.city %>, <%= @deal.country %></p>
       </div>
     </div>
   </div>
@@ -149,16 +145,25 @@
     </div>
     <div class="col-xs-12 col-sm-8 col-md-8">
       <div class="desc-content">
-        <p>1 Participant :<strong>155 €</strong><br>
-          2 Participants :<strong>185 €</strong><br>
-          3 Participants :<strong>215 €</strong><br>
-          4 Participants :<strong>245 €</strong><br>
-        </p>
+        <p><%= @deal.price %>€/jour</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-12 col-md-6 col-lg-6 col-lg-offset-4">
+      <div class="desc-card">
+        <div class="desc-card-photo text-center">
+          <%= cl_image_tag @deal.photo, height: 350, width: 400, crop: :fill %>
+        </div>
+        <div class="desc-card-description text-center">
+          <h2>#alohatravel #<%= @deal.city %> #<%= @deal.country %> #<%= @deal.activity_type %> </h2>
+        </div>
       </div>
     </div>
   </div>
 </div>
 
-<!-- Instagram bloc -->
-<%= render "shared/cards_instagram" %>
+<!-- Joinus bloc -->
+<%= render "shared/joinus" %>
 

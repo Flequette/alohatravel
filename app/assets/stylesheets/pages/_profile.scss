@@ -1,0 +1,50 @@
+.showprofile-banner {
+  color: white;
+  text-align: center;
+  height: 50vh;
+  /* if you have a 70px navbar => height: calc(100vh - 70px); */
+  background-size: cover !important;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 10px;
+  position: relative;
+}
+
+.showprofile-back a {
+  position: absolute;
+  top: 20px;
+  left: 50px;
+  text-decoration: none;
+  color: #F9F9F9;
+  opacity: 0.95;
+  font-size: 17px;
+}
+
+.showprofile-back a:hover {
+  opacity: 0.75;
+}
+
+.showprofile-content h3 {
+  position: absolute;
+  bottom: 10px;
+  left: 150px;
+}
+
+.showprofile-content a {
+  position: absolute;
+  bottom: 25px;
+  left: 350px;
+  text-decoration: none;
+  color: #F9F9F9;
+  opacity: 0.95;
+  font-size: 17px;
+  font-weight: lighter;
+}
+
+.showprofile-content a:hover {
+  opacity: 0.70;
+}
+
+
+
+
