@@ -2,7 +2,15 @@ class DealsController < ApplicationController
   before_action :set_deal, only: [:show, :edit, :update, :destroy]
 
   def index
-    @deals = Deal.all
+    @deals = Deal.where.not(latitude: nil, longitude: nil)
+
+    @markers = @deals.map do |deal|
+      {
+        lat: deal.latitude,
+        lng: deal.longitude#,
+        # infoWindow: { content: render_to_string(partial: "/deals/map_box", locals: { deal: deal }) }
+      }
+    end
   end
 
   def show
