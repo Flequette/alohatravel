@@ -1,27 +1,65 @@
-
-// Specific CSS for your home-page
-.deals {
-  padding: 50px 30px;
+.deal-card {
+  height: 490px;
+  width: 450px;
+  background-size: cover !important;
+  background-position: center;
+  color: white;
+  position: relative;
+  margin: 15px 0px;
+  background-color: #F9F9F9;
+  box-shadow: 0px 1px 2px rgba(0,0,0,0.6);
 }
 
-.deals-card {
-  margin: 0px 30px;
-  background-color: black;
-  height: 150px;
-}
-
-.deals-icon {
-  padding-bottom: 20px;
-}
-
-.deals h4 {
-  font-size: 20px;
+.deal-card-photo {
+  padding-top: 25px;
   padding-bottom: 10px;
-  color: #50E3C2;
+}
+
+.deal-card-user {
+  position: absolute;
+  left: 35px;
+  bottom: 40px;
+  width: 50px;
+  border-radius: 50%;
+}
+
+.deal-card-price {
+  position: absolute;
+  bottom: 20px;
+  right: 50px;
+  font-size: 15px;
+  text-transform: uppercase;
+  color: #404040;
+}
+
+.deal-card-description {
+  position: absolute;
+  bottom: 10px;
+  left: 110px;
+  color: #404040;
+}
+
+.deal-card-description h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.deal-card-description p {
+  font-size: 14px;
+  opacity: 0.8;
   font-weight: lighter;
 }
 
-.deals p {
-  font-size: 14px;
-  font-weight: lighter;
+.deal-card-link {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  z-index: 2;
+  background: black;
+  opacity: 0;
+}
+.deal-card-link:hover {
+  opacity: 0.1;
 }

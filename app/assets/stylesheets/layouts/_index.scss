@@ -6,4 +6,25 @@
 
 .container {
   min-height: 80vh;
+  margin-bottom: 30px ;
+  margin-top: 30px;
+}
+
+.btn-aloha {
+  color: white;
+  padding: 10px 15px;
+  border-radius: 50px;
+  font-weight: lighter;
+  background: #50E3C2;
+  transition: background 0.3s ease;
+  font-size: 16px;
+  min-width: 100px;
+  margin-top: 30px;
+  margin-bottom:30px;
+}
+
+.btn-aloha:hover {
+  opacity: 0.7;
+  text-decoration: none;
+  color: #F9F9F9;
 }

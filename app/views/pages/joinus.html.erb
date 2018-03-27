@@ -1,0 +1,181 @@
+<!-- Banner bloc -->
+<div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('<%=image_path "banner.jpg" %>');">
+  <div class="banner-content">
+    <h1>Bienvenue dans la communauté</h1>
+    <div class="fb-like" data-href="https://www.facebook.com/AloHa-Travel-1861717003901882/?ref=aymt_homepage_panel" data-layout="button" data-action="like" data-size="large" data-show-faces="true" data-share="true">
+    </div>
+    <div class="compteur">
+      <h4>Lancement de notre site dans </h4>
+      <span><font size="6"> <div align="center">
+      <center><script language="JavaScript">
+      TargetDate = "04/09/2018 08:00 AM";
+      BackColor = false;
+      ForeColor = false;
+      CountActive = true;
+      CountStepper = -1;
+      LeadingZero = true;
+      DisplayFormat = "%%D%%j &nbsp %%H%%h &nbsp %%M%%m &nbsp %%S%%s";
+      FinishMessage = "GO GO GO!";
+      </script>
+      <script language="JavaScript" src="http://scripts.hashemian.com/js/countdown.js">
+      </script></center></div></span>
+      &nbsp;
+    </div>
+  </div>
+</div>
+
+<!-- Product value bloc -->
+<div class="value text-center">
+  <div class="row text-center">
+    <div class="value-card">
+      <div class="col-xs-12 col-sm-6 col-md-4 ">
+        <div class="value-icon">
+          <%=image_tag 'flaticon/night-camping.png', width:100, height:100  %>
+        </div>
+        <h4>Vivez comme un local</h4>
+        <p>Laissez-vous guider par le savoir et bons plans de votre Aloha Guide.</p>
+      </div>
+    </div>
+
+    <div class="value-card">
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="value-icon">
+          <%=image_tag 'flaticon/worldwide.png', width:100, height:100  %>
+        </div>
+        <h4>Appartenez à une communauté</h4>
+        <p>Profitez de cette grande communauté de voyageurs. Et partagez vos moments avec les autres AloHa Traveler.</p>
+      </div>
+    </div>
+
+    <div class="value-card">
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="value-icon">
+          <%=image_tag 'flaticon/wallet.png', width:100, height:100  %>
+        </div>
+        <h4>Economisez autrement</h4>
+        <p>Gagnez du temps grâce à votre Aloha Guide qui vous fera découvrir tous les plans authentiques de sa ville.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Instagram bloc -->
+<%= render "shared/cards_instagram" %>
+
+<!-- Experience bloc -->
+<div class="experience text-center">
+  <div class="experience-title">
+    <h4>L'expérience AloHa Travel</h4>
+  </div>
+
+  <div class="row">
+    <div class="experience-card text-right">
+      <div class="col-xs-12 col-sm-5 col-md-6">
+        <div class="experience-nb ">
+          <h1>1</h1>
+        </div>
+        <div class="experience-content">
+          <h4>Je crée mon profil</h4>
+          <p>e renseigne mes informations en quelques clics. Plus mon profil est complet, plus le match avec les Aloha Guides sera pertinent.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="experience-card text-left">
+      <div class="col-xs-12 col-sm-5 col-md-6 offset-md-3">
+        <div class="experience-icon">
+          <%=image_tag 'experience/1.Profilebis.png', width:250 %>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row text-left">
+    <div class="experience-card">
+      <div class="col-xs-12 col-sm-5 col-md-6 offset-md-3">
+        <div class="experience-icon2 text-right">
+          <%=image_tag 'experience/2.Plansbis.png', width:250  %>
+        </div>
+      </div>
+    </div>
+
+    <div class="experience-card">
+      <div class="col-xs-12 col-sm-5 col-md-6 ">
+        <div class="experience-nb ">
+          <h1>2</h1>
+        </div>
+        <div class="experience-content">
+          <h4>Je choisis mon Aloha Guide</h4>
+          <p>Matchez avec les 3 Aloha Guides qui vous correspondent le plus et choississez celui qui vous fera vivre ce moment unique.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="experience-card text-right">
+      <div class="col-xs-12 col-sm-5 col-md-6 ">
+        <div class="experience-nb">
+          <h1>3</h1>
+        </div>
+        <div class="experience-content">
+          <h4>Je réserve en un clic</h4>
+          <p>Une demi-journée, une journée…A vous de vous laissez tenter. Réservez en un clic, échangez avec votre Aloha Guide et vivez comme un local le temps d’un voyage.</p>
+        </div>
+      </div>
+    </div>
+    <div class="experience-card text-left">
+      <div class="col-xs-12 col-sm-5 col-md-6 offset-md-3">
+        <div class="experience-icon">
+          <%=image_tag 'experience/3.Bookingbis.png', width:250 %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Joinus bloc -->
+<%= render "shared/joinus" %>
+
+<!-- Reviews bloc -->
+<div class="review text-center">
+  <div class="experience-title">
+    <h4>Ils parlent de nous</h4>
+  </div>
+  <div class="row text-center">
+    <div class="review-icon">
+      <%=image_tag 'flaticon/whatsup.png', height:30 %>
+      <%=image_tag 'flaticon/whatsup.png', height:30 %>
+      <%=image_tag 'flaticon/whatsup.png', height:30 %>
+    </div>
+
+  </div>
+  <div class="row text-center">
+    <div class="review-card">
+      <div class="col-xs-12 col-sm-6 col-md-4 ">
+      <%=image_tag 'avatar/margaux.jpg', class: "review-avatar-large"%>
+      <div class="review-content ">
+        <p>"J'ai réservé une demi-journée avec un Aloha Guide à Bangkok. Génial de découvrir cette ville avec ses recos !!!"</p>
+      </div>
+      </div>
+    </div>
+
+    <div class="review-card">
+      <div class="col-xs-12 col-sm-6 col-md-4 ">
+      <%=image_tag 'avatar/adri.png', class: "review-avatar-large"%>
+      <div class="review-content ">
+        <p>"Des rencontres inoubliable au Cambodge. Nous avons passé 1 journée avec notre Aloha Guide en partagant son quotidien."</p>
+      </div>
+      </div>
+    </div>
+
+    <div class="review-card">
+      <div class="col-xs-12 col-sm-6 col-md-4 ">
+      <%=image_tag 'avatar/clo.jpg', class: "review-avatar-large"%>
+      <div class="review-content ">
+        <p>"J'ai passé 1 journée avec un expat qui m'a fait découvrir des temples cachés en Birmanie. Fabuleux!"</p>
+      </div>
+      </div>
+    </div>
+  </div>
+</div>

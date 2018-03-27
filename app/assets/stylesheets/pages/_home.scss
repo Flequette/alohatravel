@@ -1,6 +1,7 @@
 // Specific CSS for your home-page
 .value {
   padding: 50px 30px;
+  background-color: white;
 }
 
 .value-card {
@@ -23,9 +24,49 @@
   font-weight: lighter;
 }
 
-.review {
+.experience {
+  padding-top: 50px;
+  padding-bottom: 80px;
+  padding-right: 50px;
+  padding-left: 50px;
   background-color: white;
+}
+
+.experience-title h4 {
+  font-size: 26px;
+  font-weight: lighter;
+}
+
+.experience-icon {
+  margin-top:50px;
+  margin-left: 15px;
+
+}
+
+.experience-icon2 {
+  margin-top:50px;
+  margin-right: 15px;
+}
+
+.experience h1 {
+  font-size: 70px;
+  color: #50E3C2;
+}
+
+.experience-content h4 {
+  font-size: 20px;
+  font-weight: lighter;
+  color: #50E3C2;
+}
+
+.experience p {
+  font-size: 14px;
+  font-weight: lighter;
+}
+
+.review {
   padding: 30px 30px;
+  background-color: white;
 }
 
 .review-card {
@@ -45,8 +86,15 @@
 .review-avatar-large {
   width: 70px;
   border-radius: 50%;
+  border: #50E3C2 1px solid;
 }
 
+.fb-like {
+  margin-top: 40px;
+}
+
+.joinus-logo {
+}
 
 
 

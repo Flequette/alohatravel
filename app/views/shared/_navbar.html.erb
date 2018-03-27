@@ -1,7 +1,7 @@
 <div class="navbar-wagon">
   <!-- Logo -->
   <%= link_to root_path, class: "navbar-wagon-brand" do %>
-    <%= image_tag "logo.png", height: 50 %>
+    <%= image_tag "logo/vf_black.png", height: 50 %>
   <% end %>
 
   <!-- Right Navigation -->
@@ -10,9 +10,9 @@
     <% if user_signed_in? %>
 
       <!-- Links when logged in -->
-      <%= link_to "Ajouter un bon plan", new_deal_path, class: "navbar-wagon-item navbar-wagon-link" %>
-      <%= link_to "Tous les BPs", deals_path, class: "navbar-wagon-item navbar-wagon-link" %>
-      <%= link_to "Mes BPs", "#", class: "navbar-wagon-item navbar-wagon-link" %>
+      <%= link_to "Ajouter un Aloha Tour", new_deal_path, class: "btn-aloha" %>
+      <%= link_to "Tout voir", deals_path, class: "navbar-wagon-item navbar-wagon-link" %>
+      <%= link_to "Mes Aloha Tours", "#", class: "navbar-wagon-item navbar-wagon-link" %>
 
       <!-- Avatar with dropdown menu -->
       <div class="navbar-wagon-item">
@@ -20,7 +20,7 @@
           <%= image_tag "http://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar dropdown-toggle", id: "navbar-wagon-menu", "data-toggle" => "dropdown" %>
           <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
             <li>
-              <%= link_to "#" do %>
+              <%= link_to profile_path(current_user.profile) do %>
                 <i class="fa fa-user"></i> <%= t(".profile", default: "Profile") %>
               <% end %>
             </li>
@@ -39,10 +39,10 @@
       </div>
 
     <% else %>
-      <%= link_to "Voyageur", root_path, class: "navbar-wagon-item navbar-wagon-link" %>
-      <%= link_to "Local", local_path, class: "navbar-wagon-item navbar-wagon-link" %>
-      <!-- Login link (when logged out) -->
-      <%= link_to t(".sign_in", default: "Login"), new_user_session_path, class: "navbar-wagon-item navbar-wagon-link" %>
+      <%= link_to "Je suis un voyageur", root_path, class: "navbar-wagon-item navbar-wagon-link" %>
+      <%= link_to "Je suis un expat", local_path, class: "navbar-wagon-item navbar-wagon-link" %>
+      <!-- Login link (when logged out)
+      <%= link_to t(".sign_in", default: "Login"), new_user_session_path, class: "navbar-wagon-item navbar-wagon-link" %>-->
     <% end %>
   </div>
 
@@ -51,8 +51,8 @@
     <div class="dropdown">
       <i class="fa fa-bars dropdown-toggle" data-toggle="dropdown"></i>
       <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
-        <li><a href="#">Voyageur</a></li>
-        <li><a href="#">Local</a></li>
+        <li><%= link_to "Voyageur", root_path %></li>
+        <li><%= link_to "Expat", local_path %></li>
       </ul>
     </div>
   </div>
