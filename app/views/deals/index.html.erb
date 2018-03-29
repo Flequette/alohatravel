@@ -6,32 +6,28 @@
 
 <div class="container">
   <div class="row">
+    <div class="col-xs-12 col-md-8 col-lg-8 col-lg-offset-2">
+      <div id="map" style="width: 100%; height: 300px;" data-markers="<%= @markers.to_json %>"></div>
+    </div>
+  </div>
 
-    <div class="col-xs-12 col-md-6 col-lg-8">
-      <div class="row">
-        <% @deals.each do |deal| %>
-          <%= link_to deal_path(deal) do %>
-            <div class="col-xs-12 col-md-6 col-lg-3">
-              <div class="deal-card">
-                <div class="deal-card-photo text-center">
-                  <%= cl_image_tag deal.photo, height: 250, width: 300, crop: :fill %>
-                </div>
-                <div class="deal-card-description">
-                  <h2><%= deal.name %></h2>
-                  <p><%= deal.city %>, <%= deal.country%> </p>
-                </div>
-                  <img class="deal-card-user" src="https://kitt.lewagon.com/placeholder/users/tgenaitay">
-              </div>
+  <div class="row">
+    <% @deals.each do |deal| %>
+      <%= link_to deal_path(deal) do %>
+        <div class="col-xs-12 col-md-6 col-lg-4">
+          <div class="deal-card">
+            <div class="deal-card-photo text-center">
+              <%= cl_image_tag deal.photo, height: 250, width: 300, crop: :fill %>
             </div>
-          <% end %>
-        <% end %>
-      </div>
-    </div>
-
-    <div class="col-xs-12 col-md-6 col-lg-4">
-      <div id="map" style="width: 100%; height: 500px;" data-markers="<%= @markers.to_json %>"></div>
-    </div>
-
+            <div class="deal-card-description">
+              <h2><%= deal.name %></h2>
+              <p><%= deal.city %>, <%= deal.country%> </p>
+            </div>
+              <img class="deal-card-user" src="https://kitt.lewagon.com/placeholder/users/tgenaitay">
+          </div>
+        </div>
+      <% end %>
+    <% end %>
   </div>
 </div>
 
