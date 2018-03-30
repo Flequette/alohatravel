@@ -20,7 +20,7 @@ user = User.new(
     password: "123456"
 )
 user.save!
-p "user created"
+p "user created!"
 
 p "creation profile"
 profile = Profile.new(
@@ -34,7 +34,7 @@ profile = Profile.new(
     user: user
 )
 profile.save!
-puts "Profile created"
+puts "profile created!"
 
 photo_deal_list = [
   "https://scontent-cdg2-1.cdninstagram.com/vp/a3dca40affc3a5f106845b2c78b7dfa9/5B4A6B4A/t51.2885-15/s320x320/e35/28764991_1961185767248801_7483073368942444544_n.jpg",

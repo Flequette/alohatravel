@@ -6,6 +6,12 @@
   </div>
   <div class="showdeal-content text-center">
     <h3><%= @deal.name %></h3>
+    <% if policy(@deal).edit? %>
+      <%= link_to "| Edit", edit_deal_path(@deal) %>
+    <% end %>
+    <% if policy(@deal).destroy? %>
+      <%= link_to "| Delete", deal_path(@deal),method: :delete, data: {confirm: 'Are you sure?'} %>
+    <% end %>
   </div>
 </div>
 
