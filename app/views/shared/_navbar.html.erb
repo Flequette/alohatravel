@@ -12,7 +12,6 @@
       <!-- Links when logged in -->
       <%= link_to "Ajouter un Aloha Tour", new_deal_path, class: "btn-aloha" %>
       <%= link_to "Tout voir", deals_path, class: "navbar-wagon-item navbar-wagon-link" %>
-      <%= link_to "Mes Aloha Tours", "#", class: "navbar-wagon-item navbar-wagon-link" %>
 
       <!-- Avatar with dropdown menu -->
       <div class="navbar-wagon-item">
@@ -42,8 +41,8 @@
     <% else %>
       <%= link_to "Aloha Traveler", root_path, class: "navbar-wagon-item navbar-wagon-link" %>
       <%= link_to "Aloha Guide", local_path, class: "navbar-wagon-item navbar-wagon-link" %>
-      <!-- Login link (when logged out)
-      <%= link_to t(".sign_in", default: "Login"), new_user_session_path, class: "navbar-wagon-item navbar-wagon-link" %>-->
+      <!-- Login link (when logged out)-->
+      <%= link_to t(".sign_in", default: "Login"), new_user_session_path, class: "navbar-wagon-item navbar-wagon-link" %>
     <% end %>
   </div>
 
