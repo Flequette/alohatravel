@@ -5,7 +5,10 @@
     <% end %>
   </div>
   <div class="showprofile-content text-center">
-    <h3>MON PROFIL</h3> <%= link_to "| Edit", edit_profile_path(@profile) %>
+    <h3>MON PROFIL</h3>
+    <% if policy(@profile).edit? %>
+      <%= link_to "| Edit", edit_profile_path(@profile) %>
+    <% end %>
   </div>
 </div>
 

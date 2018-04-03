@@ -6,12 +6,18 @@ class ProfilesController < ApplicationController
 
   def new
     @profile = Profile.new
+    authorize @profile
   end
 
   def create
-    @profile = Profile.new(profile_params)
-    @profile.user = current_user
+    #@profile = Profile.new(profile_params)
+    #@profile.user = current_user
+    @profile = current_user.profiles.build(profile_params)
+    authorize @profile
 
+    #@deal.profile = current_user.profile
+    @deal = current_user.deals.build(deal_params)
+    authorize @deal
     if @profile.save
       redirect_to profile_path(@profile)
     else
@@ -35,6 +41,7 @@ class ProfilesController < ApplicationController
 
   def set_profile
     @profile = Profile.find(params[:id])
+    authorize @profile
   end
 
 end
