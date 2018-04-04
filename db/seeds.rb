@@ -66,7 +66,7 @@ p "creation deal"
     puts "Deal created"
 end
 
-p "creation booking"
+p "creation profile user"
 n = 1
 users = []
 10.times do
@@ -88,11 +88,9 @@ users = []
     )
     n += 1
 end
+p "profile user created"
 
-p "booking created"
-
-p "creation test"
-
+p "creation booking"
 (5..20).to_a.sample.times do
     p = users.sample.profile
     puts p
@@ -109,5 +107,5 @@ p "creation test"
     puts b
 end
 
-p "test created"
+p "booking created"
 

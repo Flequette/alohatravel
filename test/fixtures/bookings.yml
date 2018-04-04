@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  start_date: 2018-04-03
+  end_date: 2018-04-03
+  statut: MyString
+  message: MyText
+  profile: one
+  deal: one
+
+two:
+  start_date: 2018-04-03
+  end_date: 2018-04-03
+  statut: MyString
+  message: MyText
+  profile: two
+  deal: two
