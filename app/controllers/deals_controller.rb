@@ -15,6 +15,7 @@ class DealsController < ApplicationController
   end
 
   def show
+
   end
 
   def new
@@ -27,10 +28,11 @@ class DealsController < ApplicationController
   end
 
   def create
-    #@deal = Deal.new(deal_params)
-    #@deal.profile = current_user.profile
-    @deal = current_user.deals.build(deal_params)
-    authorize @deal
+    @location = request.location
+    @deal = Deal.new(deal_params)
+    @deal.profile = current_user.profile
+    distance = Geocoder::Calculations.distance_between(@location.coordinates, [@deal.latitude, @deal.longitude])
+    puts distance
     if @deal.save
       redirect_to deal_path(@deal)
     else
@@ -39,13 +41,23 @@ class DealsController < ApplicationController
   end
 
   def edit
+    if @deal.profile_id != current_user.profile.id
+      redirect_to root_path
+    end
   end
 
   def update
     @deal.update(deal_params)
+
+    @location = request.location
+    distance = Geocoder::Calculations.distance_between(@location.coordinates, [@deal.latitude, @deal.longitude])
+    puts distance
+
+
     if @deal.update(deal_params)
       redirect_to deal_path(@deal)
     else
+      flash[:alert] = "You must be at 50km of the deal address, Please change your deal location or be closer"
       render :new
     end
   end
@@ -53,7 +65,6 @@ class DealsController < ApplicationController
   def destroy
     @deal.destroy
     redirect_to deals_path
-
   end
 
   private

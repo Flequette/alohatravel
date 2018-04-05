@@ -10,15 +10,9 @@ class ProfilesController < ApplicationController
   end
 
   def create
-    #@profile = Profile.new(profile_params)
-    #@profile.user = current_user
-    @profile = current_user.profiles.build(profile_params)
-    authorize @profile
-
-    #@deal.profile = current_user.profile
-    @deal = current_user.deals.build(deal_params)
-    authorize @deal
-    if @profile.save
+    @profile = Profile.new(profile_params)
+    @profile.user = current_user
+    if @profile.save!
       redirect_to profile_path(@profile)
     else
       render :new
@@ -26,6 +20,9 @@ class ProfilesController < ApplicationController
   end
 
   def edit
+    if @profile.id != current_user.profile.id
+      redirect_to root_path
+    end
   end
 
   def update
@@ -36,7 +33,7 @@ class ProfilesController < ApplicationController
   private
 
   def profile_params
-    params.require(:profile).permit(:first_name, :last_name, :age, :phone_number, :description, :country, :city, :user_id, :photo)
+    params.require(:profile).permit(:first_name, :last_name, :age, :phone_number, :description, :country, :city, :user_id, :photo, :photo_cache)
   end
 
   def set_profile
