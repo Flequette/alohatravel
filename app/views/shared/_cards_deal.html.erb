@@ -11,7 +11,11 @@
           <h2><%= deal.name %></h2>
           <p><%= deal.city %>, <%= deal.country%> </p>
         </div>
+        <% if deal.profile.photo.present? %>
+          <%= cl_image_tag deal.profile.photo, class: "deal-card-user" %>
+        <% else %>
           <img class="deal-card-user" src="https://kitt.lewagon.com/placeholder/users/tgenaitay">
+        <% end %>
       </div>
     </div>
       <% end %>
