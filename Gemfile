@@ -20,6 +20,7 @@ gem 'webpacker'
 gem 'cloudinary'
 gem 'carrierwave', '~> 1.2'
 gem "geocoder"
+gem 'country_select'
 
 group :development do
   gem 'web-console', '>= 3.3.0'

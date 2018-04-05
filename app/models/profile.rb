@@ -9,6 +9,6 @@ class Profile < ApplicationRecord
   validates :phone_number, presence: true
   validates :country, presence: true
   validates :city, presence: true
-
+  
   mount_uploader :photo, PhotoUploader
 end
