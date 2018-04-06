@@ -6,4 +6,10 @@ def default_url_options
   { host: ENV["HOST"] || "localhost:3000" }
 end
 
+private
+
+def after_sign_up_path_for(resource)
+  new_profile_path #your path
+end
+
 end
