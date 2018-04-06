@@ -16,22 +16,26 @@
       <!-- Avatar with dropdown menu -->
       <div class="navbar-wagon-item">
         <div class="dropdown">
+        <% if current_user.profile.present? %>
           <% if current_user.profile.photo.present? %>
             <%= cl_image_tag current_user.profile.photo, class: "avatar dropdown-toggle", id: "navbar-wagon-menu", "data-toggle" => "dropdown" %>
           <% else %>
             <%= image_tag "http://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar dropdown-toggle", id: "navbar-wagon-menu", "data-toggle" => "dropdown" %>
           <% end %>
+        <% end %>
           <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
             <li>
-              <% if current_user.profile %>
-                  <%= link_to profile_path(current_user.profile) do %>
-                    <i class="fa fa-user"></i> Profile
-                  <% end %>
-                <% else %>
-                  <%= link_to new_profile_path do %>
-                    <i class="fa fa-edit"></i>Créer mon profil
-                  <% end %>
-                <% end %>
+
+            <% if current_user.profile.present? %>
+              <%= link_to profile_path(current_user.profile) do %>
+                <i class="fa fa-user"></i> <%= t(".profile", default: "Profile") %>
+              <% end %>
+            <% end %>
+            </li>
+            <li>
+              <%= link_to "#" do %>
+                <i class="fa fa-cog"></i>  <%= t(".settings", default: "Settings") %>
+              <% end %>
             </li>
             <li>
               <%= link_to destroy_user_session_path, method: :delete do %>

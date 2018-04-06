@@ -19,11 +19,11 @@ class DealsController < ApplicationController
   end
 
   def new
-    if current_user
+    if current_user.profile.present?
       @deal = Deal.new
       authorize @deal
     else
-      redirect_to new_user_session_path
+      redirect_to new_profile_path
     end
   end
 
