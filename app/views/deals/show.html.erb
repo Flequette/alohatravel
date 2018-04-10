@@ -6,7 +6,7 @@
   </div>
   <div class="showdeal-content text-center">
     <% if @deal.profile == current_user.profile %>
-      <h3><%= @deal.name %> <%= link_to "| Edit", edit_deal_path(@deal) %> <%= link_to "| Delete", deal_path(@deal), method: :delete %></h3> 
+      <h3><%= @deal.name %> <%= link_to "| Edit", edit_deal_path(@deal) %> <%= link_to "| Delete", deal_path(@deal), method: :delete %></h3>
     <% else %>
       <h3><%= @deal.name %></h3>
     <% end %>
