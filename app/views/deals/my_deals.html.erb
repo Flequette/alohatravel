@@ -1,0 +1,47 @@
+<div class="newdeal-banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('<%=image_path "banner.jpg" %>');">
+  <div class="newdeal-content text-center">
+    <h3>Vos Aloha Tours</h3>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <% @deals.each do |deal| %>
+    <%= link_to deal_path(deal) do %>
+    <div class="col-xs-12 col-md-6">
+      <div class="deal-card">
+        <div class="deal-card-photo text-center">
+          <%= cl_image_tag deal.photo, height: 350, width: 400, crop: :fill %>
+        </div>
+        <div class="deal-card-description">
+          <h2><%= deal.name %></h2>
+          <p><%= deal.city %>, <%= deal.country%> </p>
+        </div>
+        <% if deal.profile.photo.present? %>
+          <%= cl_image_tag deal.profile.photo, class: "deal-card-user" %>
+        <% else %>
+          <img class="deal-card-user" src="https://kitt.lewagon.com/placeholder/users/tgenaitay">
+        <% end %>
+      </div>
+    </div>
+      <% end %>
+      <div class="col-xs-12 col-md-6">
+        <h3>Disponibilités</h3>
+        <% deal.bookings.each do |b| %>
+          <h3>Du <%= b.start_date.strftime("%A %d %B %Y") %> au <%= b.end_date.strftime("%A %d %B %Y") %></h3>
+          <h3>
+          <%= b.status %>
+          <% if b.status == "En attente de validation" %>
+            <%= link_to "Accepter", accepter_path(b) %> | <%= link_to "Refuser", refuser_path(b) %>
+          <% elsif b.status == "En attente de paiement" %>
+            <%= link_to "Annuler", refuser_path(b) %>
+          <% end %>
+          </h3>
+          <h5><%= demi_journées = ((b.end_date - b.start_date).to_i) * 2 %> demi journées</h5>
+          <p><%= (b.deal.price * 4) * demi_journées %> €</p>
+          <h4><%= link_to "Modifier", edit_deal_booking_path(deal, b) %></h4>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+</div>
