@@ -10,4 +10,15 @@ class PagesController < ApplicationController
   def joinus
   end
 
+  def result
+    @deals = Deal.near(params[:location], 50, units: :km).where(activity_type: params[:activity])
+    @markers = @deals.map do |deal|
+      {
+        lat: deal.latitude,
+        lng: deal.longitude#,
+        # infoWindow: { content: render_to_string(partial: "/deals/map_box", locals: { deal: deal }) }
+      }
+    end
+  end
+
 end

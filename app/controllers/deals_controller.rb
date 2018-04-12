@@ -17,6 +17,10 @@ class DealsController < ApplicationController
 
   end
 
+  def my_deals
+    @deals = Deal.where(profile_id: current_user.profile.id) 
+  end
+
   def new
     if current_user.profile.present?
       @deal = Deal.new
@@ -32,6 +36,7 @@ class DealsController < ApplicationController
 
     distance = Geocoder::Calculations.distance_between(@location.coordinates, [@deal.latitude, @deal.longitude])
     puts distance
+    # A IMPLEMENTER QUAND TOUT FINI
 
     if @deal.save
       redirect_to deal_path(@deal)

@@ -1,0 +1,29 @@
+<div class="newdeal-banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('<%=image_path "banner.jpg" %>');">
+  <div class="newdeal-content text-center">
+    <h3>Les disponibilités</h3>
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+    <% if @bookings.where(status: "Disponible").size > 0 %>
+      <% @bookings.where(status: "Disponible").each do |b| %>
+        <div class="col-xs-12 text-center">
+          <h3>Du <%= b.start_date.strftime("%A %d %B %Y") %> au <%= b.end_date.strftime("%A %d %B %Y") %></h3>
+          <h3><%= b.status %></h3>
+          <h5><%= demi_journées = ((b.end_date - b.start_date).to_i) * 2 %> demi journées</h5>
+          <p><% (b.deal.price * 4) * demi_journées %> €</p>
+          <% if b.profile_id == current_user.profile.id %>
+            <h4><%= link_to "Modifier", edit_deal_booking_path(@deal, b) %></h4>
+          <% else %>
+            <h4><%= link_to "Réserver", deal_booking_path(@deal, b) %></h4>
+          <% end %>
+        </div>
+      <% end %>
+    <% elsif current_user.profile.id == @deal.profile_id %>
+      <h3 class="text-center">Aucune disponibilité</h3>
+      <h4><%= link_to "Ajouter", new_deal_booking_path(@deal) %></h4>
+    <% else %>
+      <h3 class="text-center">Aucune disponibilité</h3>
+    <% end %>
+  </div>
+</div>

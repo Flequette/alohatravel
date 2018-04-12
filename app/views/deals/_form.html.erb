@@ -9,13 +9,12 @@
           <p><%= f.input :city, class: "form-control" %></p>
           <p><%= f.input :zip_code, class: "form-control" %></p>
           <p><%= f.input :inhabitant, class: "form-control" %></p>
-          <p><%= f.input :activity_type, class: "form-control" %></p>
+          <p><%= f.input :activity_type, as: :radio_buttons, collection: [['Culture', "Culture"], ['Nature', "Nature"], ['Nautique', "Nautique"], ['Hivernale', "Hivernale"], ['Aérienne', "Aérienne"]] %></p>
           <p><%= f.input :time, class: "form-control" %></p>
           <p><%= f.input :price, class: "form-control" %></p>
           <p><%= f.input :photo %></p>
           <p><%= f.input :photo_cache, as: :hidden %></p>
         </div>
-
           <%= f.submit "Ajouter", class: "btn-aloha" %>
       <% end %>
     </div>

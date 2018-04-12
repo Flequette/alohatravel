@@ -12,7 +12,8 @@ class Deal < ApplicationRecord
   #validates :city, presence: true
   #validates :zip_code, presence: true
   #validates :inhabitant, presence: true
-  #validates :activity_type, presence: true
+  validates :activity_type, inclusion: { in: %w(Culture Nature Nautique Hivernale Aérienne),
+		message: "Veuillez choisir une activité valide"}
   #validates :time, presence: true
 
   mount_uploader :photo, PhotoUploader
