@@ -56,7 +56,7 @@ p "creation deal"
       country_code: "855",
       zip_code: "1710",
       inhabitant: "Cambodgien",
-      activity_type: "Tour",
+      activity_type: "Culture",
       time: "1 jour",
       profile: profile
     )
@@ -110,4 +110,3 @@ p "creation test"
 end
 
 p "test created"
-
