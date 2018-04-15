@@ -13,12 +13,15 @@ class DealsController < ApplicationController
     end
   end
 
-  def show
 
+  def show
+    @booking = Booking.new
+    @booking.deal_id = params[:id]
   end
 
   def my_deals
-    @deals = Deal.where(profile_id: current_user.profile.id) 
+    @deals = Deal.where(profile_id: current_user.profile.id)
+    @bookings = Booking.where(profile_id: current_user.profile.id)
   end
 
   def new
