@@ -3,13 +3,12 @@
     <div class="col-xs-12 col-sm-4 col-md-4 col-md-offset-4 col-sm-offset-4">
       <%= simple_form_for @booking,  url: deal_bookings_path do |f| %>
         <div class="form">
-          <p><%= f.input :start_date, class: "form-control" %></p>
-          <p><%= f.input :end_date, class: "form-control" %></p>
+          <p><%= f.input :start_date, order: [:day, :month, :year], class: "form-control" %></p>
+          <p><%= f.input :nb_people, class: "form-control" %></p>
           <p><%= f.input :message, class: "form-control" %></p>
-          <p><%= f.input :status, as: :radio_buttons, collection: [['Disponible', "Disponible"], ['En attente de paiement', "En attente de paiement"], ['Indisponible', "Indisponible"]] %></p>
-        </div>
-          <%= f.submit "Ajouter", class: "btn-aloha" %>
+          <%= f.submit "Réserver", class: "btn-aloha" %>
       <% end %>
+        </div>
     </div>
   </div>
 </div>

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180327121926) do
+ActiveRecord::Schema.define(version: 20180415184938) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -24,6 +24,9 @@ ActiveRecord::Schema.define(version: 20180327121926) do
     t.datetime "updated_at", null: false
     t.bigint "profile_id"
     t.bigint "deal_id"
+    t.integer "price_cents", default: 0, null: false
+    t.integer "nb_people"
+    t.string "sku"
     t.index ["deal_id"], name: "index_bookings_on_deal_id"
     t.index ["profile_id"], name: "index_bookings_on_profile_id"
   end
@@ -47,6 +50,18 @@ ActiveRecord::Schema.define(version: 20180327121926) do
     t.float "latitude"
     t.float "longitude"
     t.index ["profile_id"], name: "index_deals_on_profile_id"
+  end
+
+  create_table "orders", force: :cascade do |t|
+    t.string "state"
+    t.string "booking_sku"
+    t.integer "amount_cents", default: 0, null: false
+    t.jsonb "payment"
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "bookid"
+    t.index ["user_id"], name: "index_orders_on_user_id"
   end
 
   create_table "profiles", force: :cascade do |t|
@@ -84,5 +99,6 @@ ActiveRecord::Schema.define(version: 20180327121926) do
   add_foreign_key "bookings", "deals"
   add_foreign_key "bookings", "profiles"
   add_foreign_key "deals", "profiles"
+  add_foreign_key "orders", "users"
   add_foreign_key "profiles", "users"
 end

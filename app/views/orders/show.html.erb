@@ -1,0 +1,10 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 text-center">
+      <h1>Commande</h1>
+      <h2><%= @order.booking_sku %></h2>
+      <h3>Montant <%= humanized_money_with_symbol(@order.amount) %></h3>
+      <h4><%= @order.state %></h4>
+    </div>
+  </div>
+</div>
