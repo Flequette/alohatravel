@@ -19,9 +19,13 @@ class BookingsController < ApplicationController
     @booking = Booking.new(booking_params)
     @booking.profile = current_user.profile
     @booking.deal = @deal
+    @booking.price_cents = @booking.deal.price * @booking.nb_people
+    @booking.status = "En attente de validation"
+    @booking.sku = @deal.name
 
     if @booking.save
       redirect_to root_path
+      flash[:alert] = "Votre demande a bien été prise en compte"
     else
       render :new
     end
@@ -69,7 +73,7 @@ class BookingsController < ApplicationController
   private
 
   def booking_params
-    params.require(:booking).permit(:start_date, :end_date, :status, :message, :deal_id)
+    params.require(:booking).permit(:start_date, :end_date, :status, :message, :deal_id, :nb_people, :sku)
   end
 
   def set_availability

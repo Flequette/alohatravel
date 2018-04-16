@@ -19,9 +19,6 @@
           <% end %>
         </div>
       <% end %>
-    <% elsif current_user.profile.id == @deal.profile_id %>
-      <h3 class="text-center">Aucune disponibilité</h3>
-      <h4><%= link_to "Ajouter", new_deal_booking_path(@deal) %></h4>
     <% else %>
       <h3 class="text-center">Aucune disponibilité</h3>
     <% end %>
