@@ -5,7 +5,7 @@
         <div class="form">
           <p><%= f.input :name, class: "form-control" %></p>
           <p><%= f.input :description, class: "form-control" %></p>
-          <p><%= f.input :address, class: "form-control" %></p>
+          <p><%= f.input :address, class: "form-control", :input_html =>{:id => 'address'} %></p>
           <p><%= f.input :city, class: "form-control" %></p>
           <p><%= f.input :zip_code, class: "form-control" %></p>
           <p><%= f.input :inhabitant, class: "form-control" %></p>

@@ -2,7 +2,7 @@
 <div class="row">
     <div class="col-xs-12 text-center">
       <%= form_tag result_path, id: "address_input", method: :get, autocomplete: 'on' do %>
-        <%= text_field_tag :location, params[:location], {id: 'gmaps-input-address', class: "namanyay-search-box", placeholder: 'Localisation', :required => true} %>
+        <%= text_field_tag :location, params[:location], {id: 'address', class: "namanyay-search-box", placeholder: 'Localisation', :required => true} %>
         <%= select_tag(:activity, options_for_select([ ['Culture', "Culture"], ['Nature', "Nature"], ['Nautique', "Nautique"], ['Hivernale', "Hivernale"], ['Aérienne', "Aérienne"]]),
          {class: "namanyay-search-box-type", :prompt => "Activité", :required => true})  %>
         <%= submit_tag "Trouver", id: "namanyay-search-btn" %>
