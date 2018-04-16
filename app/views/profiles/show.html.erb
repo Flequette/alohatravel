@@ -6,7 +6,7 @@
   </div>
   <div class="showprofile-content text-center">
     <% if current_user.profile == @profile %>
-      <h3>MON PROFIL</h3> <%= link_to "| Edit", edit_profile_path(@profile) %>
+      <h3>MON PROFIL</h3> <%= link_to "| Modifier", edit_profile_path(@profile) %>
     <% else %>
       <h3>PROFIL</h3>
     <% end %>
