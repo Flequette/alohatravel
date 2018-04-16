@@ -20,8 +20,12 @@ class DealsController < ApplicationController
   end
 
   def my_deals
-    @deals = Deal.where(profile_id: current_user.profile.id)
-    @bookings = Booking.where(profile_id: current_user.profile.id)
+    if current_user.profile.present?
+      @deals = Deal.where(profile_id: current_user.profile.id)
+      @bookings = Booking.where(profile_id: current_user.profile.id)
+    else
+      redirect_to new_profile_path
+    end
   end
 
   def new
@@ -33,17 +37,25 @@ class DealsController < ApplicationController
   end
 
   def create
-    @location = request.location
     @deal = Deal.new(deal_params)
     @deal.profile = current_user.profile
-
-    distance = Geocoder::Calculations.distance_between(@location.coordinates, [@deal.latitude, @deal.longitude])
+    location = Geocoder.coordinates(@deal.profile.city)
+    sleep 1
+    distance = Geocoder::Calculations.distance_between(location, Geocoder.coordinates(@deal.address))
+    sleep 1
+    puts "ADRESSSE PROFILE"
+    puts location
+    puts "ADRESSE DEAL"
+    puts Geocoder.coordinates(@deal.address)
+    puts "DISTANCE"
     puts distance
-    # A IMPLEMENTER QUAND TOUT FINI
 
-    if @deal.save
+
+    if distance <= 100
+      @deal.save
       redirect_to deal_path(@deal)
     else
+      flash[:alert] = "Vous devez vivre à moins de 100km du lieu de votre tour pour pouvoir le proposer"
       render :new
     end
   end
@@ -57,15 +69,21 @@ class DealsController < ApplicationController
   def update
     @deal.update(deal_params)
 
-    @location = request.location
-    distance = Geocoder::Calculations.distance_between(@location.coordinates, [@deal.latitude, @deal.longitude])
+    location = Geocoder.coordinates(@deal.profile.city)
+    sleep 1
+    distance = Geocoder::Calculations.distance_between(location, Geocoder.coordinates(@deal.address))
+    sleep 1
+    puts "ADRESSSE PROFILE"
+    puts location
+    puts "ADRESSE DEAL"
+    puts Geocoder.coordinates(@deal.address)
+    puts "DISTANCE"
     puts distance
 
-
-    if @deal.update(deal_params)
+    if @deal.update(deal_params) && distance <= 100
       redirect_to deal_path(@deal)
     else
-      flash[:alert] = "You must be at 50km of the deal address, Please change your deal location or be closer"
+      flash[:alert] = "Vous devez vivre à moins de 100km du lieu de votre tour pour pouvoir le proposer"
       render :new
     end
   end
