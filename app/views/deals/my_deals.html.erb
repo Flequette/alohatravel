@@ -6,9 +6,9 @@
 
 <div class="container">
   <div class="row">
-    <div class="col-xs-12">
+    <div class="col-xs-12 col-sm-6">
       <% @deals.each do |d| %>
-        <h3><%= d.name %></h3>
+        <h2><%= d.name %></h2>
         <h4><%= d.city %>, <%= d.country %></h4>
         <h5><%= link_to "Modifier", edit_deal_path(d) %></h5>
         <h3>Demandes de réservation:</h3>
@@ -33,7 +33,7 @@
 <div class="container">
   <div class="row">
     <div class="col-xs-12">
-      <h2>Vos réservations</h2>
+      <h2>Vos réservations:</h2>
       <% @bookings.each do |booking| %>
         <h3><%= booking.deal.name%></h3>
         <h4>Le <%= booking.start_date.strftime("%A %d %B %Y") %></h4>
