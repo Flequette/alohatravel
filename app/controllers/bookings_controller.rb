@@ -24,7 +24,7 @@ class BookingsController < ApplicationController
     @booking.sku = @deal.name
 
     if @booking.save
-      redirect_to root_path
+      redirect_to deal_path(@deal)
       flash[:alert] = "Votre demande a bien été prise en compte"
     else
       render :new

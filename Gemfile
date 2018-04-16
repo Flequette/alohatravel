@@ -23,6 +23,10 @@ gem "geocoder"
 gem 'country_select'
 gem 'money-rails'
 gem 'stripe'
+gem 'simple_form_autocomplete'
+
+gem 'jquery-rails'
+
 
 group :development do
   gem 'web-console', '>= 3.3.0'
