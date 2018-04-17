@@ -1,17 +1,49 @@
+.main-container {
+  display: flex;
+}
+
+#map {
+  flex: 0 0 450px;
+  height: 100vh;
+  position: sticky !important; /* !important to override Gmaps inline CSS */
+  top: 0 !important;
+}
+
 .deal-card {
   height: 320px;
   width: 350px;
   background-size: cover !important;
   background-position: center;
-  margin: 20px 20px;
+  margin-top: 30px;
+  margin-left: 20px;
 }
 
 .deal-card-photo {
-  border-radius: 2px;
+  border-radius: 3px;
 }
 
 .deal-card-desc {
   position: relative;
+}
+
+.deal-card-title {
+  position: absolute;
+  left: 70px;
+  color: #404040;
+  font-size: 14px;
+  opacity: 0.8;
+  font-weight: lighter;
+  word-spacing: 2px;
+  letter-spacing: 2px;
+  margin-top: 10px;
+}
+
+.deal-card-name {
+  position: absolute;
+  left: 70px;
+  top: 30px;
+  color: #404040;
+  font-size: 16px;
 }
 
 .deal-card-user {
@@ -20,31 +52,6 @@
   width: 50px;
   border-radius: 50%;
   top: 15px;
-}
-
-.deal-card-title {
-  position: absolute;
-  left: 80px;
-  color: #404040;
-}
-
-.deal-card-title h2 {
-  font-size: 16px;
-}
-
-.deal-card-title p {
-  font-size: 12px;
-  opacity: 0.8;
-  font-weight: lighter;
-}
-
-.deal-card-price {
-  position: absolute;
-  left: 80px;
-  color: #404040;
-  font-size: 12px;
-  opacity: 0.8;
-  font-weight: lighter;
 }
 
 .deal-card-link {
@@ -59,15 +66,4 @@
 }
 .deal-card-link:hover {
   opacity: 0.1;
-}
-#map {
-    z-index: 1;
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    padding: 0px;
-    border-width: 0px;
-    margin: 0px;
-    left: 0px;
-    top: 0px;
 }

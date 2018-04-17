@@ -1,111 +1,105 @@
 <div class="newdeal-banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('<%=image_path "banner.jpg" %>');">
   <div class="newdeal-content text-center">
-    <h3>Vos Aloha Tours</h3>
+    <h3>Mon Dashboard</h3>
   </div>
 </div>
 
-
 <div class="container">
   <div class="row">
-
-    <div class="tabs col-xs-12 col-sm-12 col-sm-offset-3">
-      <a class="tab" onclick="myFunction()"><h3>Mes Tours</h3></a>
-      <a class="tab" onclick="myFunction2()"><h3>Mes réservations</h3></a>
+    <div class="col-xs-12 col-md-8 col-md-offset-4">
+      <div class="tabs">
+        <a class="tab" onclick="myFunction()"><p>Mes Tours</p></a>
+        <a class="tab" onclick="myFunction2()"><p>Mes réservations</p></a>
+      </div>
     </div>
+  </div>
 
-    <div id="tours" class="tab" style="background: #F4F4F4;">
-      <% @deals.each do |deal| %>
-      <%= link_to deal_path(deal) do %>
-      <div class="col-xs-12 col-sm-6">
-        <div class="deal-card">
-          <div class="deal-card-photo text-center">
-            <% if deal.photo.present? %>
-            <%= cl_image_tag deal.photo, height: 350, width: 400, crop: :fill %>
-            <% else %>
-            <%= image_tag("no_photo.png", height: 350, width: 400) %>
+  <div class="row">
+    <div id="tours" class="tab" style="background: white;">
+      <div class="row">
+        <% @deals.each do |deal| %>
+          <div class="col-xs-12 col-md-6 col-lg-6">
+            <%= link_to deal_path(deal) do %>
+              <div class="deal-card">
+                <div class="deal-card-photo text-center">
+                  <%= cl_image_tag deal.photo, height: 250, width: 350, crop: :fill %>
+                </div>
+                <div class="deal-card-desc">
+                  <div class="deal-card-title">
+                    <p><%= deal.city %>, <%= deal.country%> | <%= deal.price%> €</p>
+                  </div>
+                  <div class="deal-card-name">
+                    <p><%= deal.name %></p>
+                  </div>
+                  <% if deal.profile.photo.present? %>
+                    <%= cl_image_tag deal.profile.photo, class: "deal-card-user" %>
+                  <% else %>
+                    <img class="deal-card-user" src="https://kitt.lewagon.com/placeholder/users/tgenaitay">
+                  <% end %>
+                </div>
+              </div>
             <% end %>
           </div>
-          <div class="deal-card-description">
-            <h2><%= deal.name %></h2>
-            <p><%= deal.city %>, <%= deal.country%> </p>
-          </div>
-          <% if deal.profile.photo.present? %>
-          <%= cl_image_tag deal.profile.photo, class: "deal-card-user" %>
-          <% else %>
-          <img class="deal-card-user" src="https://kitt.lewagon.com/placeholder/users/tgenaitay">
-          <% end %>
-        </div>
+        <% end %>
       </div>
-      <% end %>
-      <% end %>
     </div>
+  </div>
 
+  <div class="row">
     <div id="reservation" class="tab" style="display: none; background: #F4F4F4;">
       <% @bookings.each do |booking| %>
-      <div class="col-xs-12">
-        <div class="message">
-          <% if booking.deal.profile.photo.present? %>
-          <%= cl_image_tag booking.deal.profile.photo, class: "avatar-large" %>
-          <% else %>
-          <%= image_tag "http://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar-large" %>
-          <% end %>
-          <div class="message-name">
-            <h3><%= booking.deal.profile.first_name %> <%= booking.deal.profile.last_name %></h3>
-            <p><%= booking.start_date.strftime(" %d/%m/%y") %></p>
-          </div>
-          <div class="message-body">
-            <p><strong><%= booking.deal.name %></strong></p>
-            <p>
-              <%= booking.message %>
-            </p>
-          </div>
-          <div class="message-status">
-            <p class="status pending"><%= booking.status %></p>
-            <p class="price"><%= booking.price_cents %> €</p>
-            <% if booking.status == "En attente de paiement" %>
-            <%= form_tag orders_path do %>
-            <%= hidden_field_tag 'booking_id', booking.id %>
-            <%= submit_tag 'Payer', class: 'btn btn-primary' %>
+        <div class="col-xs-12">
+          <div class="message">
+            <% if booking.deal.profile.photo.present? %>
+              <%= cl_image_tag booking.deal.profile.photo, class: "avatar-large" %>
+            <% else %>
+              <%= image_tag "http://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar-large" %>
             <% end %>
-            <% end %>
+            <div class="message-name">
+              <h3><%= booking.deal.profile.first_name %> <%= booking.deal.profile.last_name %></h3>
+              <p><%= booking.start_date.strftime(" %d/%m/%y") %></p>
+            </div>
+            <div class="message-body">
+              <p><strong><%= booking.deal.name %></strong></p>
+              <p>
+                <%= booking.message %>
+              </p>
+            </div>
+            <div class="message-status">
+              <p class="status pending"><%= booking.status %></p>
+              <p class="price"><%= booking.price_cents %> €</p>
+              <% if booking.status == "En attente de paiement" %>
+                <%= form_tag orders_path do %>
+                  <%= hidden_field_tag 'booking_id', booking.id %>
+                  <%= submit_tag 'Payer', class: 'btn btn-primary' %>
+                <% end %>
+              <% end %>
+            </div>
           </div>
         </div>
-      </div>
       <% end %>
     </div>
-
-    <script>
-    function myFunction() {
-      var x = document.getElementById('tours');
-      var y = document.getElementById('reservation');
-      if (x.style.display === 'none') {
-        x.style.display = 'block';
-        y.style.display = 'none';
-      }
-    }
-    </script>
-
-    <script>
-    function myFunction2() {
-      var x = document.getElementById('reservation');
-      var y = document.getElementById('tours');
-      if (x.style.display === 'none') {
-        x.style.display = 'block';
-        y.style.display = 'none';
-      }
-    }
-    </script>
-
-</div>
-
-<div class="row">
-
-</div>
-
-</div>
-
-<div class="container">
-  <div class="row">
-
   </div>
+
+  <script>
+  function myFunction() {
+    var x = document.getElementById('tours');
+    var y = document.getElementById('reservation');
+    if (x.style.display === 'none') {
+      x.style.display = 'block';
+      y.style.display = 'none';
+    }
+  }
+  </script>
+
+  <script>
+  function myFunction2() {
+    var x = document.getElementById('reservation');
+    var y = document.getElementById('tours');
+    if (x.style.display === 'none') {
+      x.style.display = 'block';
+      y.style.display = 'none';
+    }
+  }
+  </script>
 </div>
