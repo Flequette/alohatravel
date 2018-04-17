@@ -4,13 +4,47 @@
   </div>
 </div>
 
-<%= render "shared/cards_deal" %>
-<div
-  id="map"
-  style="width: 100%;
-  height: 600px;"
-  data-markers="<%= @markers.to_json %>"
-></div>
+
+<div class="row">
+  <div class="col-xs-6 col-md-8 col-lg-8 ">
+  <!-- Cards Deal -->
+    <div class="row">
+      <% @deals.each do |deal| %>
+        <div class="col-xs-12 col-md-6 col-lg-6 ">
+          <%= link_to deal_path(deal) do %>
+            <div class="deal-card">
+              <div class="deal-card-photo text-center">
+                <%= cl_image_tag deal.photo, height: 250, width: 350, crop: :fill %>
+              </div>
+              <div class="deal-card-desc">
+                <div class="deal-card-title">
+                  <h2><%= deal.name %></h2>
+                  <p><%= deal.city %>, <%= deal.country%></p>
+                </div>
+                <div class="deal-card-price">
+                  <p><%= deal.price%>€</p>
+                </div>
+
+                <% if deal.profile.photo.present? %>
+                  <%= cl_image_tag deal.profile.photo, class: "deal-card-user" %>
+                <% else %>
+                  <img class="deal-card-user" src="https://kitt.lewagon.com/placeholder/users/tgenaitay">
+                <% end %>
+              </div>
+            </div>
+          <% end %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+
+  <div class="col-xs-6 col-md-4 col-lg-4 ">
+  <!-- Maps -->
+    <div id="map" style="width: 100%; height: 700px;" data-markers="<%= @markers.to_json %>"></div>
+  </div>
+</div>
+
+
 
 <!-- Joinus bloc -->
 <%= render "shared/joinus" %>
