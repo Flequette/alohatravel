@@ -3,10 +3,10 @@
     <div class="searchbar">
       <div class="col-xs-12 text-center">
         <%= form_tag result_path, id: "address_input", method: :get, autocomplete: 'on' do %>
-          <%= text_field_tag :location, params[:location], {id: 'address', class: "namanyay-search-box", placeholder: 'Localisation', :required => true} %>
+          <%= text_field_tag :location, params[:location], {id: 'address', class: "namanyay-search-box", placeholder: 'Quelle est votre destination?', :required => true} %>
           <%= select_tag(:activity, options_for_select([ ['Culture', "Culture"], ['Nature', "Nature"], ['Nautique', "Nautique"], ['Hivernale', "Hivernale"], ['Aérienne', "Aérienne"]]),
            {class: "namanyay-search-box-type", :prompt => "Activité"})  %>
-          <%= submit_tag "Trouver", id: "namanyay-search-btn" %>
+          <%= submit_tag "Trouver", class: "btn-aloha" %>
         <% end %>
       </div>
     </div>
