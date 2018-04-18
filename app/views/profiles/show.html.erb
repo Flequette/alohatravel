@@ -13,100 +13,101 @@
   </div>
 </div>
 
-<!-- Resume bloc -->
-<div class="resume">
-  <div class="row">
-    <div class="col-xs-12 col-sm-4 col-md-2 col-md-offset-2">
-      <div class="resume-avatar text-center">
-        <div class="row">
-          <% if @profile.photo.present? %>
-            <%= cl_image_tag @profile.photo, class: "resume-card-user" %>
-          <% else %>
-              <img class="resume-card-user" src="https://kitt.lewagon.com/placeholder/users/tgenaitay">
-          <% end %>
-        </div>
-        <div class="row">
-          <div class="resume-content">
-            <p><%= @profile.first_name %></p>
+<div class="container">
+  <!-- Resume bloc -->
+  <div class="resume">
+    <div class="row">
+      <div class="col-xs-12 col-sm-4 col-md-2 col-md-offset-2">
+        <div class="resume-avatar text-center">
+          <div class="row">
+            <% if @profile.photo.present? %>
+              <%= cl_image_tag @profile.photo, class: "resume-card-user" %>
+            <% else %>
+                <img class="resume-card-user" src="https://kitt.lewagon.com/placeholder/users/tgenaitay">
+            <% end %>
           </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-xs-12 col-sm-8 col-md-6">
-      <div class="resume-infos">
-        <div class="row">
-          <div class="resume-content text-left">
-              <%=image_tag 'flaticon/geoloc2.png', width:20, height:20  %>
-              <strong><%= @profile.city %>, <%= @profile.country %></strong>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="resume-icon text-center">
-            <div class="col-xs-4 col-sm-3 col-md-3">
-              <%=image_tag 'activity_type/travel.png', width:40, height:40  %>
-              <p>2 Voyages</p>
-            </div>
-          </div>
-
-          <div class="resume-icon text-center">
-            <div class="col-xs-4 col-sm-3 col-md-3">
-              <%=image_tag 'activity_type/camping.png', width:40, height:40  %>
-              <p>3 Bons Plans</p>
+          <div class="row">
+            <div class="resume-content">
+              <p><%= @profile.first_name %></p>
             </div>
           </div>
         </div>
+      </div>
 
+      <div class="col-xs-12 col-sm-8 col-md-6">
+        <div class="resume-infos">
+          <div class="row">
+            <div class="resume-content text-left">
+                <%=image_tag 'flaticon/geoloc2.png', width:20, height:20  %>
+                <strong><%= @profile.city %>, <%= @profile.country %></strong>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="resume-icon text-center">
+              <div class="col-xs-4 col-sm-3 col-md-3">
+                <%=image_tag 'activity_type/travel.png', width:40, height:40  %>
+                <p>2 Voyages</p>
+              </div>
+            </div>
+
+            <div class="resume-icon text-center">
+              <div class="col-xs-4 col-sm-3 col-md-3">
+                <%=image_tag 'activity_type/camping.png', width:40, height:40  %>
+                <p>3 Bons Plans</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
       </div>
     </div>
   </div>
-</div>
 
-<!-- Description bloc -->
-<div class="description">
-  <div class="row">
-    <div class="col-xs-12 col-sm-4 col-md-2 col-md-offset-1">
-      <div class="desc-title">
-        <h5>Qui suis-je?</h5>
+  <!-- Description bloc -->
+  <div class="description">
+    <div class="row">
+      <div class="col-xs-12 col-sm-4 col-md-2 col-md-offset-1">
+        <div class="desc-title">
+          <h5>Qui suis-je?</h5>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-8 col-md-8">
+        <div class="desc-content">
+          <p><%= @profile.description %></p>
+        </div>
       </div>
     </div>
-    <div class="col-xs-12 col-sm-8 col-md-8">
-      <div class="desc-content">
-        <p><%= @profile.description %></p>
+    <hr>
+
+    <div class="row">
+      <div class="col-xs-12 col-sm-4 col-md-2 col-md-offset-1"">
+        <div class="desc-title">
+          <h5>Langues</h5>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-8 col-md-8">
+        <div class="desc-content">
+          <p>Français, Espagnol, Anglais</p>
+        </div>
       </div>
     </div>
+    <hr>
+
+    <div class="row">
+      <div class="col-xs-12 col-sm-4 col-md-2 col-md-offset-1"">
+        <div class="desc-title">
+          <h5>Ville</h5>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-8 col-md-8">
+        <div class="desc-content">
+          <p><%= @profile.city %>, <%= @profile.country %></p>
+        </div>
+      </div>
+    </div>
+    <hr>
   </div>
-  <hr>
-
-  <div class="row">
-    <div class="col-xs-12 col-sm-4 col-md-2 col-md-offset-1"">
-      <div class="desc-title">
-        <h5>Langues</h5>
-      </div>
-    </div>
-    <div class="col-xs-12 col-sm-8 col-md-8">
-      <div class="desc-content">
-        <p>Français, Espagnol, Anglais</p>
-      </div>
-    </div>
-  </div>
-  <hr>
-
-  <div class="row">
-    <div class="col-xs-12 col-sm-4 col-md-2 col-md-offset-1"">
-      <div class="desc-title">
-        <h5>Ville</h5>
-      </div>
-    </div>
-    <div class="col-xs-12 col-sm-8 col-md-8">
-      <div class="desc-content">
-        <p><%= @profile.city %>, <%= @profile.country %></p>
-      </div>
-    </div>
-  </div>
-  <hr>
-
 </div>
 
 <!-- Joinus bloc -->

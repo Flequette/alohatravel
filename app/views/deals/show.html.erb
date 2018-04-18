@@ -6,181 +6,189 @@
   </div>
   <div class="showdeal-content text-center">
     <% if @deal.profile == current_user.profile %>
-      <h3><%= @deal.name %> <%= link_to "Modifier", edit_deal_path(@deal) %> | <%= link_to "Suprimer", deal_path(@deal), method: :delete %></h3>
-      <h3><%= link_to "Modifier les disponibilités", deal_bookings_path(@deal) %></h3>
+      <p><%= link_to "Modifier", edit_deal_path(@deal) %> | <%= link_to "Suprimer", deal_path(@deal), method: :delete %> | <%= link_to "Modifier les disponibilités", deal_bookings_path(@deal) %></p>
+      <h3><%= @deal.name.capitalize %></h3>
     <% else %>
-      <h3><%= @deal.name %></h3>
+      <h3><%= @deal.name.capitalize %></h3>
     <% end %>
   </div>
 </div>
 
+<div class="container">
 
-<!-- Resume bloc -->
-<div class="resume">
   <div class="row">
-    <div class="col-xs-12 col-sm-4 col-md-2">
-      <div class="resume-avatar text-center">
-        <div class="row">
-          <% if @deal.profile.photo.present? %>
-            <%= cl_image_tag @deal.profile.photo, class: "resume-card-user" %>
-          <% else %>
-              <img class="resume-card-user" src="https://kitt.lewagon.com/placeholder/users/tgenaitay">
-          <% end %>
+  <!-- Resume bloc -->
+    <div class="col-xs-12 col-sm-6 col-md-8 ">
+      <!-- Sous bloc Resume-->
+      <div class="row">
+        <div class="col-xs-12 col-sm-4 col-md-2 col-md-offset-2">
+          <div class="resume-avatar text-center">
+            <div class="row">
+              <% if @deal.profile.photo.present? %>
+                <%= cl_image_tag @deal.profile.photo, class: "resume-card-user" %>
+              <% else %>
+                  <img class="resume-card-user" src="https://kitt.lewagon.com/placeholder/users/tgenaitay">
+              <% end %>
+            </div>
+            <div class="row">
+              <div class="resume-content">
+                <p><%= @deal.profile.first_name.capitalize %></p>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="row">
-          <div class="resume-content">
-            <p><%= @deal.profile.first_name %></p>
+
+        <div class="col-xs-12 col-sm-8 col-md-6">
+          <div class="resume-infos">
+            <div class="row">
+              <div class="resume-content text-left">
+                  <%=image_tag 'flaticon/geoloc2.png', width:20, height:20  %>
+                  <strong><%= @deal.city.capitalize %>, <%= @deal.country.capitalize %></strong>
+              </div>
+            </div>
+            <div class="row">
+              <div class="resume-icon text-center">
+                <div class="col-xs-4 col-sm-3 col-md-3">
+                  <%=image_tag 'activity_type/nature.png', width:40, height:40  %>
+                  <p><%= @deal.activity_type.capitalize %></p>
+                </div>
+              </div>
+              <div class="resume-icon text-center">
+                <div class="col-xs-4 col-sm-3 col-md-3">
+                  <%=image_tag 'activity_type/time.png', width:40, height:40  %>
+                  <p><%= @deal.time %></p>
+                </div>
+              </div>
+              <div class="resume-icon text-center">
+                <div class="col-xs-4 col-sm-3 col-md-3">
+                  <%=image_tag 'flaticon/bank.png', width:40, height:40  %>
+                  <p><%= @deal.price %>€/pers</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sous bloc Description -->
+      <div class="row">
+        <div class="description">
+          <div class="row">
+            <div class="col-xs-12 col-sm-4 col-md-2 col-md-offset-1">
+              <div class="desc-title">
+                <h5>Description</h5>
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-8 col-md-8">
+              <div class="desc-content">
+                <p><%= @deal.description %></p>
+              </div>
+            </div>
+          </div>
+          <hr>
+
+          <div class="row">
+            <div class="col-xs-12 col-sm-4 col-md-2 col-md-offset-1">
+              <div class="desc-title">
+                <h5>Activité</h5>
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-8 col-md-8">
+              <div class="desc-content">
+                <p><%= @deal.activity_type %></p>
+              </div>
+            </div>
+          </div>
+          <hr>
+
+          <div class="row">
+            <div class="col-xs-12 col-sm-4 col-md-2 col-md-offset-1">
+              <div class="desc-title">
+                <h5>Tips</h5>
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-8 col-md-8">
+              <div class="desc-content">
+                <p>N'oublie pas de prendre de l'eau</p>
+              </div>
+            </div>
+          </div>
+          <hr>
+
+          <div class="row">
+            <div class="col-xs-12 col-sm-4 col-md-2 col-md-offset-1">
+              <div class="desc-title">
+                <h5>Le prix inclut</h5>
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-8 col-md-8">
+              <div class="desc-content">
+                <ul class="list_ok">
+                  <li>Les repas</li>
+                  <li>Les 2 nuits</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <hr>
+
+          <div class="row">
+            <div class="col-xs-12 col-sm-4 col-md-2 col-md-offset-1">
+              <div class="desc-title">
+                <h5>Ville</h5>
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-8 col-md-8">
+              <div class="desc-content">
+                <p><%= @deal.city %>, <%= @deal.country %></p>
+              </div>
+            </div>
+          </div>
+          <hr>
+
+          <div class="row">
+            <div class="col-xs-12 col-sm-4 col-md-2 col-md-offset-1">
+              <div class="desc-title">
+                <h5>Prix</h5>
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-8 col-md-8">
+              <div class="desc-content">
+                <p><%= @deal.price %>€/pers</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
 
-    <div class="col-xs-12 col-sm-8 col-md-6">
-      <div class="resume-infos">
-        <div class="row">
-          <div class="resume-content text-left">
-              <%=image_tag 'flaticon/geoloc2.png', width:20, height:20  %>
-              <strong><%= @deal.city %>, <%= @deal.country %></strong>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="resume-icon text-center">
-            <div class="col-xs-4 col-sm-3 col-md-2">
-              <%=image_tag 'activity_type/nature.png', width:40, height:40  %>
-              <p><%= @deal.activity_type %></p>
-            </div>
-          </div>
-
-          <div class="resume-icon text-center">
-            <div class="col-xs-4 col-sm-3 col-md-2">
-              <%=image_tag 'activity_type/time.png', width:40, height:40  %>
-              <p><%= @deal.time %>H</p>
-            </div>
-          </div>
-
-          <div class="resume-icon text-center">
-            <div class="col-xs-4 col-sm-3 col-md-2">
-              <%=image_tag 'activity_type/money.png', width:40, height:40  %>
-              <p><%= @deal.price %>€/pers</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-xs-12 col-sm-4">
+  <!-- Réservation bloc -->
+    <div class="col-xs-12 col-sm-6 col-md-4">
       <%= simple_form_for @booking,  url: deal_bookings_path(@deal.id) do |f| %>
         <div class="form">
           <p><%= f.input :start_date, order: [:day, :month, :year], class: "form-control" %></p>
           <p><%= f.input :nb_people, class: "form-control" %></p>
           <p><%= f.input :message, class: "form-control" %></p>
           <%= f.submit "Réserver", class: "btn-aloha" %>
+        </div>
       <% end %>
-        </div>
     </div>
+  </div>
 
-    <!-- Description bloc -->
-    <div class="description">
-      <div class="row">
-        <div class="col-xs-12 col-sm-4 col-md-2 col-md-offset-1">
-          <div class="desc-title">
-            <h5>Description</h5>
-          </div>
+  <!-- Photo insta bloc -->
+  <div class="row">
+    <div class="col-xs-12 col-md-6 col-lg-6 col-lg-offset-4">
+      <div class="desc-card">
+        <div class="desc-card-photo text-center">
+          <%= cl_image_tag @deal.photo, height: 350, width: 400, crop: :fill %>
         </div>
-        <div class="col-xs-12 col-sm-8 col-md-8">
-          <div class="desc-content">
-            <p><%= @deal.description %></p>
-          </div>
-        </div>
-      </div>
-      <hr>
-
-      <div class="row">
-        <div class="col-xs-12 col-sm-4 col-md-2 col-md-offset-1">
-          <div class="desc-title">
-            <h5>Activité</h5>
-          </div>
-        </div>
-        <div class="col-xs-12 col-sm-8 col-md-8">
-          <div class="desc-content">
-            <p><%= @deal.activity_type %></p>
-          </div>
-        </div>
-      </div>
-      <hr>
-
-      <div class="row">
-        <div class="col-xs-12 col-sm-4 col-md-2 col-md-offset-1">
-          <div class="desc-title">
-            <h5>Tips</h5>
-          </div>
-        </div>
-        <div class="col-xs-12 col-sm-8 col-md-8">
-          <div class="desc-content">
-            <p>N'oublie pas de prendre de l'eau</p>
-          </div>
-        </div>
-      </div>
-      <hr>
-
-      <div class="row">
-        <div class="col-xs-12 col-sm-4 col-md-2 col-md-offset-1">
-          <div class="desc-title">
-            <h5>Le prix inclut</h5>
-          </div>
-        </div>
-        <div class="col-xs-12 col-sm-8 col-md-8">
-          <div class="desc-content">
-            <ul class="list_ok">
-              <li>Les repas</li>
-              <li>Les 2 nuits</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <hr>
-
-      <div class="row">
-        <div class="col-xs-12 col-sm-4 col-md-2 col-md-offset-1">
-          <div class="desc-title">
-            <h5>Ville</h5>
-          </div>
-        </div>
-        <div class="col-xs-12 col-sm-8 col-md-8">
-          <div class="desc-content">
-            <p><%= @deal.city %>, <%= @deal.country %></p>
-          </div>
-        </div>
-      </div>
-      <hr>
-
-      <div class="row">
-        <div class="col-xs-12 col-sm-4 col-md-2 col-md-offset-1">
-          <div class="desc-title">
-            <h5>Prix</h5>
-          </div>
-        </div>
-        <div class="col-xs-12 col-sm-8 col-md-8">
-          <div class="desc-content">
-            <p><%= @deal.price %>€/pers</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-xs-12 col-md-6 col-lg-6 col-lg-offset-4">
-          <div class="desc-card">
-            <div class="desc-card-photo text-center">
-              <%= cl_image_tag @deal.photo, height: 350, width: 400, crop: :fill %>
-            </div>
-            <div class="desc-card-description text-center">
-              <h2>#alohatravel #<%= @deal.city %> #<%= @deal.country %> #<%= @deal.activity_type %> </h2>
-            </div>
-          </div>
+        <div class="desc-card-description text-center">
+          <h2>#alohatravel #<%= @deal.city %> #<%= @deal.country %> #<%= @deal.activity_type %> </h2>
         </div>
       </div>
     </div>
+  </div>
+
 </div>
 
 

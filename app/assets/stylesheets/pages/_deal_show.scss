@@ -30,8 +30,22 @@
   left: 150px;
 }
 
+.showdeal-content a {
+  text-decoration: none;
+  color: #F9F9F9;
+  opacity: 0.90;
+  font-size: 15px;
+  font-weight: lighter;
+  margin-bottom: 0px;
+}
+
+.showdeal-content a:hover {
+  opacity: 0.75;
+  color: #50E3C2;
+}
+
 .resume {
-  padding: 15px 50px;
+  padding: 20px 50px;
   background-color: white;
 }
 
@@ -65,7 +79,6 @@
 
 .description {
   padding: 50px 50px;
-  background-color: white;
 }
 
 .desc-title {

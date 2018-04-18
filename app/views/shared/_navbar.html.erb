@@ -10,9 +10,9 @@
     <% if user_signed_in? %>
 
       <!-- Links when logged in -->
-      <%= link_to "Ajouter un Aloha Tour", new_deal_path, class: "btn-aloha" %>
+      <%= link_to "Proposer une expérience", new_deal_path, class: "navbar-wagon-item navbar-wagon-link" %>
       <%= link_to "Tout voir", deals_path, class: "navbar-wagon-item navbar-wagon-link" %>
-      <%= link_to "Mes Aloha Tours", my_deals_path, class: "navbar-wagon-item navbar-wagon-link" %>
+      <%= link_to "PeetaGuide", my_deals_path(current_user.profile), class: "navbar-wagon-item navbar-wagon-link" %>
 
       <!-- Avatar with dropdown menu -->
       <div class="navbar-wagon-item">
@@ -33,8 +33,8 @@
             <% end %>
             </li>
             <li>
-              <%= link_to "#" do %>
-                <i class="fa fa-cog"></i>  <%= t(".settings", default: "Settings") %>
+              <%= link_to my_deals_path(current_user.profile) do %>
+                <i class="fa fa-cog"></i>  <%= t(".peetaGuide", default: "PeetaGuide") %>
               <% end %>
             </li>
             <li>

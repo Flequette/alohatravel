@@ -1,17 +1,17 @@
 Arguments: 
-  /usr/bin/node /usr/share/yarn/bin/yarn.js check --integrity
+  /usr/local/Cellar/node/9.9.0/bin/node /usr/local/Cellar/yarn/1.5.1_1/libexec/bin/yarn.js check --integrity
 
 PATH: 
-  /home/wako/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/bin:/home/wako/.rbenv/versions/2.3.5/bin:/home/wako/.rbenv/libexec:/home/wako/.rbenv/plugins/ruby-build/bin:./bin:/home/wako/.rbenv/shims:/home/wako/.rbenv/bin:/home/wako/bin:/home/wako/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+  /Users/florinelequette/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/bin:/Users/florinelequette/.rbenv/versions/2.3.5/bin:/usr/local/Cellar/rbenv/1.1.1/libexec:./bin:./node_modules/.bin:/Users/florinelequette/.rbenv/shims:/Users/florinelequette/.rbenv/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/sbin
 
 Yarn version: 
   1.5.1
 
 Node version: 
-  6.14.1
+  9.9.0
 
 Platform: 
-  linux x64
+  darwin x64
 
 npm manifest: 
   {
@@ -6106,9 +6106,9 @@ Lockfile:
 
 Trace: 
   Error: Found 1 errors.
-      at MessageError.Error (native)
-      at new MessageError (/usr/share/yarn/lib/cli.js:186:110)
-      at /usr/share/yarn/lib/cli.js:59470:13
-      at next (native)
-      at step (/usr/share/yarn/lib/cli.js:98:30)
-      at /usr/share/yarn/lib/cli.js:109:13
+      at new MessageError (/usr/local/Cellar/yarn/1.5.1_1/libexec/lib/cli.js:186:110)
+      at /usr/local/Cellar/yarn/1.5.1_1/libexec/lib/cli.js:59470:13
+      at Generator.next (<anonymous>)
+      at step (/usr/local/Cellar/yarn/1.5.1_1/libexec/lib/cli.js:98:30)
+      at /usr/local/Cellar/yarn/1.5.1_1/libexec/lib/cli.js:109:13
+      at <anonymous>
