@@ -56,8 +56,10 @@ p "creation deal"
       country_code: "855",
       zip_code: "1710",
       inhabitant: "Cambodgien",
-      activity_type: "Culture",
-      time: "1 jour",
+      activity_type: "Culturelle",
+      time: "1journée",
+      tips: "N'oubliez pas de prévoir de l'eau",
+      included: "Le repas du déjeuner",
       profile: profile
     )
 
@@ -103,6 +105,7 @@ p "creation test"
         end_date: Faker::Date.between(6.days.ago, 1.days.ago),
         status: "En cours",
         message: Faker::Seinfeld.quote,
+        nb_people: 2,
         profile: p,
         deal: c,
     )
