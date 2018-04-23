@@ -51,7 +51,7 @@ class DealsController < ApplicationController
     puts distance
 
 
-    if distance <= 100
+    if distance <= 200
       @deal.save
       redirect_to deal_path(@deal)
     else
