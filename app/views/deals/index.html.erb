@@ -4,21 +4,19 @@
   </div>
 </div>
 
-<div class="container-cards">
-    <div class="row">
-      <div class="col-xs-12 col-sm-6 col-md-8 ">
-        <!-- Cards Deal -->
-        <div class="container">
-          <%= render "shared/cards_deal" %>
-        </div>
-      </div>
 
-      <div class="col-xs-12 col-sm-6 col-md-4 ">
-        <!-- Maps -->
-        <div id="map" style="width: 100%; height: 700px;" data-markers="<%= @markers.to_json %>"></div>
-      </div>
-    </div>
+<div class="row">
+  <div class="col-xs-12 col-sm-6 col-md-8 ">
+    <!-- Cards Deal -->
+    <%= render "shared/cards_deal" %>
+  </div>
+
+  <div class="col-xs-12 col-sm-6 col-md-4 ">
+    <!-- Maps -->
+    <div id="map" style="width: 100%; height: 700px;" data-markers="<%= @markers.to_json %>"></div>
+  </div>
 </div>
+
 
 <!-- Joinus bloc -->
 <%= render "shared/joinus" %>
