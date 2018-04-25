@@ -1,0 +1,63 @@
+@import url(https://fonts.googleapis.com/css?family=Quicksand:400,300);
+body{
+    font-family: 'Quicksand', sans-serif;
+}
+
+.instagram {
+  padding: 30px 30px;
+}
+
+.instagram-icon {
+  padding-top: 15px;
+}
+
+.instagram-icon a {
+  color: #50E3C2;
+  text-decoration: none;
+}
+
+.instagram-icon a:hover {
+  opacity: 0.6;
+}
+
+.gal-container {
+  border-radius: 3px;
+}
+.gal-item{
+  overflow: hidden;
+  padding: 3px;
+}
+.gal-item .box{
+  height: 350px;
+  overflow: hidden;
+}
+.box img{
+  height: 100%;
+  width: 100%;
+  object-fit:cover;
+  -o-object-fit:cover;
+}
+.gal-item a:focus{
+  outline: none;
+}
+.gal-item a:after{
+  content:"\e003";
+  font-family: 'Glyphicons Halflings';
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+  position: absolute;
+  right: 3px;
+  left: 3px;
+  top: 3px;
+  bottom: 3px;
+  text-align: center;
+    line-height: 350px;
+    font-size: 30px;
+    color: #fff;
+    -webkit-transition: all 0.5s ease-in-out 0s;
+    -moz-transition: all 0.5s ease-in-out 0s;
+    transition: all 0.5s ease-in-out 0s;
+}
+.gal-item a:hover:after{
+  opacity: 1;
+}

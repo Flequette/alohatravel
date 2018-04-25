@@ -1,42 +1,48 @@
 // Specific CSS for your home-page
+
+.story-card {
+  border: 3px solid black;
+  padding: 30px 30px;
+  margin: 40px 20px;
+}
+.story-card h3 {
+  font-weight: regular;
+  margin-top:30px;
+}
+
 .value {
-  padding: 50px 30px;
-  background-color: white;
+  padding: 30px 30px;
 }
 
 .value-card {
-  margin: 0px 30px;
+  margin: 30px 30px;
 }
 
-.value-icon {
+.value-desc {
+  min-height: 18vh;
+}
+
+.value-pics {
   padding-bottom: 20px;
+  border-radius: 3px;
 }
 
 .value h4 {
-  font-size: 26px;
-  padding-bottom: 10px;
-  color: #50E3C2;
-  font-weight: lighter;
+  font-size: 24px;
+  font-weight: regular;
   letter-spacing: 1px;
+  box-shadow: inset 0 -10px 0 rgba(80,227,194,0.6);
+  border-bottom: 3px solid rgba(80,227,194,0.6)
+
 }
 
 .value p {
-  font-size: 16px;
-  font-weight: lighter;
-  letter-spacing: 1px;
+  font-size: 18px;
+  font-weight: regular;
 }
 
 .experience {
-  padding-top: 50px;
-  padding-bottom: 80px;
-  padding-right: 50px;
-  padding-left: 50px;
-  background-color: white;
-}
-
-.experience-title h4 {
-  font-size: 30px;
-  font-weight: lighter;
+  padding: 30px 30px;
 }
 
 .experience-icon {
@@ -50,27 +56,21 @@
   margin-right: 15px;
 }
 
-.experience h1 {
-  font-size: 60px;
-  color: #50E3C2;
-}
-
 .experience-content h4 {
-  font-size: 26px;
-  font-weight: lighter;
-  color: #50E3C2;
+  font-size: 24px;
+  font-weight: regular;
   letter-spacing: 1px;
+  box-shadow: inset 0 -10px 0 rgba(80,227,194,0.6);
+  border-bottom: 3px solid rgba(80,227,194,0.6)
 }
 
 .experience p {
   font-size: 18px;
-  font-weight: lighter;
-  letter-spacing: 1px;
+  font-weight: regular;
 }
 
 .review {
   padding: 30px 30px;
-  background-color: white;
 }
 
 .review-card {
@@ -81,17 +81,29 @@
 }
 
 .review-content {
-  font-size: 16px;
   margin: 10px 15px;
-  font-style: italic;
-  font-weight: lighter;
+  font-size: 16px;
+  font-weight: regular;
   letter-spacing: 1px;
+}
+
+.review-content h4 {
+  letter-spacing: 1px;
+  box-shadow: inset 0 -10px 0 rgba(80,227,194,0.6);
+  border-bottom: 3px solid rgba(80,227,194,0.6);
+  text-align: right;
+}
+
+.review-content p {
+  font-style: italic;
+  margin-bottom: 15px;
 }
 
 .review-avatar-large {
   width: 70px;
   border-radius: 50%;
   border: #50E3C2 1px solid;
+  margin-bottom: 15px;
 }
 
 .fb-like {

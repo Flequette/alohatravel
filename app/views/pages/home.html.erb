@@ -1,64 +1,68 @@
 <!-- Banner bloc -->
 <%= render "shared/banner" %>
 
-<!-- Product value bloc -->
-<div class="value text-center">
-  <div class="row text-center">
-    <div class="value-card">
-      <div class="col-xs-12 col-sm-6 col-md-4 ">
-        <div class="value-icon">
-          <%=image_tag 'flaticon/night-camping.png', width:100, height:100  %>
-        </div>
-        <h4>Vivez comme un local</h4>
-        <p>Laissez-vous guider par le savoir et les bons plans de votre PeetaGuide</p>
-      </div>
-    </div>
-
-    <div class="value-card">
-      <div class="col-xs-12 col-sm-6 col-md-4">
-        <div class="value-icon">
-          <%=image_tag 'flaticon/worldwide.png', width:100, height:100  %>
-        </div>
-        <h4>Appartenez à une communauté</h4>
-        <p>Profitez de cette grande communauté de Peetayers et partagez des moments uniques</p>
-      </div>
-    </div>
-
-    <div class="value-card">
-      <div class="col-xs-12 col-sm-6 col-md-4">
-        <div class="value-icon">
-          <%=image_tag 'flaticon/wallet.png', width:100, height:100  %>
-        </div>
-        <h4>Economisez autrement</h4>
-        <p>Gagnez du temps grâce à votre PeetaGuide qui vous fera découvrir tous les plans authentiques de sa ville</p>
+<!-- Story bloc -->
+<div class="story text-center">
+  <div class="row">
+    <div class="col-xs-12 col-sm-10 col-md-10 col-md-offset-1 ">
+      <div class="story-card text-center">
+        <h1>LE BEAU VOYAGE</h1>
+        <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus, repellat. Repellat fugit quia, iure magni quaerat perspiciatis a adipisci, atque consectetur explicabo velit, reprehenderit eum placeat! Quam rem, laborum et!</h3>
       </div>
     </div>
   </div>
 </div>
 
-<!-- Instagram bloc -->
-<%= render "shared/cards_instagram" %>
+<!-- Product value bloc -->
+<div class="value text-center">
+  <div class="row">
+    <div class="value-card">
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="value-desc">
+          <h4>Vivez comme un local</h4>
+          <p>Laissez-vous guider par le savoir et les bons plans de votre PeetaGuide</p>
+        </div>
+          <%=image_tag 'home/local.jpg', width:380, class: "value-pics" %>
+      </div>
+    </div>
 
-<!-- Experience bloc -->
-<div class="experience text-center">
-  <div class="experience-title">
-    <h4>Comment ça marche?</h4>
+    <div class="value-card">
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="value-desc">
+          <h4>Appartenez à une communauté</h4>
+          <p>Profitez de cette grande communauté de Peetayers et partagez des moments uniques</p>
+        </div>
+          <%=image_tag 'home/comunity3.jpg', width:380, class: "value-pics" %>
+      </div>
+    </div>
+
+    <div class="value-card">
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="value-desc">
+          <h4>Economisez autrement</h4>
+          <p>Gagnez du temps grâce à votre PeetaGuide qui vous fera découvrir tous les plans authentiques de sa ville</p>
+        </div>
+          <%=image_tag 'home/money.jpg', width:380, class: "value-pics" %>
+      </div>
+    </div>
   </div>
+</div>
+
+<%= render "shared/carousel" %>
+<!-- Experience bloc
+<div class="experience text-center">
+  <h1>COMMENT CA MARCHE?</h1>
 
   <div class="row">
-    <div class="experience-card text-right">
+    <div class="experience-card">
       <div class="col-xs-12 col-sm-5 col-md-6">
-        <div class="experience-nb ">
-          <h1>1</h1>
-        </div>
         <div class="experience-content">
-          <h4>Je cherche</h4>
+          <h4>1. Je cherche</h4>
           <p>Mon PeetaGuide en moins de 1 minute</p>
         </div>
       </div>
     </div>
-
-    <div class="experience-card text-left">
+    <div class="experience-card">
       <div class="col-xs-12 col-sm-5 col-md-6 offset-md-3">
         <div class="experience-icon">
           <%=image_tag 'experience/1.Profilebis.png', width:250 %>
@@ -67,7 +71,7 @@
     </div>
   </div>
 
-  <div class="row text-left">
+  <div class="row">
     <div class="experience-card">
       <div class="col-xs-12 col-sm-5 col-md-6 offset-md-3">
         <div class="experience-icon2 text-right">
@@ -75,14 +79,10 @@
         </div>
       </div>
     </div>
-
     <div class="experience-card">
       <div class="col-xs-12 col-sm-5 col-md-6 ">
-        <div class="experience-nb ">
-          <h1>2</h1>
-        </div>
         <div class="experience-content">
-          <h4>Je choisis</h4>
+          <h4>2. Je choisis</h4>
           <p>Le PeetaGuide de mon choix grâce au matching avec les tours qui me correspondent</p>
         </div>
       </div>
@@ -92,11 +92,8 @@
   <div class="row">
     <div class="experience-card text-right">
       <div class="col-xs-12 col-sm-5 col-md-6 ">
-        <div class="experience-nb">
-          <h1>3</h1>
-        </div>
         <div class="experience-content">
-          <h4>Je paye</h4>
+          <h4>3. Je paye</h4>
           <p>Directement via le site en quelques clics seulement.</p>
         </div>
       </div>
@@ -110,30 +107,22 @@
     </div>
   </div>
 
-</div>
+</div> -->
 
-<!-- Joinus bloc -->
-<%= render "shared/joinus" %>
+<!-- Instagram bloc -->
+<%= render "shared/instagram" %>
 
 <!-- Reviews bloc -->
 <div class="review text-center">
-  <div class="experience-title">
-    <h4>Ils parlent de nous</h4>
-  </div>
-  <div class="row text-center">
-    <div class="review-icon">
-      <%=image_tag 'flaticon/whatsup.png', height:30 %>
-      <%=image_tag 'flaticon/whatsup.png', height:30 %>
-      <%=image_tag 'flaticon/whatsup.png', height:30 %>
-    </div>
+  <h1>DEJA CONVAINVUS</h1>
 
-  </div>
   <div class="row text-center">
     <div class="review-card">
       <div class="col-xs-12 col-sm-6 col-md-4 ">
       <%=image_tag 'avatar/margaux.jpg', class: "review-avatar-large"%>
       <div class="review-content ">
         <p>"J'ai réservé une demi-journée avec un Aloha Guide à Bangkok. Génial de découvrir cette ville avec ses recos !!!"</p>
+        <h4>Margaux</h4>
       </div>
       </div>
     </div>
@@ -143,6 +132,7 @@
       <%=image_tag 'avatar/adri.png', class: "review-avatar-large"%>
       <div class="review-content ">
         <p>"Des rencontres inoubliable au Cambodge. Nous avons passé 1 journée avec notre Aloha Guide en partagant son quotidien."</p>
+        <h4>Cécile & Adri</h4>
       </div>
       </div>
     </div>
@@ -152,8 +142,13 @@
       <%=image_tag 'avatar/clo.jpg', class: "review-avatar-large"%>
       <div class="review-content ">
         <p>"J'ai passé 1 journée avec un expat qui m'a fait découvrir des temples cachés en Birmanie. Fabuleux!"</p>
+        <h4>Chloé</h4>
       </div>
       </div>
     </div>
   </div>
 </div>
+
+<!-- Joinus bloc -->
+<%= render "shared/joinus" %>
+

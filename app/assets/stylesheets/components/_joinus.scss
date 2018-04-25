@@ -1,7 +1,7 @@
 .joinus {
   color: white;
   text-align: center;
-  height: 70vh;
+  height: 90vh;
   /* if you have a 70px navbar => height: calc(100vh - 70px); */
   background-size: cover !important;
   display: flex;
@@ -10,8 +10,10 @@
   padding: 10px 10px;
 }
 
-.joinus-content h4{
-  font-size: 30px;
+.joinus-content h1{
+  font-size: 50px;
+  font-weight: bold;
+  text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
 }
 
 #mailchimp {
@@ -35,21 +37,21 @@
 }
 
 #mailchimp input[type="submit"] {
-  color: #404040;
-  border: 1px solid #50E3C2;
+  color: #F9F9F9;
+  border: 1px solid #404040;
   padding: 10px 10px;
   border-radius: 50px;
-  font-weight: lighter;
+  font-weight: regular;
   font-size: 14px;
-  width: 80px;
+  width: 100px;
   margin-top: 20px;
-  background: #50E3C2;
+  background: #404040;
+  opacity: 0.9;
 }
 
 #mailchimp input[type="submit"]:hover {
-  opacity: 0.8;
+  opacity: 0.7;
   text-decoration: none;
-  color: #404040;
 }
 
 .socials {
@@ -61,10 +63,10 @@
   color: #F9F9F9;
   text-decoration: none;
   font-size: 24px;
-   padding: 0px 15px;
-
+  padding: 0px 15px;
 }
 .socials a:hover {
   opacity: 0.7;
+  color: #404040;
 }
 
