@@ -4,18 +4,26 @@ body{
 }
 
 .instagram-title{
-  margin-bottom: 10px;
+  margin-bottom: 30px;
+
 }
 
 .instagram-title h4 {
   font-size: 30px;
   padding-top: 30px;
   font-weight: lighter;
+  box-shadow: inset 0 -10px 0 #50E3C2;
+  border-bottom: 3px solid #50E3C2;
 }
 
 .instagram-title p {
   font-size: 14px;
   font-weight: lighter;
+}
+
+.instagram-icon {
+  padding-bottom: 30px;
+
 }
 
 .instagram-icon a {
@@ -27,8 +35,10 @@ body{
   opacity: 0.6;
 }
 
-.gal-container{
-  padding: 12px;
+.gal-container {
+  background-color: black;
+  border-radius: 3px;
+
 }
 .gal-item{
   overflow: hidden;
@@ -68,41 +78,7 @@ body{
 .gal-item a:hover:after{
   opacity: 1;
 }
-.modal-open .gal-container .modal{
-  background-color: rgba(0,0,0,0.4);
-}
-.modal-open .gal-item .modal-body{
-  padding: 0px;
-}
-.modal-open .gal-item button.close{
-    position: absolute;
-    width: 25px;
-    height: 25px;
-    background-color: #000;
-    opacity: 1;
-    color: #fff;
-    z-index: 999;
-    right: -12px;
-    top: -12px;
-    border-radius: 50%;
-    font-size: 15px;
-    border: 2px solid #fff;
-    line-height: 25px;
-    -webkit-box-shadow: 0 0 1px 1px rgba(0,0,0,0.35);
-  box-shadow: 0 0 1px 1px rgba(0,0,0,0.35);
-}
-.modal-open .gal-item button.close:focus{
-  outline: none;
-}
-.modal-open .gal-item button.close span{
-  position: relative;
-  top: -3px;
-  font-weight: lighter;
-  text-shadow:none;
-}
-.gal-container .modal-dialogue{
-  width: 80%;
-}
+
 .gal-container .description{
   position: relative;
   height: 40px;

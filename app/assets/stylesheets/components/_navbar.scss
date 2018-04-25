@@ -7,6 +7,17 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  transition: 0.5s background-color ease;
+}
+
+.navbar-home {
+  background-color: #F9F9F9;
+  opacity: 0.9;
+  color: black;
+}
+
+.navbar-home a {
+  color: black;
 }
 
 /* Logo */

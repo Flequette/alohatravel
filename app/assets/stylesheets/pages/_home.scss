@@ -1,4 +1,16 @@
 // Specific CSS for your home-page
+
+.story-card {
+  border: 3px solid black;
+  padding: 20px 30px;
+  margin: 40px 20px;
+}
+.story-card h3 {
+  font-weight: lighter;
+
+  margin-top:30px;
+}
+
 .value {
   padding: 50px 30px;
   background-color: white;
@@ -10,14 +22,16 @@
 
 .value-icon {
   padding-bottom: 20px;
+  border-radius: 10px;
 }
 
 .value h4 {
-  font-size: 26px;
-  padding-bottom: 10px;
-  color: #50E3C2;
+  font-size: 24px;
   font-weight: lighter;
   letter-spacing: 1px;
+  box-shadow: inset 0 -10px 0 rgba(80,227,194,0.6);
+  width: fit-content;
+  text-align: -webkit-left;
 }
 
 .value p {
@@ -37,6 +51,9 @@
 .experience-title h4 {
   font-size: 30px;
   font-weight: lighter;
+  box-shadow: inset 0 -10px 0 rgba(80,227,194,0.6);
+  width: fit-content;
+  text-align: -webkit-left;
 }
 
 .experience-icon {
