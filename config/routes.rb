@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get "local", to: "pages#home_local", as: "local"
   get "joinus", to: "pages#joinus", as: "joinus"
   get "result", to: "pages#result", as: "result"
+  get "legal", to: "pages#legal", as: "legal"
 
   get "ask_booking", to: "bookings#ask_booking", as: "demande"
   get "accept_booking", to: "bookings#accept_booking", as: "accepter"
