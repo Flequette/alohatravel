@@ -3,27 +3,12 @@ body{
     font-family: 'Quicksand', sans-serif;
 }
 
-.instagram-title{
-  margin-bottom: 30px;
-
-}
-
-.instagram-title h4 {
-  font-size: 30px;
-  padding-top: 30px;
-  font-weight: lighter;
-  box-shadow: inset 0 -10px 0 #50E3C2;
-  border-bottom: 3px solid #50E3C2;
-}
-
-.instagram-title p {
-  font-size: 14px;
-  font-weight: lighter;
+.instagram {
+  padding: 30px 30px;
 }
 
 .instagram-icon {
-  padding-bottom: 30px;
-
+  padding-top: 15px;
 }
 
 .instagram-icon a {
@@ -36,9 +21,7 @@ body{
 }
 
 .gal-container {
-  background-color: black;
   border-radius: 3px;
-
 }
 .gal-item{
   overflow: hidden;
@@ -77,60 +60,4 @@ body{
 }
 .gal-item a:hover:after{
   opacity: 1;
-}
-
-.gal-container .description{
-  position: relative;
-  height: 40px;
-  top: -40px;
-  padding: 10px 25px;
-  background-color: rgba(0,0,0,0.5);
-  color: #fff;
-  text-align: left;
-}
-.gal-container .description h4{
-  margin:0px;
-  font-size: 15px;
-  font-weight: 300;
-  line-height: 20px;
-}
-.gal-container .modal.fade .modal-dialog {
-    -webkit-transform: scale(0.1);
-    -moz-transform: scale(0.1);
-    -ms-transform: scale(0.1);
-    transform: scale(0.1);
-    top: 100px;
-    opacity: 0;
-    -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    transition: all 0.3s;
-}
-
-.gal-container .modal.fade.in .modal-dialog {
-    -webkit-transform: scale(1);
-    -moz-transform: scale(1);
-    -ms-transform: scale(1);
-    transform: scale(1);
-    -webkit-transform: translate3d(0, -100px, 0);
-    transform: translate3d(0, -100px, 0);
-    opacity: 1;
-}
-@media (min-width: 768px) {
-.gal-container .modal-dialog {
-    width: 55%;
-    margin: 50 auto;
-}
-}
-@media (max-width: 768px) {
-    .gal-container .modal-content{
-        height:250px;
-    }
-}
-/* Footer Style */
-i.red{
-    color:#BC0213;
-}
-.gal-container{
-    padding-top :75px;
-    padding-bottom:75px;
 }
