@@ -23,8 +23,9 @@
 }
 
 .value-photo {
-  padding-bottom: 20px;
+  padding-bottom: 15px;
   border-radius: 3px;
+  width: 300px;
 }
 
 .value h4 {
@@ -42,7 +43,7 @@
 }
 
 .review {
-  padding: 30px 30px;
+  padding: 15px 30px;
 }
 
 .review-card {
@@ -53,6 +54,7 @@
 }
 
 .review-content {
+  min-height: 15vh;
   margin: 10px 15px;
   font-size: 16px;
   font-weight: regular;

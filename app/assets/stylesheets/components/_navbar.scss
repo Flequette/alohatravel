@@ -11,14 +11,14 @@
 }
 
 .navbar-home {
-  background-color: #F9F9F9;
-  opacity: 0.9;
-  color: black;
-  font-weight: regular;
+  background-color: white;
+  opacity: 0.95;
+  box-shadow: 1px 0px 2px #404040;
 }
 
 .navbar-home a {
   color: black;
+  font-weight: regular;
 }
 
 /* Logo */
@@ -51,7 +51,7 @@
 .navbar-wagon-link {
   color: #E6E6E6;
   font-size: 18px;
-  font-weight: regular;
+  font-weight: lighter;
   letter-spacing: 1px;
 }
 .navbar-wagon-link:hover {
