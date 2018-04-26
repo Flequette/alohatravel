@@ -1,9 +1,39 @@
 <div class="footer text-center">
-  <ul>
-    <li> <a href="/"> <p>LEGAL</p></a> </li>
-    <li> <a href="/"> <p>FACEBOOK</p></a> </li>
-    <li> <a href="/"> <p>INSTAGRAM</p></a> </li>
-    <li> <a href="/"> <p>CONTACT</p></a> </li>
-    <li> <%=image_tag 'logo_euratech.png', width:130  %> </li>
-  </ul>
+
+  <div class="row text-center">
+
+    <div class="footer-card">
+      <div class="col-xs-12 col-sm-6 col-md-4  ">
+        <div class="footer-content">
+          <h4>A propos</h4>
+          <ul>
+            <li><%= link_to "Mentions Légales", legal_path %></li>
+            <li><%= link_to "CGV", legal_path %></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-card">
+      <div class="col-xs-12 col-sm-6 col-md-4 ">
+      <div class="footer-content text-align">
+        <h4>About us</h4>
+          <ul>
+            <li><%= link_to "Qui sommes-nous?", legal_path, class: "footer-link" %></li>
+            <li><%= link_to "Nous contacter", legal_path, class: "footer-link" %></li>
+          </ul>
+      </div>
+      </div>
+    </div>
+
+    <div class="footer-card">
+      <div class="col-xs-12 col-sm-6 col-md-4 ">
+      <div class="footer-content">
+        <h4>Nos partenaires</h4>
+        <%=image_tag 'logo_euratech.png', width:150  %>
+      </div>
+      </div>
+    </div>
+
+  </div>
 </div>

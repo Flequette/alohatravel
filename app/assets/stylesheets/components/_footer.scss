@@ -1,33 +1,40 @@
 .footer {
-  width: 100%;
-  bottom: 0;
-  border-top: 2px solid black;
-  background: white;
-  z-index: 4;
-  cursor: pointer;
-  margin-top: 40px;
+  background: #404040;
+  min-height: 35vh;
+  padding: 30px 30px;
+  color: black;
 }
 
-.footer p {
+.footer-card {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  margin-right: 50px;
+  margin-left: 50px;
+}
 
-  color: black;
-  text-decoration: none;
+.footer-content {
+  margin: 10px 15px;
+  font-size: 16px;
   letter-spacing: 1px;
 }
 
-
-.footer ul {
-  list-style-type: none;
+.footer-content h4 {
+  letter-spacing: 1px;
+  font-weight: bold;
+  margin-bottom: 15px;
 }
 
-.footer ul li {
-  display: inline-block;
-  font-size: 16px;
-  padding: 20px 55px;
+.footer-content ul li {
+  list-style:none;
+  font-weight: regular;
+  letter-spacing: 1px;
 }
 
-.footer ul li :hover {
-  color: #50E3C2;
+.footer-content ul li a {
+  color: black;
+}
+
+.footer-content ul li a:hover {
   text-decoration: none;
   opacity: 0.7;
 }
