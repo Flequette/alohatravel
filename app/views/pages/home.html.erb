@@ -4,7 +4,7 @@
 <!-- Story bloc -->
 <div class="story text-center">
   <div class="row">
-    <div class="col-xs-12 col-sm-10 col-md-10 col-md-offset-1 ">
+    <div class="col-xs-12 col-sm-12 col-md-10 col-md-offset-1 ">
       <div class="story-card text-center">
         <h1>LE BEAU VOYAGE</h1>
         <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus, repellat. Repellat fugit quia, iure magni quaerat perspiciatis a adipisci, atque consectetur explicabo velit, reprehenderit eum placeat! Quam rem, laborum et!</h3>
@@ -22,17 +22,7 @@
           <h4>Vivez comme un local</h4>
           <p>Laissez-vous guider par le savoir et les bons plans de votre PeetaGuide</p>
         </div>
-          <%=image_tag 'home/local.jpg', width:380, class: "value-pics" %>
-      </div>
-    </div>
-
-    <div class="value-card">
-      <div class="col-xs-12 col-sm-6 col-md-4">
-        <div class="value-desc">
-          <h4>Appartenez à une communauté</h4>
-          <p>Profitez de cette grande communauté de Peetayers et partagez des moments uniques</p>
-        </div>
-          <%=image_tag 'home/comunity3.jpg', width:380, class: "value-pics" %>
+          <%=image_tag 'home/local.jpg', class: "value-photo" %>
       </div>
     </div>
 
@@ -42,72 +32,27 @@
           <h4>Economisez autrement</h4>
           <p>Gagnez du temps grâce à votre PeetaGuide qui vous fera découvrir tous les plans authentiques de sa ville</p>
         </div>
-          <%=image_tag 'home/money.jpg', width:380, class: "value-pics" %>
+          <%=image_tag 'home/money.jpg', class: "value-photo" %>
       </div>
     </div>
+
+    <div class="value-card">
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="value-desc">
+          <h4>Appartenez à une communauté</h4>
+          <p>Profitez de cette grande communauté de Peetayers et partagez des moments uniques</p>
+        </div>
+          <%=image_tag 'home/comunity3.jpg', class: "value-photo" %>
+      </div>
+    </div>
+
+
+
   </div>
 </div>
 
+<!-- Expérience bloc -->
 <%= render "shared/carousel" %>
-<!-- Experience bloc
-<div class="experience text-center">
-  <h1>COMMENT CA MARCHE?</h1>
-
-  <div class="row">
-    <div class="experience-card">
-      <div class="col-xs-12 col-sm-5 col-md-6">
-        <div class="experience-content">
-          <h4>1. Je cherche</h4>
-          <p>Mon PeetaGuide en moins de 1 minute</p>
-        </div>
-      </div>
-    </div>
-    <div class="experience-card">
-      <div class="col-xs-12 col-sm-5 col-md-6 offset-md-3">
-        <div class="experience-icon">
-          <%=image_tag 'experience/1.Profilebis.png', width:250 %>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="experience-card">
-      <div class="col-xs-12 col-sm-5 col-md-6 offset-md-3">
-        <div class="experience-icon2 text-right">
-          <%=image_tag 'experience/2.Plansbis.png', width:250  %>
-        </div>
-      </div>
-    </div>
-    <div class="experience-card">
-      <div class="col-xs-12 col-sm-5 col-md-6 ">
-        <div class="experience-content">
-          <h4>2. Je choisis</h4>
-          <p>Le PeetaGuide de mon choix grâce au matching avec les tours qui me correspondent</p>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="experience-card text-right">
-      <div class="col-xs-12 col-sm-5 col-md-6 ">
-        <div class="experience-content">
-          <h4>3. Je paye</h4>
-          <p>Directement via le site en quelques clics seulement.</p>
-        </div>
-      </div>
-    </div>
-    <div class="experience-card text-left">
-      <div class="col-xs-12 col-sm-5 col-md-6 offset-md-3">
-        <div class="experience-icon">
-          <%=image_tag 'experience/3.Bookingbis.png', width:250 %>
-        </div>
-      </div>
-    </div>
-  </div>
-
-</div> -->
 
 <!-- Instagram bloc -->
 <%= render "shared/instagram" %>
@@ -148,8 +93,6 @@
     </div>
   </div>
 </div>
-
-
 
 <!-- Joinus bloc -->
 <%= render "shared/joinus" %>
