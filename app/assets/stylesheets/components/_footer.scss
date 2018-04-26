@@ -8,32 +8,39 @@
 }
 
 .footer-card {
-  margin-top: 50px;
-  margin-bottom: 50px;
-  margin-right: 50px;
-  margin-left: 50px;
+  margin: 30px;
 }
 
 .footer-content {
   margin: 10px 15px;
-  font-size: 16px;
+  font-size: 14px;
   letter-spacing: 1px;
 }
 
 .footer-content h4 {
   letter-spacing: 1px;
-  font-weight: bold;
+  font-weight: regular;
   margin-bottom: 15px;
+  font-size: 16px;
+  color: #E4E4E4;
+}
+
+.footer-content p {
+  letter-spacing: 1px;
+  font-weight: lighter;
+  font-size: 12px;
+  color: #E4E4E4;
 }
 
 .footer-content ul li {
   list-style:none;
-  font-weight: regular;
-  letter-spacing: 1px;
 }
 
 .footer-content ul li a {
-  color: black;
+  color: #E4E4E4;
+  font-size: 12px;
+  font-weight: lighter;
+  letter-spacing: 1px;
 }
 
 .footer-content ul li a:hover {

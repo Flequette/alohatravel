@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
-  skip_before_action :authenticate_user!, only: [:home, :home_local, :joinus, :legal, :newhome]
+  skip_before_action :authenticate_user!, only: [:home, :home_local, :joinus, :legal, :team]
 
   def home
   end
@@ -10,10 +10,10 @@ class PagesController < ApplicationController
   def joinus
   end
 
-  def newhome
+  def legal
   end
 
-  def legal
+  def team
   end
 
   def result

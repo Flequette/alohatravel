@@ -1,193 +1,138 @@
 <!-- Banner bloc -->
 <%= render "shared/banner" %>
 
+<!-- Story bloc -->
+<div class="story text-center">
+  <div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-10 col-md-offset-1 ">
+      <div class="story-card text-center">
+        <h1>LE BEAU VOYAGE</h1>
+        <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus, repellat. Repellat fugit quia, iure magni quaerat perspiciatis a adipisci, atque consectetur explicabo velit, reprehenderit eum placeat! Quam rem, laborum et!</h3>
+      </div>
+    </div>
+  </div>
+</div>
+
 <!-- Product value bloc -->
 <div class="value text-center">
-  <div class="row text-center">
-
+  <div class="row">
     <div class="value-card">
       <div class="col-xs-12 col-sm-6 col-md-4">
-        <div class="value-icon">
-          <%=image_tag 'flaticon/bank.png', width:100, height:100  %>
+        <div class="value-desc">
+          <h4>Arrondissez vos fins de mois</h4>
+          <p>Gagnez un revenu complémentaire grâce aux réservations des Peetayers</p>
         </div>
-        <h4>Arrondissez vos fins de mois</h4>
-        <p>Gagnez un revenu complémentaire grâce aux réservations des Peetayers</p>
-      </div>
-    </div>
-
-    <div class="value-card">
-      <div class="col-xs-12 col-sm-6 col-md-4 ">
-        <div class="value-icon">
-          <%=image_tag 'flaticon/night-camping.png', width:100, height:100  %>
-        </div>
-        <h4>Partagez vos plans les plus authentiques</h4>
-        <p>Devenez votre propre agence de voyage en faisant vivre une expérience unique aux Peetayers</p>
+          <%=image_tag 'home/money2.jpg', class: "value-photo" %>
       </div>
     </div>
 
     <div class="value-card">
       <div class="col-xs-12 col-sm-6 col-md-4">
-        <div class="value-icon">
-          <%=image_tag 'flaticon/geolocalization.png', width:100, height:100  %>
+        <div class="value-desc">
+          <h4>Partagez vos meilleurs plans</h4>
+          <p>Devenez votre propre agence de voyage en faisant vivre une expérience unique aux Peetayers</p>
         </div>
-        <h4>Aidez et rencontrez nos Peetayers</h4>
-        <p>Profitez de cette grande communauté de PeetaHost et partagez des moments uniques</p>
+          <%=image_tag 'home/live.jpg', class: "value-photo" %>
       </div>
     </div>
 
+    <div class="value-card">
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="value-desc">
+          <h4>Aidez nos Peetayers</h4>
+          <p>Profitez de cette grande communauté de PeetaHost et partagez des moments uniques</p>
+        </div>
+          <%=image_tag 'home/comunity.jpg', class: "value-photo" %>
+      </div>
+    </div>
   </div>
 </div>
+
+<!-- Expérience bloc -->
+<div class="experience text-center">
+  <h1>COMMENT CA MARCHE?</h1>
+
+  <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+      <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+      <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+      <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+    </ol>
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner text-center" role="listbox">
+
+      <div class="item active">
+        <%=image_tag 'carousel/search1.jpg', class: "value-pics text-center" %>
+        <div class="carousel-caption">
+          <h1>1. Je Renseigne</h1>
+          <h3>Mon profil et les tours que je propose</h3>
+        </div>
+      </div>
+
+      <div class="item">
+        <%=image_tag 'carousel/search3.jpg', class: "value-pics text-center" %>
+        <div class="carousel-caption">
+          <h1>2. J'Accepte</h1>
+          <h3>Les demandes des Peetayers selon mes disponibiltés et envie</h3>
+        </div>
+      </div>
+
+      <div class="item">
+        <%=image_tag 'carousel/choice3.jpg', class: "value-pics text-center" %>
+        <div class="carousel-caption">
+          <h1>3. Je gagne</h1>
+          <h3>Un revenu complémentaire que je reçois directement dans ma cagnotte</h3>
+        </div>
+      </div>
+
+      <div class="item">
+        <%=image_tag 'carousel/selfi.jpg', class: "value-pics text-center" %>
+        <div class="carousel-caption">
+          <h1>4. Je note</h1>
+          <h3>L'expérience et réalise un selfie avec mon Peetayers</h3>
+        </div>
+      </div>
+
+    </div>
+    <!-- Controls -->
+    <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
+
+<script type="text/javascript">
+$('.carousel').carousel({
+interval: 3000,
+pause: false
+})
+</script>
+
 
 <!-- Instagram bloc -->
-<%= render "shared/cards_instagram" %>
-
-<!-- Experience bloc -->
-<div class="experience text-center">
-  <div class="experience-title">
-    <h4>Devenir un PeetaHost</h4>
-    <p>Rien de plus simple</p>
-  </div>
-
-  <div class="row">
-    <div class="experience-card text-right">
-      <div class="col-xs-12 col-sm-5 col-md-6">
-        <div class="experience-nb ">
-          <h1>1</h1>
-        </div>
-        <div class="experience-content">
-          <h4>Je cherche</h4>
-          <p>Mon PeetaGuide en moins de 1 minute</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="experience-card text-left">
-      <div class="col-xs-12 col-sm-5 col-md-6 offset-md-3">
-        <div class="experience-icon">
-          <%=image_tag 'experience/1.Profilebis.png', width:250 %>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="row text-left">
-    <div class="experience-card">
-      <div class="col-xs-12 col-sm-5 col-md-6 offset-md-3">
-        <div class="experience-icon2 text-right">
-          <%=image_tag 'experience/2.Plansbis.png', width:250  %>
-        </div>
-      </div>
-    </div>
-
-    <div class="experience-card">
-      <div class="col-xs-12 col-sm-5 col-md-6 ">
-        <div class="experience-nb ">
-          <h1>2</h1>
-        </div>
-        <div class="experience-content">
-          <h4>Je match</h4>
-          <p>Avec le top 5 des tours proposés par les PeetaGuides et qui me correspondent</p>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="experience-card text-right">
-      <div class="col-xs-12 col-sm-5 col-md-6 ">
-        <div class="experience-nb">
-          <h1>3</h1>
-        </div>
-        <div class="experience-content">
-          <h4>Je choisis</h4>
-          <p>Le PeetaGuide de mon choix</p>
-        </div>
-      </div>
-    </div>
-    <div class="experience-card text-left">
-      <div class="col-xs-12 col-sm-5 col-md-6 offset-md-3">
-        <div class="experience-icon">
-          <%=image_tag 'experience/3.Bookingbis.png', width:250 %>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="row text-left">
-    <div class="experience-card">
-      <div class="col-xs-12 col-sm-5 col-md-6 offset-md-3">
-        <div class="experience-icon2 text-right">
-          <%=image_tag 'experience/2.Plansbis.png', width:250  %>
-        </div>
-      </div>
-    </div>
-
-    <div class="experience-card">
-      <div class="col-xs-12 col-sm-5 col-md-6 ">
-        <div class="experience-nb ">
-          <h1>4</h1>
-        </div>
-        <div class="experience-content">
-          <h4>Je règle</h4>
-          <p>Le paiment directement via le site</p>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="experience-card text-right">
-      <div class="col-xs-12 col-sm-5 col-md-6 ">
-        <div class="experience-nb">
-          <h1>5</h1>
-        </div>
-        <div class="experience-content">
-          <h4>Je note</h4>
-          <p>Mon expérience avec mon peetaGuide</p>
-        </div>
-      </div>
-    </div>
-    <div class="experience-card text-left">
-      <div class="col-xs-12 col-sm-5 col-md-6 offset-md-3">
-        <div class="experience-icon">
-          <%=image_tag 'experience/3.Bookingbis.png', width:250 %>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+<%= render "shared/instagram" %>
 
 <!-- Joinus bloc -->
 <%= render "shared/joinus" %>
 
 <!-- Reviews bloc -->
 <div class="review text-center">
-  <div class="experience-title">
-    <h4>Ils parlent de nous</h4>
-  </div>
-  <div class="row text-center">
-    <div class="review-icon">
-      <%=image_tag 'flaticon/whatsup.png', height:30 %>
-      <%=image_tag 'flaticon/whatsup.png', height:30 %>
-      <%=image_tag 'flaticon/whatsup.png', height:30 %>
-    </div>
+  <h1>DEJA CONVAINVUS</h1>
 
-  </div>
   <div class="row text-center">
     <div class="review-card">
       <div class="col-xs-12 col-sm-6 col-md-4 ">
       <%=image_tag 'avatar/aude.jpg', class: "review-avatar-large"%>
       <div class="review-content ">
         <p>"J'ai fait découvrir Siem Reap à un couple en vacances un week end ou je n'avais rien de prévu. Moment très sympa et rémunéré donc très bon deal."</p>
-      </div>
-      </div>
-    </div>
-
-    <div class="review-card">
-      <div class="col-xs-12 col-sm-6 col-md-4 ">
-      <%=image_tag 'avatar/tiph.jpg', class: "review-avatar-large"%>
-      <div class="review-content ">
-        <p>"J'ai beaucoup aimé m'occuper de mes Aloha Travelers qui ont réservé une journée avec moi. On est un peu sa propre agence de voyage, c'est top."</p>
+        <h4>Aude</h4>
       </div>
       </div>
     </div>
@@ -197,10 +142,20 @@
       <%=image_tag 'avatar/robin.jpg', class: "review-avatar-large"%>
       <div class="review-content ">
         <p>"A tester!! On gère son planning, on partage son expérience avec d'autres...Facile et pratique."</p>
+        <h4>Robin</h4>
+      </div>
+      </div>
+    </div>
+
+    <div class="review-card">
+      <div class="col-xs-12 col-sm-6 col-md-4 ">
+      <%=image_tag 'avatar/tiph.jpg', class: "review-avatar-large"%>
+      <div class="review-content ">
+        <p>"J'ai beaucoup aimé m'occuper de mes Aloha Travelers qui ont réservé une journée avec moi. On est un peu sa propre agence de voyage, c'est top."</p>
+        <h4>Tiphaine</h4>
       </div>
       </div>
     </div>
   </div>
 </div>
-
 
