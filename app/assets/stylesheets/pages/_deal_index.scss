@@ -52,10 +52,6 @@
   left: 150px;
 }
 
-.form {
-
-}
-
 .form-control {
   font-size: 10px;
   font-weight: lighter;
@@ -86,12 +82,12 @@ border-radius:3px 0 0 3px;
 -moz-border-radius:3px 0 0 3px;
 -webkit-border-radius:3px 3px 3px 3px;
 -o-border-radius:3px 0 0 3px;
-border:0 none;
 width: 350px;
 color: #404040;
 background-color: #F9F9F9;
 font-size: 14px;
 opacity: 0.8;
+border: 1px solid #C0C0C0;
 }
 
 .namanyay-search-box-type {
@@ -102,11 +98,11 @@ border-radius:3px 0 0 3px;
 -webkit-border-radius:3px 3px 3px 3px;
 -o-border-radius:3px 0 0 3px;
 -webkit-appearance:none;
-border:0 none;
 width: 100px;
 color: #404040;
 font-size: 14px;
 opacity: 0.9;
+border: 1px solid #C0C0C0;
 }
 
 
