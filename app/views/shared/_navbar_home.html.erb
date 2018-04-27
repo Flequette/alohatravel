@@ -1,17 +1,17 @@
-<div class="navbar2-wagon">
+<div class="navbar-wagon navbar-fixed-top">
   <!-- Logo -->
   <%= link_to root_path, class: "navbar-wagon-brand" do %>
     <%= image_tag "logo/color.png" %>
   <% end %>
 
   <!-- Right Navigation -->
-  <div class="navbar2-wagon-right hidden-xs hidden-sm">
+  <div class="navbar-wagon-right hidden-xs hidden-sm">
 
     <% if user_signed_in? %>
       <!-- Links when logged in -->
-      <%= link_to "Proposer une expérience", new_deal_path, class: "navbar2-wagon-item navbar2-wagon-link" %>
-      <%= link_to "Tout voir", deals_path, class: "navbar2-wagon-item navbar2-wagon-link" %>
-      <%= link_to "PeetaGuide", my_deals_path(current_user.profile), class: "navbar2-wagon-item navbar2-wagon-link" %>
+      <%= link_to "Proposer une expérience", new_deal_path, class: "navbar-wagon-item navbar-wagon-link" %>
+      <%= link_to "Tout voir", deals_path, class: "navbar-wagon-item navbar-wagon-link" %>
+      <%= link_to "PeetaGuide", my_deals_path(current_user.profile), class: "navbar-wagon-item navbar-wagon-link" %>
 
       <!-- Avatar with dropdown menu -->
       <div class="navbar-wagon-item">
