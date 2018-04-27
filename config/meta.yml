@@ -1,5 +1,5 @@
 meta_product_name: "Peetaya"
 meta_title: "Peetaya - Be different"
-meta_description: "Bousculez votre façon de voyager. Vivez une expérience authentique et unique."
-meta_image: "https://res.cloudinary.com/dj7tgtuol/image/upload/v1521137315/facebook_iebcyc.png"                       # should exist in `app/assets/images/`
+meta_description: "Peetaya is all about traveling like a local. Book a PeetaGuide and lets him helping you to live a unique experience."
+meta_image: "logo2.png" # should exist in `app/assets/images/`
 
