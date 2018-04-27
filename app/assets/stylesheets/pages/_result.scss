@@ -1,7 +1,7 @@
 .deals-banner {
   color: white;
   text-align: center;
-  height: 50vh;
+  height: 60vh;
   /* if you have a 70px navbar => height: calc(100vh - 70px); */
   background-size: cover !important;
   display: flex;
@@ -61,6 +61,53 @@
   font-weight: lighter;
 }
 
+.searchbar2 {
+  margin-top: 15px;
+}
+
+#namanyay-search-btn {
+background:#4FE4C4;
+color: #F9F9F9;
+padding:10px 10px !important;
+margin-top: 10px;
+border-radius:0 3px 3px 0;
+-moz-border-radius:0 3px 3px 0;
+-webkit-border-radius:3px 3px 3px 3px;
+-o-border-radius:0 3px 3px 0;
+border:0 none;
+font-weight:bold;
+font-size: 14px;
+}
+
+.namanyay-search-box {
+padding:10px !important;
+margin-top: 10px;
+border-radius:3px 0 0 3px;
+-moz-border-radius:3px 0 0 3px;
+-webkit-border-radius:3px 3px 3px 3px;
+-o-border-radius:3px 0 0 3px;
+border:0 none;
+width: 350px;
+color: #404040;
+background-color: #F9F9F9;
+font-size: 14px;
+opacity: 0.8;
+}
+
+.namanyay-search-box-type {
+padding:10px !important;
+margin-top: 10px;
+border-radius:3px 0 0 3px;
+-moz-border-radius:3px 0 0 3px;
+-webkit-border-radius:3px 3px 3px 3px;
+-o-border-radius:3px 0 0 3px;
+-webkit-appearance:none;
+border:0 none;
+width: 100px;
+color: #404040;
+font-size: 14px;
+opacity: 0.9;
+}
 
 
 
