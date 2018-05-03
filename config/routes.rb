@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   get "joinus", to: "pages#joinus", as: "joinus"
   get "result", to: "pages#result", as: "result"
   get "legal", to: "pages#legal", as: "legal"
-  get "expats", to: "pages#guide", as: "guide"
+  get "landing", to: "pages#landing", as: "landing"
 
   get "ask_booking", to: "bookings#ask_booking", as: "demande"
   get "accept_booking", to: "bookings#accept_booking", as: "accepter"
