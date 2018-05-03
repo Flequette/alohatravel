@@ -1,11 +1,15 @@
 class PagesController < ApplicationController
-  skip_before_action :authenticate_user!, only: [:home, :home_local, :joinus, :legal, :team]
+  skip_before_action :authenticate_user!, only: [:home, :home_local, :joinus, :legal, :team, :guide]
 
   def home
   end
 
   def home_local
   end
+
+  def guide
+  end
+
 
   def joinus
   end
