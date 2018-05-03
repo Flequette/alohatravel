@@ -1,29 +1,29 @@
-<div class="navbar2-wagon">
+<div class="navbar-wagon">
   <!-- Logo -->
-  <%= link_to root_path, class: "navbar-wagon-brand" do %>
+  <div class= "navbar-wagon-brand">
     <%= image_tag "logo/color.png" %>
-  <% end %>
+  </div>
 
   <!-- Right Navigation -->
-  <div class="navbar2-wagon-right hidden-xs hidden-sm">
+  <div class="navbar-wagon-right hidden-xs hidden-sm">
 
     <% if user_signed_in? %>
       <!-- Links when logged in -->
-      <%= link_to "Proposer une expérience", new_deal_path, class: "navbar2-wagon-item navbar2-wagon-link" %>
-      <%= link_to "Tout voir", deals_path, class: "navbar2-wagon-item navbar2-wagon-link" %>
-      <%= link_to "PeetaGuide", my_deals_path(current_user.profile), class: "navbar2-wagon-item navbar2-wagon-link" %>
+      <%= link_to "Proposer une expérience", new_deal_path, class: "navbar-wagon-item navbar-wagon-link" %>
+      <%= link_to "Tout voir", deals_path, class: "navbar-wagon-item navbar-wagon-link" %>
+      <%= link_to "PeetaGuide", my_deals_path(current_user.profile), class: "navbar-wagon-item navbar-wagon-link" %>
 
       <!-- Avatar with dropdown menu -->
-      <div class="navbar2-wagon-item">
+      <div class="navbar-wagon-item">
         <div class="dropdown">
         <% if current_user.profile.present? %>
           <% if current_user.profile.photo.present? %>
-            <%= cl_image_tag current_user.profile.photo, class: "avatar dropdown-toggle", id: "navbar2-wagon-menu", "data-toggle" => "dropdown" %>
+            <%= cl_image_tag current_user.profile.photo, class: "avatar dropdown-toggle", id: "navbar-wagon-menu", "data-toggle" => "dropdown" %>
           <% else %>
-            <%= image_tag "http://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar dropdown-toggle", id: "navbar-wagon2-menu", "data-toggle" => "dropdown" %>
+            <%= image_tag "http://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar dropdown-toggle", id: "navbar-wagon-menu", "data-toggle" => "dropdown" %>
           <% end %>
         <% end %>
-          <ul class="dropdown-menu dropdown-menu-right navbar-wagon2-dropdown-menu">
+          <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
             <li>
             <% if current_user.profile.present? %>
               <%= link_to profile_path(current_user.profile) do %>
@@ -46,15 +46,13 @@
       </div>
 
     <% else %>
-      <%= link_to "Être Peetayers", root_path, class: "navbar2-wagon-item navbar2-wagon-link" %>
-      <%= link_to "Devenir PeetaGuide", local_path, class: "navbar2-wagon-item navbar2-wagon-link" %>
       <!-- Login link (when logged out)-->
-      <%= link_to t(".sign_in", default: "S'inscrire / Se connecter"), new_user_session_path, class: "navbar2-wagon-item navbar2-wagon-link" %>
+      <%= link_to t(".sign_in", default: "Get Started"), new_user_registration_path, class: "navbar-wagon-item navbar-wagon-link" %>
     <% end %>
   </div>
 
   <!-- Dropdown list appearing on mobile only -->
-  <div class="navbar2-wagon-item hidden-md hidden-lg">
+  <div class="navbar-wagon-item hidden-md hidden-lg">
     <div class="dropdown">
       <i class="fa fa-bars dropdown-toggle" data-toggle="dropdown"></i>
       <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">

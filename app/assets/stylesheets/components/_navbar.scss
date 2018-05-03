@@ -10,7 +10,6 @@
   justify-content: space-between;
 }
 
-
 /* Logo */
 .navbar-wagon-brand img {
   height: 50px;
@@ -18,14 +17,14 @@
 
 
 /* User Avatar */
-.navbar-wagon .avatar {
+.navbar2-wagon .avatar {
   height: 40px;
   width: 40px;
   border-radius: 50%;
 }
 
 /* Right section */
-.navbar-wagon-right {
+.navbar2-wagon-right {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -50,12 +49,12 @@
 }
 
 /* Dropdown menu */
-.navbar-wagon-dropdown-menu {
+.navbar2-wagon-dropdown-menu {
   margin-top: 15px;
   box-shadow: 1px 1px 4px #E6E6E6;
   border-color: #E6E6E6;
 }
-.navbar-wagon-dropdown-menu li > a {
+.navbar2-wagon-dropdown-menu li > a {
   transition: color 0.3s ease;
   font-weight: lighter !important;
   color: #404040 !important;
@@ -63,11 +62,11 @@
   line-height: 22px !important;
   padding: 10px 20px;
 }
-.navbar-wagon-dropdown-menu li > a:hover {
+.navbar2-wagon-dropdown-menu li > a:hover {
   background: transparent !important;
   color: black !important;
 }
-.navbar-wagon-dropdown-menu:before {
+.navbar2-wagon-dropdown-menu:before {
   content: ' ';
   height: 10px;
   width: 10px;
