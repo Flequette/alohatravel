@@ -59,7 +59,6 @@ p "creation deal"
       activity_type: "Culturelle",
       time: "1journée",
       tips: "N'oubliez pas de prévoir de l'eau",
-      included: "Le repas du déjeuner",
       profile: profile
     )
 
@@ -113,3 +112,4 @@ p "creation test"
 end
 
 p "test created"
+AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password') if Rails.env.development?
