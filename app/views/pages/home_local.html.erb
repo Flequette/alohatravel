@@ -1,7 +1,18 @@
 <%= render 'shared/navbar_home' %>
 
 <!-- Banner bloc -->
-<%= render "shared/banner" %>
+<div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.4) 0%, rgba(0,36,61,0.4) 50%), url('<%=image_path "banner.jpg" %>');">
+  <div class="banner-content">
+    <h1>Getting bored less. Live More</h1>
+    <p>Partagez une expérience authentique et unique</p>
+
+    <%= render "shared/searchbar" %>
+    <!-- Bouton
+    <a class="btn btn-medium btn-lg">Lancement du site J - 26</a>-->
+
+  </div>
+</div>
+
 
 <!-- Story bloc -->
 <div class="story text-center">

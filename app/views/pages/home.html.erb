@@ -1,97 +1,103 @@
 <%= render 'shared/navbar_home' %>
 
 <!-- Banner bloc -->
-<%= render "shared/banner" %>
-
-<!-- Story bloc -->
-<div class="story text-center">
-  <div class="row">
-    <div class="col-xs-12 col-sm-12 col-md-10 col-md-offset-1 ">
-      <div class="story-card text-center">
-        <h1>PEETAYA, QUESACO?</h1>
-        <h3>Tous nos Peetaguides sont des locaux, des expatriés, des conjoint(e)s d'expatriés les plus experts de leur ville. Nous rassemblons les meilleurs talents du monde entier, offrant un point de vue personnel, révélant l'inconnu et la beauté du monde. Peetaya est là pour ceux qui cherchent à vivre une expérience authentique & unique.</h3>
-      </div>
-    </div>
+<div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.4) 0%, rgba(0,36,61,0.4) 50%), url('<%=image_path "banner.jpg" %>');">
+  <div class="banner-content">
+    <h1>Bousculez votre façon de voyager</h1>
+    <h3>Vivez une expérience authentique et unique</h3>
+    <%= render "shared/searchbar" %>
   </div>
 </div>
 
-<!-- Product value bloc -->
-<div class="value text-center">
-  <div class="row">
-    <div class="value-card">
-      <div class="col-xs-12 col-sm-6 col-md-4">
-        <div class="value-desc">
-          <h4>Vivez comme un local</h4>
-          <p>Laissez-vous guider par le savoir et les bons plans de votre PeetaGuide</p>
+    <!-- Story bloc -->
+    <div class="story text-center">
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-10 col-md-offset-1 ">
+          <div class="story-card text-center">
+            <h1>PEETAYA, QUESACO?</h1>
+            <h3>Tous nos Peetaguides sont des locaux, des expatriés, des conjoint(e)s d'expatriés les plus experts de leur ville. Nous rassemblons les meilleurs talents du monde entier, offrant un point de vue personnel, révélant l'inconnu et la beauté du monde. Peetaya est là pour ceux qui cherchent à vivre une expérience authentique & unique.</h3>
+          </div>
         </div>
-          <%=image_tag 'home/local.jpg', class: "value-photo" %>
       </div>
     </div>
 
-    <div class="value-card">
-      <div class="col-xs-12 col-sm-6 col-md-4">
-        <div class="value-desc">
-          <h4>Economisez autrement</h4>
-          <p>Gagnez du temps grâce à votre PeetaGuide qui vous fera découvrir tous les plans authentiques de sa ville</p>
+    <!-- Product value bloc -->
+    <div class="value text-center">
+      <div class="row">
+        <div class="value-card">
+          <div class="col-xs-12 col-sm-6 col-md-4">
+            <div class="value-desc">
+              <h4>Vivez comme un local</h4>
+              <p>Laissez-vous guider par le savoir et les bons plans de votre PeetaGuide</p>
+            </div>
+              <%=image_tag 'home/local.jpg', class: "value-photo" %>
+          </div>
         </div>
-          <%=image_tag 'home/money.jpg', class: "value-photo" %>
-      </div>
-    </div>
 
-    <div class="value-card">
-      <div class="col-xs-12 col-sm-6 col-md-4">
-        <div class="value-desc">
-          <h4>Appartenez à une communauté</h4>
-          <p>Profitez de cette grande communauté de Peetayers et partagez des moments uniques</p>
+        <div class="value-card">
+          <div class="col-xs-12 col-sm-6 col-md-4">
+            <div class="value-desc">
+              <h4>Economisez autrement</h4>
+              <p>Gagnez du temps grâce à votre PeetaGuide qui vous fera découvrir tous les plans authentiques de sa ville</p>
+            </div>
+              <%=image_tag 'home/money.jpg', class: "value-photo" %>
+          </div>
         </div>
-          <%=image_tag 'home/comunity3.jpg', class: "value-photo" %>
-      </div>
-    </div>
-  </div>
-</div>
 
-<!-- Expérience bloc -->
-<%= render "shared/carousel" %>
-
-<!-- Instagram bloc -->
-<%= render "shared/instagram" %>
-
-<!-- Reviews bloc -->
-<div class="review text-center">
-  <h1>DEJA CONVAINVUS</h1>
-
-  <div class="row text-center">
-    <div class="review-card">
-      <div class="col-xs-12 col-sm-6 col-md-4 ">
-      <%=image_tag 'avatar/margaux.jpg', class: "review-avatar-large"%>
-      <div class="review-content ">
-        <p>"J'ai réservé une demi-journée avec un Peetaguide à Bangkok. Génial de découvrir cette ville avec ses recos !!!"</p>
-        <h4>Margaux</h4>
-      </div>
+        <div class="value-card">
+          <div class="col-xs-12 col-sm-6 col-md-4">
+            <div class="value-desc">
+              <h4>Appartenez à une communauté</h4>
+              <p>Profitez de cette grande communauté de Peetayers et partagez des moments uniques</p>
+            </div>
+              <%=image_tag 'home/comunity3.jpg', class: "value-photo" %>
+          </div>
+        </div>
       </div>
     </div>
 
-    <div class="review-card">
-      <div class="col-xs-12 col-sm-6 col-md-4 ">
-      <%=image_tag 'avatar/adri.png', class: "review-avatar-large"%>
-      <div class="review-content ">
-        <p>"Des rencontres inoubliables au Cambodge. Nous avons passé 1 journée avec notre Peetaguide en partagant son quotidien."</p>
-        <h4>Cécile & Adri</h4>
-      </div>
-      </div>
-    </div>
+    <!-- Expérience bloc -->
+    <%= render "shared/carousel" %>
 
-    <div class="review-card">
-      <div class="col-xs-12 col-sm-6 col-md-4 ">
-      <%=image_tag 'avatar/clo.jpg', class: "review-avatar-large"%>
-      <div class="review-content ">
-        <p>"J'ai passé 1 journée avec un expat qui m'a fait découvrir des temples cachés en Birmanie. Fabuleux!"</p>
-        <h4>Chloé</h4>
-      </div>
+    <!-- Instagram bloc -->
+    <%= render "shared/instagram" %>
+
+    <!-- Reviews bloc -->
+    <div class="review text-center">
+      <h1>DEJA CONVAINVUS</h1>
+
+      <div class="row text-center">
+        <div class="review-card">
+          <div class="col-xs-12 col-sm-6 col-md-4 ">
+          <%=image_tag 'avatar/margaux.jpg', class: "review-avatar-large"%>
+          <div class="review-content ">
+            <p>"J'ai réservé une demi-journée avec un Peetaguide à Bangkok. Génial de découvrir cette ville avec ses recos !!!"</p>
+            <h4>Margaux</h4>
+          </div>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <div class="col-xs-12 col-sm-6 col-md-4 ">
+          <%=image_tag 'avatar/adri.png', class: "review-avatar-large"%>
+          <div class="review-content ">
+            <p>"Des rencontres inoubliables au Cambodge. Nous avons passé 1 journée avec notre Peetaguide en partagant son quotidien."</p>
+            <h4>Cécile & Adri</h4>
+          </div>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <div class="col-xs-12 col-sm-6 col-md-4 ">
+          <%=image_tag 'avatar/clo.jpg', class: "review-avatar-large"%>
+          <div class="review-content ">
+            <p>"J'ai passé 1 journée avec un expat qui m'a fait découvrir des temples cachés en Birmanie. Fabuleux!"</p>
+            <h4>Chloé</h4>
+          </div>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</div>
 
 <!-- Joinus bloc -->
 <%= render "shared/joinus" %>
