@@ -1,25 +1,43 @@
 // Specific CSS for your home-page
 
+.banner-home {
+  color: white;
+  text-align: center;
+  height: 100vh;
+  /* if you have a 70px navbar => height: calc(100vh - 70px); */
+  background-size: cover !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 10px;
+}
+
+.banner-home-content {
+  padding: 10px 10px;
+}
+
+.banner-home h1 {
+  text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
+}
+
+.banner-home h3 {
+  opacity: 0.95;
+}
+
 .story-card {
   border: 2px solid black;
-  padding: 30px 30px;
-  margin: 40px 20px;
-}
-.story-card h3 {
-  font-weight: regular;
-  margin-top:30px;
+  padding: 0px 15px;
+  margin: 30px 15px;
 }
 
 .value {
-  padding: 30px 30px;
+  margin: 30px 0;
+  display: flex;
+  align-items: center;
 }
 
-.value-card {
-  margin: 30px 30px;
-}
-
-.value-desc {
-  min-height: 17vh;
+.value-content {
+  padding: 0 10px;
 }
 
 .value-photo {
@@ -28,18 +46,24 @@
   width: 100%;
 }
 
-.value h4 {
-  font-size: 24px;
-  font-weight: regular;
-  letter-spacing: 1px;
-  box-shadow: inset 0 -10px 0 rgba(80,227,194,0.6);
-  border-bottom: 3px solid rgba(80,227,194,0.6)
-
+.carouselbis {
+  margin: 20px 50px;
 }
 
-.value p {
-  font-size: 18px;
-  font-weight: regular;
+.carousel-pics {
+  height: 100% !important;
+  width: 100% !important;
+  background-image: linear-gradient(-225deg, rgba(200,200,200,0.6) 0%, rgba(0,0,0,0.6) 50%) !important;
+}
+
+.instagram-icon a {
+  color: #50E3C2;
+  text-decoration: none;
+}
+
+.instagram-icon a:hover {
+  color: #50E3C2;
+  opacity: 0.6;
 }
 
 .review {
@@ -80,9 +104,55 @@
   margin-bottom: 15px;
 }
 
-.fb-like {
-  margin-top: 40px;
+.join-banner {
+  color: white;
+  text-align: center;
+  height: 70vh;
+  background-size: cover !important;
+  background-position: center;
+  padding-top: 20px;
+  margin-top: 30px;
 }
 
+.join-content h1 {
+  color: #50E3C2;
+  font-size: 34px;
+  text-shadow: 0px 1px rgba(0,0,0,0.2);
+  padding-bottom: 25px !important;
+}
+
+#mailchimp {
+  padding: 15px 15px;
+}
+
+#mailchimp input {
+    height: 36px;
+    padding: 5px 10px;
+    font-size: 16px;
+    line-height: 1.5;
+    border-radius: 2px;
+    font-weight: lighter;
+    color: #A9A9A9;
+  }
+
+#mailchimp input.email {
+
+}
+
+#mailchimp input[type="submit"] {
+  background: #50E3C2;
+  border: 2px solid #50E3C2;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  margin: 20px 10px;
+  padding: 5px 10px;
+  font-weight: 400;
+  color: #404040;
+}
+
+#mailchimp input[type="submit"]:hover {
+  opacity: 0.9;
+  text-decoration: none;
+}
 
 

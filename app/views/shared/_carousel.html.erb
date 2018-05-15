@@ -1,64 +1,61 @@
-<div class="experience text-center">
-  <h1>COMMENT CA MARCHE?</h1>
+<div class="carouselbis">
+<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+  </ol>
 
-  <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-    <!-- Indicators -->
-    <ol class="carousel-indicators">
-      <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-      <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-      <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-      <li data-target="#carousel-example-generic" data-slide-to="3"></li>
-    </ol>
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner text-center" role="listbox">
 
-    <!-- Wrapper for slides -->
-    <div class="carousel-inner text-center" role="listbox">
-
-      <div class="item active">
-        <%=image_tag 'carousel/search1.jpg', class: "value-pics text-center" %>
-        <div class="carousel-caption">
-          <h1>1. Je Cherche</h1>
-          <h3>Un PeetaGuide en moins de 1 minute dès que j'en ai besoin</h3>
-        </div>
+    <div class="item active">
+      <%=image_tag 'carousel/search1.jpg', class: "carousel-pics text-center" %>
+      <div class="carousel-caption">
+        <h1>1. Je Cherche</h1>
+        <h3>Un PeetaGuide en moins de 1 minute dès que j'en ai besoin</h3>
       </div>
-
-      <div class="item">
-        <%=image_tag 'carousel/search3.jpg', class: "value-pics text-center" %>
-        <div class="carousel-caption">
-          <h1>2. Je Match & Choisis</h1>
-          <h3>Le PeetaGuide de mon choix. Mise en relation personnalisée</h3>
-        </div>
-      </div>
-
-      <div class="item">
-        <%=image_tag 'carousel/pay.jpg', class: "value-pics text-center" %>
-        <div class="carousel-caption">
-          <h1>3. Je Règle</h1>
-          <h3>Directement via le site. La rémunération sera versée à mon PeetaGuide une fois le tour effectué</h3>
-        </div>
-      </div>
-
-      <div class="item">
-        <%=image_tag 'carousel/selfi.jpg', class: "value-pics text-center" %>
-        <div class="carousel-caption">
-          <h1>4. Je Note</h1>
-          <h3>L'expérience et réalise un selfie avec mon PeetaGuide</h3>
-        </div>
-      </div>
-
     </div>
 
-    <!-- Controls -->
-    <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-      <span class="sr-only">Next</span>
-    </a>
-  </div>
-</div>
+    <div class="item">
+      <%=image_tag 'carousel/search3.jpg', class: "carousel-pics text-center" %>
+      <div class="carousel-caption">
+        <h1>2. Je Match & Choisis</h1>
+        <h3>Le PeetaGuide de mon choix. Mise en relation personnalisée</h3>
+      </div>
+    </div>
 
+    <div class="item">
+      <%=image_tag 'carousel/pay.jpg', class: "carousel-pics text-center" %>
+      <div class="carousel-caption">
+        <h1>3. Je Règle</h1>
+        <h3>Directement via le site. La rémunération sera versée à mon PeetaGuide une fois le tour effectué</h3>
+      </div>
+    </div>
+
+    <div class="item">
+      <%=image_tag 'carousel/selfi.jpg', class: "value-pics text-center" %>
+      <div class="carousel-caption">
+        <h1>4. Je Note</h1>
+        <h3>L'expérience et réalise un selfie avec mon PeetaGuide</h3>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Controls -->
+  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+</div>
 
 <script type="text/javascript">
 $('.carousel').carousel({

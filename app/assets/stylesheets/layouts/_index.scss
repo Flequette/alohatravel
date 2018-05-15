@@ -4,20 +4,12 @@
 // @import "profile";
 // @import "map";
 
-.container {
-  min-height: 80vh;
-  padding-bottom: 30px;
-  padding-top: 30px;
-  background-color: white;
-  width: 100%;
-}
-
 .btn-aloha {
   color: white;
   padding: 10px 15px;
   border-radius: 50px;
   font-weight: lighter;
-  background: #50E3C2;
+  background: green;
   transition: background 0.3s ease;
   font-size: 16px;
   min-width: 100px;
