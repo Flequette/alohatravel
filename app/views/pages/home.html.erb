@@ -1,69 +1,64 @@
 <%= render 'shared/navbar_home' %>
 
 <!-- Banner bloc -->
-<div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.4) 0%, rgba(0,36,61,0.4) 50%), url('<%=image_path "banner.jpg" %>');">
-  <div class="banner-content">
+<div class="banner-home" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.4) 0%, rgba(0,36,61,0.4) 50%), url('<%=image_path "banner.jpg" %>');">
+  <div class="banner-home-content">
     <h1>Bousculez votre façon de voyager</h1>
     <h3>Vivez une expérience authentique et unique</h3>
     <%= render "shared/searchbar" %>
   </div>
 </div>
 
+<div class="wrapper-home">
+  <div class="container">
     <!-- Story bloc -->
-    <div class="story text-center">
-      <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-10 col-md-offset-1 ">
-          <div class="story-card text-center">
-            <h1>PEETAYA, QUESACO?</h1>
-            <h3>Tous nos Peetaguides sont des locaux, des expatriés, des conjoint(e)s d'expatriés les plus experts de leur ville. Nous rassemblons les meilleurs talents du monde entier, offrant un point de vue personnel, révélant l'inconnu et la beauté du monde. Peetaya est là pour ceux qui cherchent à vivre une expérience authentique & unique.</h3>
-          </div>
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-10 col-md-offset-1 ">
+        <div class="story-card text-center">
+          <h2>Peetaya, quesaco?</h2>
+          <p>Tous nos Peetaguides sont des locaux, des expatriés, des conjoint(e)s d'expatriés les plus experts de leur ville. Nous rassemblons les meilleurs talents du monde entier, offrant un point de vue personnel, révélant l'inconnu et la beauté du monde. Peetaya est là pour ceux qui cherchent à vivre une expérience authentique & unique.</p>
         </div>
       </div>
     </div>
 
     <!-- Product value bloc -->
-    <div class="value text-center">
-      <div class="row">
-        <div class="value-card">
-          <div class="col-xs-12 col-sm-6 col-md-4">
-            <div class="value-desc">
-              <h4>Vivez comme un local</h4>
-              <p>Laissez-vous guider par le savoir et les bons plans de votre PeetaGuide</p>
-            </div>
-              <%=image_tag 'home/local.jpg', class: "value-photo" %>
-          </div>
+    <div class="row value">
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="value-content text-center">
+          <h4>Vivez comme un local</h4>
+          <p>Laissez-vous guider par le savoir et les bons plans de votre PeetaGuide</p>
         </div>
+          <%=image_tag 'home/local.jpg', class: "value-photo" %>
+      </div>
 
-        <div class="value-card">
-          <div class="col-xs-12 col-sm-6 col-md-4">
-            <div class="value-desc">
-              <h4>Economisez autrement</h4>
-              <p>Gagnez du temps grâce à votre PeetaGuide qui vous fera découvrir tous les plans authentiques de sa ville</p>
-            </div>
-              <%=image_tag 'home/money.jpg', class: "value-photo" %>
-          </div>
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="value-content text-center">
+          <h4>Economisez autrement</h4>
+          <p>Gagnez du temps pour découvrir tous les plans authentiques d'une ville</p>
         </div>
+          <%=image_tag 'home/money.jpg', class: "value-photo" %>
+      </div>
 
-        <div class="value-card">
-          <div class="col-xs-12 col-sm-6 col-md-4">
-            <div class="value-desc">
-              <h4>Appartenez à une communauté</h4>
-              <p>Profitez de cette grande communauté de Peetayers et partagez des moments uniques</p>
-            </div>
-              <%=image_tag 'home/comunity3.jpg', class: "value-photo" %>
-          </div>
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="value-content text-center">
+          <h4>Appartenez à une communauté</h4>
+          <p>Profitez de la communauté Peetaya et partagez des moments uniques</p>
         </div>
+          <%=image_tag 'home/comunity3.jpg', class: "value-photo" %>
       </div>
     </div>
 
     <!-- Expérience bloc -->
-    <%= render "shared/carousel" %>
+    <div class="row text-center">
+      <h2>Comment ça marche?</h2>
+      <%= render "shared/carousel" %>
+    </div>
 
     <!-- Instagram bloc -->
     <%= render "shared/instagram" %>
 
     <!-- Reviews bloc -->
-    <div class="review text-center">
+    <div class="row">
       <h1>DEJA CONVAINVUS</h1>
 
       <div class="row text-center">
@@ -98,7 +93,8 @@
         </div>
       </div>
     </div>
-
+  </div>
+</div>
 <!-- Joinus bloc -->
 <%= render "shared/joinus" %>
 
