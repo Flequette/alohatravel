@@ -1,7 +1,8 @@
-.container-cards {
-  padding-bottom: 30px;
+#map {
+  flex: 0 0 450px;
+  position: sticky !important;
+  top: 0 !important;
 }
-
 
 .deals-banner {
   color: white;
@@ -13,48 +14,6 @@
   align-items: center;
   justify-content: center;
   padding: 10px 10px;
-}
-
-.deals-card {
-  height: 450px;
-  width: 500px;
-  margin: 30px 30px;
-  background-color: white;
-  border-radius: 1px;
-  box-shadow: 2px 2px 3px #404040;
-}
-
-.deals-photo {
-  padding-top: 30px;
-
-}
-
-.deals-content {
-  padding: 30px 50px;
-}
-
-.deals-content p {
-  font-size: 14px;
-  color: #404040
-}
-
-.newdeal-banner {
-  color: white;
-  text-align: center;
-  height: 50vh;
-  /* if you have a 70px navbar => height: calc(100vh - 70px); */
-  background-size: cover !important;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 10px 10px;
-  position: relative;
-}
-
-.newdeal-content {
-  position: absolute;
-  bottom: 10px;
-  left: 150px;
 }
 
 .form-control {
