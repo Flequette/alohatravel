@@ -1,28 +1,24 @@
-<div class="container">
-  <div class="row">
-    <% @deals.each do |deal| %>
-      <div class="col-xs-12 col-sm-6 col-md-4 ">
-        <%= link_to deal_path(deal) do %>
-          <div class="deal-card">
-            <div class="deal-card-photo text-center">
-              <%= cl_image_tag deal.photo, height: 250, width: 350, crop: :fill %>
-            </div>
-            <div class="deal-card-content">
-              <div class="deal-card-title">
+<div class="wrapper-grey padded">
+  <div class="container">
+    <div class="row">
+      <% @deals.each do |deal| %>
+        <div class="col-xs-12 col-sm-6">
+          <%= link_to deal_path(deal) do %>
+            <div class="card" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.4) 0%, rgba(0,36,61,0.4) 50%), url('<%= cl_image_path deal.photo, height: 350, width: 550, crop: :fill %>')">
+              <div class="card-category"><h3><%= deal.city %></h3></div>
+              <div class="card-description">
+                <h3><%= deal.name %></h3>
                 <p><%= deal.city %>, <%= deal.country%> | <%= deal.price%> €</p>
-              </div>
-              <div class="deal-card-name">
-                <p><%= deal.name %></p>
               </div>
               <% if deal.profile.photo.present? %>
                 <%= cl_image_tag deal.profile.photo, class: "deal-card-user" %>
               <% else %>
-                <img class="deal-card-user" src="https://kitt.lewagon.com/placeholder/users/tgenaitay">
+                <img class="card-user" src="https://kitt.lewagon.com/placeholder/users/tgenaitay">
               <% end %>
             </div>
-          </div>
-        <% end %>
-      </div>
-    <% end %>
+          <% end %>
+        </div>
+      <% end %>
+    </div>
   </div>
 </div>

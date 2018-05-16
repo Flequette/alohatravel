@@ -3,26 +3,27 @@
 <!-- Maps -->
 <div id="map" style="width: 100%; height: 60vh;" data-markers="<%= @markers.to_json %>"></div>
 
-<div class="container">
-  <!-- Searchbar bloc -->
-  <div class="row">
-    <% if user_signed_in? %>
-      <div class="row">
-        <div class="searchbar2">
-          <div class="col-xs-12 text-center">
-            <%= form_tag result_path, id: "address_input", method: :get, autocomplete: 'on' do %>
-              <%= text_field_tag :location, params[:location], {id: 'address', class: "namanyay-search-box", placeholder: 'Quelle est votre destination?', :required => true} %>
-              <%= select_tag(:activity, options_for_select([ ['Culture', "Culture"], ['Nature', "Nature"], ['Nautique', "Nautique"], ['Hivernale', "Hivernale"], ['Aérienne', "Aérienne"]]),
-               {class: "namanyay-search-box-type", :prompt => "Activité"})  %>
-              <%= submit_tag "Trouver", class: "btn-peetaya" %>
-            <% end %>
-          </div>
+<div class="searchbar-deal">
+  <div class="container">
+    <!-- Searchbar bloc -->
+    <div class="row">
+      <% if user_signed_in? %>
+        <div class="row">
+            <div class="col-xs-12 text-center">
+              <%= form_tag result_path, id: "address_input", method: :get, autocomplete: 'on' do %>
+                <%= text_field_tag :location, params[:location], {id: 'address', class: "namanyay-search-box", placeholder: 'Quelle est votre destination?', :required => true} %>
+                <%= select_tag(:activity, options_for_select([ ['Culture', "Culture"], ['Nature', "Nature"], ['Nautique', "Nautique"], ['Hivernale', "Hivernale"], ['Aérienne', "Aérienne"]]),
+                 {class: "namanyay-search-box-type", :prompt => "Activité"})  %>
+                <%= submit_tag "Chercher", class: "btn-peetaya" %>
+              <% end %>
+            </div>
         </div>
-      </div>
-    <% end %>
+      <% end %>
+    </div>
+    <!-- End Searchbar bloc -->
   </div>
+</div>
 
   <!-- Cards Deal -->
   <%= render "shared/cards_deal" %>
-</div>
 
