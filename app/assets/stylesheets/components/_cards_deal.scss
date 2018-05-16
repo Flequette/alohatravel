@@ -1,66 +1,58 @@
-.container-cards {
-  display: flex;
-  background-color: white;
-  margin: 20px 20px;
-}
-
-.deal-card {
-  height: 320px;
-  width: 350px;
+.card {
+  height: 350px;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.6);
   background-size: cover !important;
-  background-position: center;
-  margin-top: 30px;
-  margin-left: 20px;
-}
-
-.deal-card-photo {
-  padding: 15px 15px 15px 15px;
-  border-radius: 3px;
-  width: 100%;
-}
-
-.deal-card-desc {
+  color: white;
   position: relative;
+  border-radius: 3px;
+  margin-bottom: 30px;
 }
-
-.deal-card-title {
+.card-user {
   position: absolute;
-  left: 70px;
-  color: #404040;
-  font-size: 14px;
-  opacity: 0.8;
-  font-weight: lighter;
-  word-spacing: 2px;
-  letter-spacing: 2px;
-  margin-top: 10px;
-}
-
-.deal-card-name {
-  position: absolute;
-  left: 70px;
-  top: 30px;
-  color: #404040;
-  font-size: 16px;
-}
-
-.deal-card-user {
-  position: absolute;
-  left: 5px;
-  width: 50px;
+  right: 10px;
+  top: 10px;
+  width: 60px;
   border-radius: 50%;
-  top: 15px;
 }
 
-.deal-card-link {
+.card-category {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+.card-category h3 {
+  margin: 0 !important;
+  font-weight: 300 !important;
+}
+
+.card-description {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+}
+
+.card-description h3 {
+  margin: 0 !important;
+  font-weight: 400 !important;
+}
+
+.card-description p {
+  font-size: 22px !important;
+  font-weight: lighter !important;
+}
+
+.card-link {
   position: absolute;
   top: 0;
   bottom: 0;
-  right: 0;
   width: 100%;
-  z-index: 2;
+  z-index:2;
   background: black;
   opacity: 0;
 }
-.deal-card-link:hover {
+
+.card-link:hover{
   opacity: 0.1;
 }
+
