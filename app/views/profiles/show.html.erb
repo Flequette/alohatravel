@@ -1,12 +1,12 @@
 <%= render 'shared/navbar' %>
 
-<div class="showprofile-banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('<%=image_path "banner.jpg" %>');">
-  <div class="showprofile-back">
+<div class="showdeal-banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('<%=image_path "banner.jpg" %>');">
+  <div class="showdeal-back">
     <%= link_to deals_path do %>
       <i class="fa fa-arrow-left"></i> Retour aux expériences
     <% end %>
   </div>
-  <div class="showprofile-content text-center">
+  <div class="showdeal-content text-center">
     <% if current_user.profile == @profile %>
       <h3>MON PROFIL</h3> <%= link_to "| Modifier", edit_profile_path(@profile) %>
     <% else %>

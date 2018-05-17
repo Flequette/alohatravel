@@ -4,6 +4,10 @@
 // @import "profile";
 // @import "map";
 
+
+.body {
+  color:#4c4c4c !important;
+}
 .btn-peetaya {
   background: #50E3C2;
   border: 2px solid #50E3C2;
@@ -18,4 +22,8 @@
 .btn-peetaya:hover {
   opacity: 0.9;
   text-decoration: none;
+}
+
+.container {
+  margin-bottom: 30px
 }
