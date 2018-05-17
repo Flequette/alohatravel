@@ -1,8 +1,9 @@
 #map {
   flex: 0 0 450px;
-  position: sticky !important;
+  /*position: sticky !important;*/
   top: 0 !important;
-  border: 2px solid #191919;
+  border: 2px solid #d9d9d9;
+  margin-bottom: 30px;
 }
 
 .deals-banner {
@@ -30,7 +31,7 @@
   position: relative;
 }
 
-.newdeal-content {
+#newdeal-content {
   position: absolute;
   bottom: 10px;
   left: 150px;
@@ -42,7 +43,6 @@
 }
 
 .searchbar-deal {
-  background: #191919;
   padding: 0px 50px;
   margin-bottom: 30px;
 }

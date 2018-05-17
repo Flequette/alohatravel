@@ -2,37 +2,40 @@
   background: #191919;
   display: flex;
   align-items: center;
-  min-height: 300px;
-  padding: 0px 50px;
-  padding-bottom: 50px;
-}
+  height: 50vh;
+  padding: 0px 30px;
 
- .footer p {
-  font-weight: lighter;
-  font-size: 12px !important;
-  opacity: 0.9;
- }
+}
 
 .footer
 .container {
   background-color: #191919;
-  color: white;
+  color: #FFFF;
 }
 
+ .footer p {
+  font-weight: lighter;
+  font-size: 14px !important;
+  opacity: 0.8;
+  color: white;
+  letter-spacing: 1px;
+ }
+
 .footer-title {
-  color: #FFF;
+  color: #FFFF;
 }
 
 .footer-link {
-  color: white;
-  text-decoration: none;
+  color: #FFFF;
   font-weight: 300;
-  font-size: 12px !important;
-  opacity: 0.9;
+  font-size: 14px !important;
+  opacity: 0.8;
+  letter-spacing: 1px;
 }
 
-.footer-link a:hover {
+.footer-link :hover {
   text-decoration: none;
-  color: white;
+  color: #50E3C2;
   opacity: 0.85;
+  cursor: pointer;
 }

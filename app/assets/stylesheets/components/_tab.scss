@@ -3,39 +3,24 @@
   padding: 10px 10px 10px 10px;
 }
 
-.tabs a {
-  color: #F9F9F9;
-}
 
 .tabs a:hover {
   cursor: pointer;
   text-decoration: none;
-  opacity: 0.6;
-}
-
-.tabs p {
-  font-size: 16px;
-  margin-top: 0;
-}
-
-.tab {
-  background: #50E3C2;
-  flex: 0 0 25%;
-  text-align: center;
-  padding-top: 10px;
-  margin:10px;
-}
-
-.tab:first-child {
-  border-radius: 3px;
-}
-
-.tab:last-child {
-  border-radius: 3px;
+  opacity: 0.85;
 }
 
 .tab.active {
   background: #50E3C2;
   opacity: 0.6;
   color: #F9F9F9;
+}
+
+.btn-peetaya {
+  font-weight: 200 !important;
+
+}
+
+.wrapper-grey {
+min-height: 80vh;
 }
