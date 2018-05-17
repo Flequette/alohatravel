@@ -82,6 +82,11 @@
   padding: 50px 50px;
 }
 
+.description p {
+  font-weight: 200 !important;
+
+}
+
 .desc-title h4 {
   font-size: 18px !important;
 }
@@ -115,3 +120,33 @@
   color: #404040;
   font-style: italic;
 }
+
+.booking-box {
+  border: 1px solid #d9d9d9;
+  border-radius: 2px;
+  padding: 15px;
+}
+
+.booking-box h4{
+  margin-bottom: 30px !important;
+}
+
+.btn-peetaya2 {
+  background: #50E3C2;
+  border: 2px solid #50E3C2;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  font-weight: 400;
+  color: #404040;
+  width: 100% !important;
+  margin: 15px 0px !important;
+  padding: 10px !important;
+}
+
+.btn-peetaya2:hover {
+  opacity: 0.9;
+  text-decoration: none;
+}
+
+
+

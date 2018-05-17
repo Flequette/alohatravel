@@ -1,6 +1,6 @@
 #map {
   flex: 0 0 450px;
-  position: sticky !important;
+  /*position: sticky !important;*/
   top: 0 !important;
   border: 2px solid #191919;
 }
@@ -30,7 +30,7 @@
   position: relative;
 }
 
-.newdeal-content {
+#newdeal-content {
   position: absolute;
   bottom: 10px;
   left: 150px;
