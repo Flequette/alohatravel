@@ -3,7 +3,6 @@ class DealsController < ApplicationController
 
   def index
     @deals = Deal.where.not(latitude: nil, longitude: nil)
-
     @markers = @deals.map do |deal|
       {
         lat: deal.latitude,
@@ -12,7 +11,6 @@ class DealsController < ApplicationController
       }
     end
   end
-
 
   def show
     @booking = Booking.new
