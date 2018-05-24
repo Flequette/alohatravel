@@ -3,9 +3,11 @@
 <!-- Banner bloc -->
 <div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.4) 0%, rgba(0,36,61,0.4) 50%), url('<%=image_path "banner.jpg" %>');">
   <div class="banner-home-content">
+    <div class="col-xs-12 col-sm-12 col-md-12">
     <h1>Getting bored less. Live More</h1>
     <h3>Partagez une expérience authentique et unique</h3>
     <%= render "shared/searchbar" %>
+    </div>
   </div>
 </div>
 <!-- End Banner bloc -->
@@ -13,15 +15,6 @@
 <!-- Body bloc -->
 <div class="wrapper-home">
   <div class="container">
-    <!-- Story bloc -->
-    <div class="row">
-      <div class="col-xs-12 col-sm-12 col-md-10 col-md-offset-1">
-        <div class="story-card text-center">
-          <h2>Peetaya, quesaco?</h2>
-          <p>Tous nos PeetaGuides sont des locaux, des expatriés, des conjoint(e)s d'expatriés les plus experts de leur ville. Nous rassemblons les meilleurs talents du monde entier, offrant un point de vue personnel, révélant l'inconnu et la beauté du monde. Peetaya est là pour ceux qui cherchent à vivre une expérience authentique & unique.</p>
-        </div>
-      </div>
-    </div>
 
     <!-- Product value bloc -->
     <div class="row">
@@ -67,32 +60,40 @@
           <div class="item active">
             <%=image_tag 'carousel/search1.jpg', class: "value-pics text-center" %>
             <div class="carousel-caption">
-              <h1>1. Je Renseigne</h1>
-              <h3>Mon profil et les tours que je propose</h3>
+              <div class="col-xs-12 col-sm-12 col-md-12">
+                <h1>1. Je Renseigne</h1>
+                <h3>Mon profil et les tours que je propose</h3>
+              </div>
             </div>
           </div>
 
           <div class="item">
             <%=image_tag 'carousel/search3.jpg', class: "value-pics text-center" %>
             <div class="carousel-caption">
-              <h1>2. J'Accepte</h1>
-              <h3>Les demandes des Peetayers selon mes disponibiltés et envie</h3>
+              <div class="col-xs-12 col-sm-12 col-md-12">
+                <h1>2. J'Accepte</h1>
+                <h3>Les demandes des Peetayers selon mes disponibiltés et envie</h3>
+              </div>
             </div>
           </div>
 
           <div class="item">
             <%=image_tag 'carousel/pay.jpg', class: "value-pics text-center" %>
             <div class="carousel-caption">
-              <h1>3. Je gagne</h1>
-              <h3>Un revenu complémentaire que je reçois directement dans ma cagnotte</h3>
+              <div class="col-xs-12 col-sm-12 col-md-12">
+                <h1>3. Je gagne</h1>
+                <h3>Un revenu complémentaire que je reçois directement dans ma cagnotte</h3>
+              </div>
             </div>
           </div>
 
           <div class="item">
             <%=image_tag 'carousel/selfi.jpg', class: "value-pics text-center" %>
             <div class="carousel-caption">
-              <h1>4. Je note</h1>
-              <h3>L'expérience et réalise un selfie avec mon Peetayers</h3>
+              <div class="col-xs-12 col-sm-12 col-md-12">
+                <h1>4. Je note</h1>
+                <h3>L'expérience et réalise un selfie avec mon Peetayers</h3>
+              </div>
             </div>
           </div>
 
@@ -132,7 +133,9 @@
 <div class="join-banner" style="background-image: linear-gradient(-225deg, rgba(200,200,200,0.6) 0%, rgba(0,0,0,0.6) 50%), url('<%=image_path "home/joinus2.jpg" %>');">
   <div class="join-banner">
     <div class="join-content text-center">
-      <h1>Prêt à sauter le pas?</h1>
+      <div class="col-xs-12 col-sm-12 col-md-12">
+        <h1>Prêt à sauter le pas?</h1>
+      </div>
     </div>
     <div class="row">
       <div class="col-xs-12 col-sm-4 col-sm-offset-4">

@@ -1,8 +1,10 @@
 <!-- Banner bloc -->
 <div class="banner-landing" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.4) 0%, rgba(0,36,61,0.4) 50%), url('<%=image_path "banner_expat.jpg" %>');">
   <div class="banner-landing-content text-center">
-    <h1>GETTING BORED LESS. LIVE MORE.</h1>
-    <p>Peetaya is all about discovering new places through local eyes. Propose a tour, match with travelers, make him live a unique exprience and earn money.</p>
+    <div class="col-xs-12 col-sm-12 col-md-12">
+      <h1>GETTING BORED LESS. LIVE MORE.</h1>
+      <p>Peetaya is all about discovering new places through local eyes. Propose a tour, match with travelers, make him live a unique exprience and earn money.</p>
+    </div>
     <!-- Begin MailChimp Signup Form -->
       <div id="mailchimp">
         <form action="https://github.us17.list-manage.com/subscribe/post?u=adc27fca9aba080530221c91a&amp;id=d5cad2a0b4" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
@@ -29,16 +31,33 @@
 <!-- Body bloc -->
 <div class="wrapper-home">
   <div class="container">
-    <!-- Story bloc -->
-    <div class="row">
-      <div class="col-xs-12 col-sm-12 col-md-10 col-md-offset-1">
-        <div class="story-card text-center">
-          <h2>Peetaya, quesaco?</h2>
-          <p>Tous nos guides sont des conjoint(e)s d'expatriés les plus experts de leur ville. Nous rassemblons les meilleurs talents du monde entier, offrant un point de vue personnel, révélant l'inconnu et la beauté du monde. Peetaya est là pour ceux qui cherchent à vivre une expérience authentique & unique.</p>
+    <!-- Product value bloc -->
+    <div class="row text-center">
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="value-content">
+          <h4>Occupez votre temps libre</h4>
+          <p>Fini l'ennui et place au partage, aux rencontres, et à une nouvelle vie </p>
         </div>
+        <%=image_tag 'home/comunity.jpg', class: "value-photo" %>
+      </div>
+
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="value-content">
+          <h4>Partagez vos meilleurs plans</h4>
+          <p>Devenez votre propre agence de voyage en faisant vivre une expérience unique</p>
+        </div>
+        <%=image_tag 'home/live.jpg', class: "value-photo" %>
+      </div>
+
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="value-content">
+          <h4>Arrondissez vos fins de mois</h4>
+          <p>Gagnez un revenu complémentaire grâce aux réservations des Peetayers</p>
+        </div>
+        <%=image_tag 'home/money2.jpg', class: "value-photo" %>
       </div>
     </div>
-    <!-- End Story bloc -->
+    <!-- End Product value bloc -->
 
     <!-- Expérience bloc -->
     <div class="row text-center">
