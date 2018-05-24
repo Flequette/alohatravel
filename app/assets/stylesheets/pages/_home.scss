@@ -10,6 +10,7 @@
   align-items: center;
   justify-content: center;
   padding: 10px 10px;
+  margin-bottom: 30px;
 }
 
 .banner-home-content {
@@ -136,6 +137,7 @@
   }
 
 #mailchimp input.email {
+  width: 280px !important;
 
 }
 
@@ -155,4 +157,8 @@
   text-decoration: none;
 }
 
+.fa-bars {
+  color: #50E3C2;
+
+}
 

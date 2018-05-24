@@ -1,13 +1,14 @@
 .banner-landing {
   color: white;
   text-align: center;
-  height: 120vh;
+  min-height: 120vh;
   /* if you have a 70px navbar => height: calc(100vh - 70px); */
   background-size: cover !important;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 10px 10px;
+  margin-bottom: 30px;
 }
 
 .banner-landing-content {
