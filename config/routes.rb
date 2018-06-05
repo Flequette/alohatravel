@@ -3,10 +3,11 @@ Rails.application.routes.draw do
   ActiveAdmin.routes(self)
   devise_for :users
 
-  get "local", to: "pages#home_local", as: "local"
+  get "expats", to: "pages#home_local", as: "local"
   get "joinus", to: "pages#joinus", as: "joinus"
   get "result", to: "pages#result", as: "result"
   get "legal", to: "pages#legal", as: "legal"
+  get "contact", to: "pages#contact", as: "contact"
   get "landing", to: "pages#landing", as: "landing"
 
   get "ask_booking", to: "bookings#ask_booking", as: "demande"

@@ -1,36 +1,31 @@
 <%= render 'shared/navbar' %>
 
-<div class="deals-banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.4) 0%, rgba(0,36,61,0.4) 50%), url('<%=image_path "joinus.jpg" %>');">
-</div>
+<!-- Maps -->
+<div id="map" style="width: 100%; height: 60vh;" data-markers="<%= @markers.to_json %>"></div>
 
-<div class="row">
-  <div class="col-xs-12 col-sm-6 col-md-8 ">
-    <!-- Searchbar bloc -->
+  <!-- <div class="searchbar-deal">
+  <div class="container">
+     Searchbar bloc
     <div class="row">
       <% if user_signed_in? %>
         <div class="row">
-          <div class="searchbar2">
             <div class="col-xs-12 text-center">
               <%= form_tag result_path, id: "address_input", method: :get, autocomplete: 'on' do %>
                 <%= text_field_tag :location, params[:location], {id: 'address', class: "namanyay-search-box", placeholder: 'Quelle est votre destination?', :required => true} %>
                 <%= select_tag(:activity, options_for_select([ ['Culture', "Culture"], ['Nature', "Nature"], ['Nautique', "Nautique"], ['Hivernale', "Hivernale"], ['Aérienne', "Aérienne"]]),
                  {class: "namanyay-search-box-type", :prompt => "Activité"})  %>
-                <%= submit_tag "Trouver", class: "btn-peetaya" %>
+                <%= submit_tag "Chercher", class: "btn-peetaya" %>
               <% end %>
             </div>
-          </div>
         </div>
       <% end %>
     </div>
-    <!-- Cards Deal -->
-    <div class="row">
-      <%= render "shared/cards_deal" %>
-    </div>
+     End Searchbar bloc
   </div>
+</div> -->
 
-  <div class="col-xs-12 col-sm-6 col-md-4 ">
-    <!-- Maps -->
-    <div id="map" style="width: 100%; height: 700px;" data-markers="<%= @markers.to_json %>"></div>
-  </div>
-</div>
+<!-- Cards Deal -->
+<%= render "shared/cards_deal" %>
+
+
 
