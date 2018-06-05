@@ -31,6 +31,7 @@ profile = Profile.new(
     description: "Je vis à Phnom Penh depuis 4 ans. J'adore cette ville et le Cambodge. c'est pourquoi je suis très heureux de partager mes bons plans. Et de pouvoir également en découvrir lorsque je voyage.",
     country: "Cambodge",
     city: "Phnom Penh",
+    language: "Français, Espagnol, Anglais",
     user: user
 )
 profile.save!
@@ -83,7 +84,8 @@ users = []
     country: "Cambodge",
     city: "Siem Reap",
     phone_number: "0698765432",
-    description: "blabla",
+    description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, quasi velit ad, tempore atque officiis fuga asperiores nobis labore deleniti non illo. Cum ducimus rerum magnam, corrupti dolorum odit quis.",
+    language: "Français",
     photo: "https://unsplash.com/photos/1ms2mtK6izM",
     user: u
     )
