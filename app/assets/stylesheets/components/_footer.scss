@@ -1,40 +1,52 @@
 .footer {
-  background: #191919;
+  display: flex;
   align-items: center;
-  min-height: 50vh;
-  padding: 30px 30px;
+
+  padding: 50px 50px;
+  padding-bottom: 50px;
+  background-color: #191919;
+}
+
+.footer .container {
+    text-align: left;
+    min-height: 50vh;
 
 }
 
-.footer
-.container {
-  background-color: #191919;
-  color: #FFFF;
+.footer-title {
+  color: #F6F6F6;
 }
 
  .footer p {
-  font-weight: lighter;
-  font-size: 14px !important;
-  opacity: 0.8;
-  color: white;
-  letter-spacing: 1px;
+  margin-top: 15px;
+  font-size: 16px !important;
+  font-weight: 200;
+  opacity: 0.85 !important;
+  color: #FFF;
+  letter-spacing: 1.5px;
  }
 
-.footer-title {
-  color: #FFFF;
+ .footer-links {
+  margin-bottom: 5px;
 }
 
-.footer-link {
-  color: #FFFF;
-  font-weight: 300;
-  font-size: 14px !important;
-  opacity: 0.8;
-  letter-spacing: 1px;
+.footer-links a {
+  font-size: 16px !important;
+  font-weight: 250;
+  opacity: 0.85;
+  letter-spacing: 1.5px;
+  color: #FFF;
+  text-decoration: none;
+  margin-bottom: 10px;
 }
 
-.footer-link :hover {
+.footer-links a:hover {
   text-decoration: none;
   color: #50E3C2;
   opacity: 0.85;
   cursor: pointer;
+}
+
+.partner-brand img {
+    height: 60px;
 }
