@@ -1,16 +1,32 @@
 // Specific CSS for your home-page
+@media screen and (min-width: 600px) {
+  .banner-home {
+    color: white;
+    text-align: center;
+    height: 100vh;
+    /* if you have a 70px navbar => height: calc(100vh - 70px); */
+    background-size: cover !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 10px;
+    margin-bottom: 30px;
+  }
+}
 
-.banner-home {
-  color: white;
-  text-align: center;
-  height: 100vh;
-  /* if you have a 70px navbar => height: calc(100vh - 70px); */
-  background-size: cover !important;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 10px 10px;
-  margin-bottom: 30px;
+@media screen and (max-width: 600px) {
+  .banner-home {
+    color: white;
+    text-align: center;
+    height: 80vh;
+    /* if you have a 70px navbar => height: calc(100vh - 70px); */
+    background-size: cover !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 10px;
+    margin-bottom: 30px;
+  }
 }
 
 .banner-home-content {
@@ -48,13 +64,46 @@
 }
 
 .carouselbis {
-  margin: 20px 50px;
+
 }
 
 .carousel-pics {
   height: 100% !important;
   width: 100% !important;
   background-image: linear-gradient(-225deg, rgba(200,200,200,0.6) 0%, rgba(0,0,0,0.6) 50%) !important;
+}
+
+@media screen and (min-width: 600px) {
+  .carousel-caption h1 {
+    font-size: 42px !important;
+    font-weight: 500 !important;
+    padding: 10px 10px !important;
+  }
+
+  .carousel-caption h3 {
+    font-size: 28px !important;
+    font-weight: lighter !important;
+    letter-spacing: 1px !important;
+    padding: 10px 10px !important;
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .carousel-caption h1 {
+    font-size: 20px !important;
+    font-weight: 450 !important;
+    padding: 5px 5px !important;
+    margin: 0 !important;
+  }
+
+  .carousel-caption h3 {
+    font-size: 14px !important;
+    font-weight: lighter !important;
+    letter-spacing: 1px !important;
+    padding: 10px 5px !important;
+    margin: 0 !important;
+  }
 }
 
 .instagram-icon a {
