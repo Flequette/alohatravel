@@ -23,34 +23,83 @@ $border-radius-large: 2px;
 $border-radius-small: 2px;
 
 // Override other variables below!
+/* If screen size is more than 600px wide, set the font-size of <div> to 80px */
+@media screen and (min-width: 600px) {
+  h1 {
+    font-size: 42px !important;
+    font-weight: 500 !important;
+    padding: 10px 10px !important;
+  }
 
-h1 {
-  font-size: 42px !important;
+  h2 {
+    font-size: 34px !important;
+    font-weight: 400 !important;
+    padding: 10px 10px !important;
+  }
+
+  h3 {
+    font-size: 28px !important;
+    font-weight: lighter !important;
+    letter-spacing: 1px !important;
+    padding: 10px 10px !important;
+    margin: 0;
+  }
+
+  p {
+    font-size: 18px !important;
+    color: #404040;
+    padding: 0px 10 !important;
+  }
+
+  h4 {
+    font-size: 22px !important;
+    font-weight: 400 !important;
+    box-shadow: inset 0 -12px 0 rgba(80,227,194,0.6);
+    -webkit-box-shadow: inset 0 -12px 0 rgba(80,227,194,0.6);
+    -webkit-transition: background .2s ease;
+    transition: background .2s ease;
+    height: 29px;
+    display: inline-block;
+  }
+
+  h5 {
+    font-size: 22px !important;
+    font-weight: 350 !important;
+    margin: 15px 10px !important ;
+  }
+
+  }
+
+/* If screen size is 600px wide, or less, set the font-size of <div> to 30px */
+@media screen and (max-width: 600px) {
+  h1 {
+  font-size: 36px !important;
   font-weight: 500 !important;
-  padding: 10px 0 !important;
+  padding: 10px 10px !important;
 }
 
 h2 {
-  font-size: 34px !important;
+  font-size: 28px !important;
   font-weight: 400 !important;
-  padding: 10px 0 !important;
+  padding: 10px 10px !important;
 }
 
 h3 {
-  font-size: 28px !important;
+  font-size: 22px !important;
   font-weight: lighter !important;
   letter-spacing: 1px !important;
-  padding: 10px 0 !important;
+  padding: 10px 10px !important;
   margin: 0;
 }
 
 p {
-  font-size: 18px !important;
+  font-size: 14px !important;
   color: #404040;
+  padding: 0px 10 !important;
 }
 
 h4 {
-  font-size: 22px !important;
+  font-size: 16px !important;
   font-weight: 400 !important;
   box-shadow: inset 0 -12px 0 rgba(80,227,194,0.6);
   -webkit-box-shadow: inset 0 -12px 0 rgba(80,227,194,0.6);
@@ -61,8 +110,11 @@ h4 {
 }
 
 h5 {
-  font-size: 22px !important;
+  font-size: 16px !important;
   font-weight: 350 !important;
-  margin: 15px 0 !important ;
+  margin: 15px 10px !important ;
 }
+
+}
+
 

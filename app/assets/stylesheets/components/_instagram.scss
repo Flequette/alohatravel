@@ -10,10 +10,21 @@ body{
   overflow: hidden;
   padding: 3px;
 }
-.gal-item .box{
-  height: 350px;
-  overflow: hidden;
+
+@media screen and (min-width: 600px) {
+  .gal-item .box{
+    height: 350px;
+    overflow: hidden;
+  }
 }
+
+@media screen and (max-width: 600px) {
+  .gal-item .box{
+    height: 150px;
+    overflow: hidden;
+  }
+}
+
 .box img{
   height: 100%;
   width: 100%;
