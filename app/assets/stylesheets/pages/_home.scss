@@ -18,7 +18,7 @@
   .banner-home {
     color: white;
     text-align: center;
-    height: 80vh;
+    height: 110vh;
     /* if you have a 70px navbar => height: calc(100vh - 70px); */
     background-size: cover !important;
     display: flex;
@@ -106,12 +106,30 @@
   }
 }
 
+.instagram-icon {
+  margin: 10px 0px;
+}
+
 .instagram-icon a {
   color: #50E3C2;
   text-decoration: none;
 }
 
 .instagram-icon a:hover {
+  color: #50E3C2;
+  opacity: 0.6;
+}
+
+.facebook-icon {
+  margin: 10px 0px;
+}
+
+.facebook-icon a {
+  color: #50E3C2;
+  text-decoration: none;
+}
+
+.facebook-icon a:hover {
   color: #50E3C2;
   opacity: 0.6;
 }
