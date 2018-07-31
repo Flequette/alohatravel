@@ -47,9 +47,8 @@
 
     <% else %>
       <%= link_to "Être Peetayer", root_path, class: "navbar-wagon-item navbar-wagon-link" %>
-      <%= link_to "Devenir PeetaGuide", landing_path, class: "navbar-wagon-item navbar-wagon-link" %>
-      <!-- Login link (when logged out) %>
-      <%= link_to t(".sign_in", default: "S'inscrire / Se connecter"), new_user_session_path, class: "navbar-wagon-item navbar-wagon-link"%>-->
+      <%= link_to "Devenir PeetaGuide", home_local_path, class: "navbar-wagon-item navbar-wagon-link" %>
+      <%= link_to t(".sign_in", default: "S'inscrire / Se connecter"), new_user_session_path, class: "navbar-wagon-item navbar-wagon-link"%>
     <% end %>
   </div>
 
@@ -59,7 +58,8 @@
       <i class="fa fa-bars dropdown-toggle" data-toggle="dropdown"></i>
       <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
         <li><%= link_to "Être Peetayer", root_path %></li>
-        <li><%= link_to "Devenir PeetaGuide", landing_path %></li>
+        <li><%= link_to "Devenir PeetaGuide", home_local_path %></li>
+        <li><%= link_to t(".sign_in", default: "S'inscrire / Se connecter"), new_user_session_path, class: "navbar2-wagon-item navbar2-wagon-link" %></li>
       </ul>
     </div>
   </div>
