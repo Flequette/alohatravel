@@ -18,7 +18,7 @@ class ApplicationController < ActionController::Base
   end
 
   def after_sign_up_path_for(resource)
-    deals_path #your path
+    new_profile_path #your path
   end
 
   def after_sign_out_path_for(resource)
