@@ -1,5 +1,36 @@
 <%= render 'shared/navbar' %>
-<div class="content">
+<div class="container">
+
+  <!-- Searchbar -->
+  <div class="searchbar-banner">
+    <div class="row">
+
+      <div class="col-xs-12 col-sm-6 col-md-6">
+        <div class="searchbar-caption">
+          <h1>Find places and experiences to enjoy like a local</h1>
+        </div>
+      </div>
+
+      <div class="col-xs-12 col-sm-6 col-md-6">
+          <% if user_signed_in? %>
+            <div class="row">
+              <div class="col-xs-12 text-center">
+                <div class="searchbar-deal">
+                  <%= form_tag result_path, id: "address_input", method: :get, autocomplete: 'on' do %>
+                    <%= text_field_tag :location, params[:location], {id: 'address', class: "namanyay-search-box", placeholder: 'Quelle est votre destination?', :required => true} %>
+                    <%= submit_tag "GO", class: "namanyay-search-btn" %>
+                  <% end %>
+                </div>
+              </div>
+            </div>
+          <% end %>
+      </div>
+    </div>
+  </div>
+  <hr/>
+
+
+  <!-- deals + maps -->
   <div class="row">
     <div class="col-xs-12 col-sm-12 col-md-8">
       <div class="row">
@@ -13,26 +44,6 @@
 </div>
 
 
-<!-- <div class="searchbar-deal">
-  <div class="container">
-     Searchbar bloc
-    <div class="row">
-      <% if user_signed_in? %>
-        <div class="row">
-            <div class="col-xs-12 text-center">
-              <%= form_tag result_path, id: "address_input", method: :get, autocomplete: 'on' do %>
-                <%= text_field_tag :location, params[:location], {id: 'address', class: "namanyay-search-box", placeholder: 'Quelle est votre destination?', :required => true} %>
-                <%= select_tag(:activity, options_for_select([ ['Culture', "Culture"], ['Nature', "Nature"], ['Nautique', "Nautique"], ['Hivernale', "Hivernale"], ['Aérienne', "Aérienne"]]),
-                 {class: "namanyay-search-box-type", :prompt => "Activité"})  %>
-                <%= submit_tag "Chercher", class: "btn-peetaya" %>
-              <% end %>
-            </div>
-        </div>
-      <% end %>
-    </div>
-     End Searchbar bloc
-  </div>
-</div> -->
 
 
 
