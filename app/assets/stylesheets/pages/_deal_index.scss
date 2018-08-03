@@ -1,9 +1,8 @@
 #map {
   flex: 0 0 450px;
-  /*position: sticky !important;*/
+  height: 100vh;
+  position: sticky !important;
   top: 0 !important;
-  border: 2px solid #d9d9d9;
-  margin-bottom: 30px;
 }
 
 .deals-banner {

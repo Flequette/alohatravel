@@ -1,18 +1,22 @@
+.content {
+  margin: 30px, 10px;
+
+}
+
 .card {
-  height: 350px;
+  height: 320px;
   text-shadow: 0 1px 3px rgba(0,0,0,0.6);
   background-size: cover !important;
+  background-position: center;
+  color: white;
+  border-radius: 1px;
+  margin: 30px 0;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
   color: white;
   position: relative;
-  border-radius: 3px;
-  margin-bottom: 30px;
-}
-.card-user {
-  position: absolute;
-  right: 10px;
-  top: 10px;
-  width: 60px;
-  border-radius: 50%;
 }
 
 .card-category {
@@ -24,6 +28,7 @@
 .card-category h3 {
   margin: 0 !important;
   font-weight: 300 !important;
+  font-size: 18px !important;
 }
 
 .card-description {
@@ -35,10 +40,11 @@
 .card-description h3 {
   margin: 0 !important;
   font-weight: 400 !important;
+  font-size: 18px !important;
 }
 
 .card-description p {
-  font-size: 22px !important;
+  font-size: 18px !important;
   font-weight: lighter !important;
   color: white !important;
 }

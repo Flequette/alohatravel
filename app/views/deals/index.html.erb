@@ -1,7 +1,17 @@
 <%= render 'shared/navbar' %>
+<div class="content">
+  <div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-8">
+      <div class="row">
+        <%= render "shared/cards_deal" %>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-4">
+      <div id="map" data-markers="<%= @markers.to_json %>"></div>
+    </div>
+  </div>
+</div>
 
-<!-- Maps -->
-<div id="map" style="width: 100%; height: 60vh;" data-markers="<%= @markers.to_json %>"></div>
 
 <!-- <div class="searchbar-deal">
   <div class="container">
@@ -24,6 +34,5 @@
   </div>
 </div> -->
 
-<!-- Cards Deal -->
-<%= render "shared/cards_deal" %>
+
 
