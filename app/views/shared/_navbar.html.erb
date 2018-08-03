@@ -9,9 +9,10 @@
 
     <% if user_signed_in? %>
       <!-- Links when logged in -->
-      <%= link_to "Proposer une expérience", new_deal_path, class: "navbar2-wagon-item navbar2-wagon-link" %>
-      <%= link_to "Tout voir", deals_path, class: "navbar2-wagon-item navbar2-wagon-link" %>
-      <%= link_to "PeetaGuide", my_deals_path(current_user.profile), class: "navbar2-wagon-item navbar2-wagon-link" %>
+      <!--<%= link_to "Proposer une expérience", new_deal_path, class: "navbar2-wagon-item navbar2-wagon-link" %>-->
+      <%= link_to "Nos excursions", deals_path, class: "navbar2-wagon-item navbar2-wagon-link" %>
+      <%= link_to "Aides", peetaguide_path, class: "nnavbar2-wagon-item navbar2-wagon-link" %>
+      <!--<%= link_to "PeetaGuide", my_deals_path(current_user.profile), class: "navbar2-wagon-item navbar2-wagon-link" %>-->
 
       <!-- Avatar with dropdown menu -->
       <div class="navbar2-wagon-item">
