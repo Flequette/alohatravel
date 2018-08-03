@@ -8,6 +8,10 @@ Rails.application.routes.draw do
   get "legal", to: "pages#legal", as: "legal"
   get "contact", to: "pages#contact", as: "contact"
   get "home_local", to: "pages#home_local", as: "home_local"
+  get "team", to: "pages#team", as: "team"
+  get "help", to: "pages#help", as: "help"
+  get "peetayer", to: "pages#peetayer", as: "peetayer"
+  get "peetaguide", to: "pages#peetaguide", as: "peetaguide"
 
   get "ask_booking", to: "bookings#ask_booking", as: "demande"
   get "accept_booking", to: "bookings#accept_booking", as: "accepter"
