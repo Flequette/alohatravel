@@ -1,3 +1,4 @@
+
 #map {
   flex: 0 0 450px;
   height: 100vh;
@@ -45,13 +46,17 @@
   padding: 10px 10px;
 }
 
-.searchbar-caption h1 {
+.searchbar-title h1 {
   color: #404040 !important;
   text-align: left;
   font-size: 36px !important;
   margin: 10px !important;
+}
 
-
+.searchbar-caption p {
+  font-size: 14px !important;
+  color: #404040 !important;
+  opacity: 0.8 !important;
 }
 
 .namanyay-search-btn {

@@ -1,13 +1,13 @@
 <%= render 'shared/navbar' %>
-<div class="container">
 
+<div class="container">
   <!-- Searchbar -->
   <div class="searchbar-banner">
     <div class="row">
 
       <div class="col-xs-12 col-sm-6 col-md-6">
-        <div class="searchbar-caption">
-          <h1>Find places and experiences to enjoy like a local</h1>
+        <div class="searchbar-title">
+          <h1>Trouvez des lieux et des expériences à partager avec nos Peetaguides</h1>
         </div>
       </div>
 
@@ -21,27 +21,30 @@
                     <%= submit_tag "GO", class: "namanyay-search-btn" %>
                   <% end %>
                 </div>
+                <div class="searchbar-caption">
+                  <p>(Pour le moment, seul le Cambodge est disponible, un peu de patience chers Peetayers le reste arrive bientôt)</p>
+                </div>
               </div>
             </div>
           <% end %>
       </div>
     </div>
   </div>
-  <hr/>
+<hr/>
 
-
-  <!-- deals + maps -->
-  <div class="row">
-    <div class="col-xs-12 col-sm-12 col-md-8">
-      <div class="row">
-        <%= render "shared/cards_deal" %>
-      </div>
-    </div>
-    <div class="col-xs-12 col-sm-12 col-md-4">
-      <div id="map" data-markers="<%= @markers.to_json %>"></div>
+<!-- deals + maps -->
+<div class="row">
+  <div class="col-xs-12 col-sm-8 col-md-8">
+    <div class="row">
+      <%= render "shared/cards_deal" %>
     </div>
   </div>
+  <div class="col-xs-12 col-sm-4 col-md-4">
+    <div id="map" data-markers="<%= @markers.to_json %>"></div>
+  </div>
 </div>
+</div>
+
 
 
 
