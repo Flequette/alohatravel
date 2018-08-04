@@ -4,12 +4,20 @@
       <%= simple_form_for @deal do |f| %>
         <div class="form">
           <p><%= f.input :name, class: "form-control" %></p>
-          <p><%= f.input :description, class: "form-control" %></p>
           <p><%= f.input :address, class: "form-control", :input_html =>{:id => 'address'} %></p>
+          <p><%= f.input :city, class: "form-control" %></p>
+          <p><%= f.input :country, class: "form-control" %></p>
           <p><%= f.input :activity_type, as: :radio_buttons, collection: [['Culture', "Culture"], ['Nature', "Nature"], ['Nautique', "Nautique"], ['Hivernale', "Hivernale"], ['Aérienne', "Aérienne"]] %></p>
           <p><%= f.input :time, as: :radio_buttons, collection: [['1 journée', "1 journée"], ['1/2 journée', "1/2 journée"]] %></p>
-          <p><%= f.input :price, class: "form-control" %></p>
+          <p><%= f.input :description, class: "form-control" %></p>
+          <p><%= f.input :language, class: "form-control" %></p>
+          <p><%= f.input :meet_point, class: "form-control" %></p>
+          <p><%= f.input :transport, class: "form-control" %></p>
           <p><%= f.input :tips, class: "form-control" %></p>
+          <p><%= f.input :nb_people, class: "form-control" %></p>
+          <p><%= f.input :price, class: "form-control" %></p>
+          <p><%= f.input :price_include, class: "form-control" %></p>
+          <p><%= f.input :price_not_include, class: "form-control" %></p>
           <p><%= f.input :photo %></p>
           <p><%= f.input :photo_cache, as: :hidden %></p>
         </div>
