@@ -79,20 +79,19 @@
 }
 
 .description {
-  padding: 50px 50px;
+  padding: 30px 15px;
 }
 
 .description p {
   font-weight: 200 !important;
+  letter-spacing: 1px !important;
+  margin: 15px 10px !important ;
+  font-size: 16px !important;
 
 }
 
-.desc-title h4 {
-  font-size: 18px !important;
-}
-
-.desc-content {
-  font-size: 14px;
+.desc-title h5 {
+  font-size: 16px !important;
 }
 
 .desc-card {
@@ -144,7 +143,7 @@
 }
 
 .btn-peetaya2:hover {
-  opacity: 0.9;
+  opacity: 0.8;
   text-decoration: none;
 }
 

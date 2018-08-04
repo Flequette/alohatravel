@@ -16,10 +16,10 @@
   </div>
 </div>
 
-<div class="container">
+<div class="content">
   <div class="row">
     <!-- Resume bloc -->
-    <div class="col-xs-12 col-sm-8 col-md-8 ">
+    <div class="col-xs-12 col-sm-12 col-md-8 ">
       <!-- Sous bloc Resume-->
       <div class="row">
         <div class="col-xs-12 col-sm- col-md-2 col-md-offset-2">
@@ -76,9 +76,9 @@
       <div class="row">
         <div class="description">
           <div class="row">
-            <div class="col-xs-12 col-sm-4 col-md-2 col-md-offset-1">
-              <div class="desc-title">
-                <h4>Description</h4>
+            <div class="col-xs-12 col-sm-4 col-md-4">
+              <div class="desc-title text-left ">
+                <h5>Description</h5>
               </div>
             </div>
             <div class="col-xs-12 col-sm-8 col-md-8">
@@ -90,9 +90,9 @@
           <hr>
 
           <div class="row">
-            <div class="col-xs-12 col-sm-4 col-md-2 col-md-offset-1">
-              <div class="desc-title">
-                <h4>Activité</h4>
+            <div class="col-xs-12 col-sm-4 col-md-4">
+              <div class="desc-title text-left">
+                <h5>Activité</h5>
               </div>
             </div>
             <div class="col-xs-12 col-sm-8 col-md-8">
@@ -104,23 +104,9 @@
           <hr>
 
           <div class="row">
-            <div class="col-xs-12 col-sm-4 col-md-2 col-md-offset-1">
-              <div class="desc-title">
-                <h4>Tips</h4>
-              </div>
-            </div>
-            <div class="col-xs-12 col-sm-8 col-md-8">
-              <div class="desc-content">
-                <p><%= @deal.tips %></p>
-              </div>
-            </div>
-          </div>
-          <hr>
-
-          <div class="row">
-            <div class="col-xs-12 col-sm-4 col-md-2 col-md-offset-1">
-              <div class="desc-title">
-                <h4>Ville</h4>
+            <div class="col-xs-12 col-sm-4 col-md-4">
+              <div class="desc-title text-left">
+                <h5>Ville</h5>
               </div>
             </div>
             <div class="col-xs-12 col-sm-8 col-md-8">
@@ -132,9 +118,9 @@
           <hr>
 
           <div class="row">
-            <div class="col-xs-12 col-sm-4 col-md-2 col-md-offset-1">
-              <div class="desc-title">
-                <h4>Prix</h4>
+            <div class="col-xs-12 col-sm-4 col-md-4">
+              <div class="desc-title text-left">
+                <h5>Langues disponibles</h5>
               </div>
             </div>
             <div class="col-xs-12 col-sm-8 col-md-8">
@@ -143,13 +129,114 @@
               </div>
             </div>
           </div>
+          <hr>
+
+          <div class="row">
+            <div class="col-xs-12 col-sm-4 col-md-4">
+              <div class="desc-title text-left">
+                <h5>Prix</h5>
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-8 col-md-8">
+              <div class="desc-content">
+                <p><%= @deal.price %>€/pers</p>
+              </div>
+            </div>
+          </div>
+          <hr>
+
+          <div class="row">
+            <div class="col-xs-12 col-sm-4 col-md-4">
+              <div class="desc-title text-left">
+                <h5>Le prix inclut</h5>
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-8 col-md-8">
+              <div class="desc-content">
+                <p><%= @deal.price %>€/pers</p>
+              </div>
+            </div>
+          </div>
+          <hr>
+
+
+          <div class="row">
+            <div class="col-xs-12 col-sm-4 col-md-4">
+              <div class="desc-title text-left">
+                <h5>Le prix n'inclut pas</h5>
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-8 col-md-8">
+              <div class="desc-content">
+                <p><%= @deal.price %>€/pers</p>
+              </div>
+            </div>
+          </div>
+          <hr>
+
+          <div class="row">
+            <div class="col-xs-12 col-sm-4 col-md-4">
+              <div class="desc-title text-left">
+                <h5>Conseils</h5>
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-8 col-md-8">
+              <div class="desc-content">
+                <p><%= @deal.tips %></p>
+              </div>
+            </div>
+          </div>
+          <hr>
+
+          <div class="row">
+            <div class="col-xs-12 col-sm-4 col-md-4">
+              <div class="desc-title text-left">
+                <h5>Point de rencontre</h5>
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-8 col-md-8">
+              <div class="desc-content">
+                <p><%= @deal.price %>€/pers</p>
+              </div>
+            </div>
+          </div>
+          <hr>
+
+          <div class="row">
+            <div class="col-xs-12 col-sm-4 col-md-4">
+              <div class="desc-title text-left">
+                <h5>Mode de transport</h5>
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-8 col-md-8">
+              <div class="desc-content">
+                <p><%= @deal.price %>€/pers</p>
+              </div>
+            </div>
+          </div>
+          <hr>
+
+          <div class="row">
+            <div class="col-xs-12 col-sm-4 col-md-4">
+              <div class="desc-title text-left">
+                <h5>Nombre de participant max.</h5>
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-8 col-md-8">
+              <div class="desc-content">
+                <p><%= @deal.price %>€/pers</p>
+              </div>
+            </div>
+          </div>
+          <hr>
+
         </div>
       </div>
     </div>
     <!-- Fin Resume bloc -->
 
     <!-- Réservation bloc -->
-    <div class="col-xs-12 col-sm-4 col-md-4">
+    <div class="col-xs-12 col-sm-12 col-md-4">
       <div class="booking-box">
         <h4>Réservez maintenant</h4>
           <%= simple_form_for @booking,  url: deal_bookings_path(@deal.id) do |f| %>
@@ -160,12 +247,12 @@
               <%= f.submit "Réserver", class: "btn-peetaya2" %>
             </div>
           <% end %>
-
       </div>
     </div>
     <!-- Fin Réservation bloc -->
-  </div>
 
+  </div>
+</div>
   <!-- Photo insta bloc
   <div class="row">
     <div class="col-xs-12 col-md-6 col-lg-6 col-lg-offset-4">
@@ -181,4 +268,4 @@
   </div>
  Fin Photo insta bloc -->
 
-</div>
+
