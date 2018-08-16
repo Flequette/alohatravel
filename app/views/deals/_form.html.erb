@@ -3,22 +3,22 @@
     <div class="col-xs-12 col-sm-4 col-md-4 col-md-offset-4 col-sm-offset-4">
       <%= simple_form_for @deal do |f| %>
         <div class="form">
-          <p><%= f.input :name, class: "form-control" %></p>
-          <p><%= f.input :address, class: "form-control", :input_html =>{:id => 'address'} %></p>
-          <p><%= f.input :city, class: "form-control" %></p>
-          <p><%= f.input :country, class: "form-control" %></p>
-          <p><%= f.input :activity_type, as: :radio_buttons, collection: [['Culture', "Culture"], ['Nature', "Nature"], ['Nautique', "Nautique"], ['Hivernale', "Hivernale"], ['Aérienne', "Aérienne"]] %></p>
-          <p><%= f.input :time, as: :radio_buttons, collection: [['1 journée', "1 journée"], ['1/2 journée', "1/2 journée"]] %></p>
-          <p><%= f.input :description, class: "form-control" %></p>
-          <p><%= f.input :language, class: "form-control" %></p>
-          <p><%= f.input :meet_point, class: "form-control" %></p>
-          <p><%= f.input :transport, class: "form-control" %></p>
-          <p><%= f.input :tips, class: "form-control" %></p>
-          <p><%= f.input :nb_people, class: "form-control" %></p>
-          <p><%= f.input :price, class: "form-control" %></p>
-          <p><%= f.input :price_include, class: "form-control" %></p>
-          <p><%= f.input :price_not_include, class: "form-control" %></p>
-          <p><%= f.input :photo %></p>
+          <p><%= f.input :name, :label => "Titre", class: "form-control" %></p>
+          <p><%= f.input :address, :label => "Adresse", class: "form-control", :input_html =>{:id => 'address'} %></p>
+          <p><%= f.input :city, :label => "Ville", class: "form-control" %></p>
+          <p><%= f.input :country, :label => "Pays", class: "form-control" %></p>
+          <p><%= f.input :activity_type, :label => "Activité", as: :radio_buttons, collection: [['Culture', "Culture"], ['Nature', "Nature"], ['Nautique', "Nautique"], ['Hivernale', "Hivernale"], ['Aérienne', "Aérienne"]] %></p>
+          <p><%= f.input :time, :label => "Durée", as: :radio_buttons, collection: [['1 journée', "1 journée"], ['1/2 journée', "1/2 journée"]] %></p>
+          <p><%= f.input :description, :label => "Description de l'excursion", class: "form-control" %></p>
+          <p><%= f.input :language, :label => "Langues disponibles", class: "form-control" %></p>
+          <p><%= f.input :meet_point, :label => "Lieu de RDV", class: "form-control" %></p>
+          <p><%= f.input :transport, :label => "Mode de transport", class: "form-control" %></p>
+          <p><%= f.input :tips, :label => "Conseils pratiques", class: "form-control" %></p>
+          <p><%= f.input :nb_people, :label => "Nombre max de peetayers", class: "form-control" %></p>
+          <p><%= f.input :price, :label => "Prix", class: "form-control" %></p>
+          <p><%= f.input :price_include, :label => "Le prix inclut", class: "form-control" %></p>
+          <p><%= f.input :price_not_include, :label => "Le prix n'inclut pas", class: "form-control" %></p>
+          <p><%= f.input :photo, :label => "Photo de l'excursion "%></p>
           <p><%= f.input :photo_cache, as: :hidden %></p>
         </div>
           <%= f.submit "Ajouter", class: "btn-peetaya" %>
