@@ -1,48 +1,94 @@
 .showdeal-banner {
   color: white;
   text-align: center;
-  height: 50vh;
+  height: 60vh;
   /* if you have a 70px navbar => height: calc(100vh - 70px); */
   background-size: cover !important;
   align-items: center;
   justify-content: center;
   padding: 10px 10px;
   position: relative;
-  margin-bottom: 30px;
 }
 
-.showdeal-back a {
-  position: absolute;
-  top: 20px;
-  left: 50px;
-  text-decoration: none;
-  color: #F9F9F9;
-  opacity: 0.95;
-  font-size: 17px;
+@media screen and (min-width: 600px) {
+  .showdeal-back a {
+    position: absolute;
+    top: 20px;
+    left: 50px;
+    text-decoration: none;
+    color: #F9F9F9;
+    opacity: 0.90;
+    font-size: 16px;
+    font-weight: lighter;
+    letter-spacing: 1px;
+  }
+
+  .showdeal-back a:hover {
+    opacity: 0.75;
+    color: #50E3C2;
+    text-decoration: none;
+  }
+
+  .showdeal-content {
+    position: absolute;
+    bottom: 30px;
+    left: 150px;
+  }
+
+  .showdeal-content a {
+    text-decoration: none;
+    color: #F9F9F9;
+    opacity: 0.90;
+    font-size: 16px;
+    font-weight: lighter;
+    letter-spacing: 1px;
+  }
+
+  .showdeal-content a:hover {
+    opacity: 0.75;
+    color: #50E3C2;
+    text-decoration: none;
+  }
 }
 
-.showdeal-back a:hover {
-  opacity: 0.75;
-}
+@media screen and (max-width: 600px) {
+  .showdeal-back a {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    text-decoration: none;
+    color: #F9F9F9;
+    opacity: 0.90;
+    font-size: 14px;
+    font-weight: lighter;
+    letter-spacing: 1px;
+  }
 
-.showdeal-content {
-  position: absolute;
-  bottom: 10px;
-  left: 150px;
-}
+  .showdeal-back a:hover {
+    opacity: 0.75;
+    color: #50E3C2;
+    text-decoration: none;
+  }
 
-.showdeal-content a {
-  text-decoration: none;
-  color: #F9F9F9;
-  opacity: 0.90;
-  font-size: 15px;
-  font-weight: lighter;
-  margin-bottom: 0px;
-}
+  .showdeal-content {
+    position: absolute;
+    bottom: 30px;
+    left: 15px;
+  }
 
-.showdeal-content a:hover {
-  opacity: 0.75;
-  color: #50E3C2;
+  .showdeal-content a {
+    text-decoration: none;
+    color: #F9F9F9;
+    opacity: 0.90;
+    font-size: 15px;
+    font-weight: lighter;
+    margin-bottom: 0px;
+  }
+
+  .showdeal-content a:hover {
+    opacity: 0.75;
+    color: #50E3C2;
+  }
 }
 
 .resume {

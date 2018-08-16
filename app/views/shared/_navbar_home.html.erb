@@ -10,20 +10,20 @@
     <% if user_signed_in? %>
       <!-- Links when logged in -->
       <%= link_to "Proposer une excursion", new_deal_path, class: "navbar-wagon-item navbar-wagon-link" %>
-      <%= link_to "Nos excursions", deals_path, class: "navbar2-wagon-item navbar2-wagon-link" %>
-      <%= link_to "Aides", peetaguide_path, class: "nnavbar2-wagon-item navbar2-wagon-link" %>
+      <%= link_to "Nos excursions", deals_path, class: "navbar2-wagon-item navbar-wagon-link" %>
+      <%= link_to "Aides", peetaguide_path, class: "navbar2-wagon-item navbar-wagon-link" %>
       <!--<%= link_to "PeetaGuide", my_deals_path(current_user.profile), class: "navbar2-wagon-item navbar2-wagon-link" %>-->
 
       <!-- Avatar with dropdown menu -->
       <div class="navbar-wagon-item">
         <div class="dropdown">
-        <% if current_user.profile.present? %>
-          <% if current_user.profile.photo.present? %>
-            <%= cl_image_tag current_user.profile.photo, class: "avatar dropdown-toggle", id: "navbar-wagon-menu", "data-toggle" => "dropdown" %>
-          <% else %>
-            <%= image_tag "http://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar dropdown-toggle", id: "navbar-wagon-menu", "data-toggle" => "dropdown" %>
+          <% if current_user.profile.present? %>
+            <% if current_user.profile.photo.present? %>
+              <%= cl_image_tag current_user.profile.photo, class: "avatar dropdown-toggle", id: "navbar-wagon-menu", "data-toggle" => "dropdown" %>
+            <% else %>
+              <%= image_tag 'favicon.ico', height: 100, width: 100, class: "avatar dropdown-toggle", id: "navbar-wagon-menu", "data-toggle" => "dropdown" %>
+            <% end %>
           <% end %>
-        <% end %>
           <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
             <li>
             <% if current_user.profile.present? %>

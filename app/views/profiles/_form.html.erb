@@ -2,15 +2,18 @@
   <div class="row">
     <div class="col-xs-12 col-sm-4 col-md-4 col-md-offset-4 col-sm-offset-4">
       <%= simple_form_for @profile do |f| %>
-        <%= f.input :first_name, class: "form-control" %>
-        <%= f.input :last_name, class: "form-control" %>
-        <%= f.input :age, class: "form-control" %>
-        <%= f.input :phone_number, class: "form-control" %>
-        <%= f.input :description, class: "form-control" %>
-        <%= f.input :language, class: "form-control" %>
-        <%= f.input :city, class: "form-control", :input_html =>{:id => 'address'} %>
-        <%= f.input :country, class: "form-control" %>
-        <%= f.input :photo %>
+        <%= f.input :first_name, :label => "Prénom", class: "form-control" %>
+        <%= f.input :last_name, :label => "Nom", class: "form-control" %>
+        <%= f.input :age, :label => "Âge", class: "form-control" %>
+        <%= f.input :phone_number, :label => "Téléphone", class: "form-control" %>
+        <%= f.input :language, :label => "Langue(s) parlé(es)", class: "form-control" %>
+        <%= f.input :city, :label => "Ville", class: "form-control", :input_html =>{:id => 'address'} %>
+        <%= f.input :country, :label => "Pays", class: "form-control" %>
+        <%= f.input :description, :label => "Qui suis-je?", class: "form-control" %>
+        <%= f.input :fascinate, :label => "Ce qui me fascine dans ma ville", class: "form-control" %>
+        <%= f.input :why_guide, :label => "Pourquoi je veux devenir un Peetaguide?", class: "form-control" %>
+        <%= f.input :story, :label => "Fait ou situation improbable", class: "form-control" %>
+        <%= f.input :photo, :label => "Photo / selfie" %>
         <%= f.input :photo_cache, as: :hidden %>
 
         <%= f.submit "Valider", class: "btn-peetaya" %>

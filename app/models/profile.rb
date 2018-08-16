@@ -10,6 +10,8 @@ class Profile < ApplicationRecord
   validates :country, presence: true
   validates :city, presence: true
   validates :language, presence: true
+  validates :description, presence: true
+  validates :why_guide, presence: true
 
   mount_uploader :photo, PhotoUploader
 end

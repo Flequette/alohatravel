@@ -1,16 +1,16 @@
 <%= render 'shared/navbar' %>
 
-<div class="showdeal-banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('<%=image_path "banner.jpg" %>');">
-  <div class="showdeal-back">
+<div class="showprofile-banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('<%=image_path "https://source.unsplash.com/collection/865018/1000x300" %>');">
+  <div class="showprofile-back">
     <%= link_to deals_path do %>
-      <i class="fa fa-arrow-left"></i> Retour aux expériences
+      <i class="fa fa-arrow-left"></i> Retour aux excursions
     <% end %>
   </div>
-  <div class="showdeal-content text-center">
+  <div class="showprofile-content text-center">
     <% if current_user.profile == @profile %>
-      <h3>MON PROFIL</h3> <%= link_to "| Modifier", edit_profile_path(@profile) %>
+      <h3>MON PROFIL</h3><%= link_to "| Modifier", edit_profile_path(@profile) %>
     <% else %>
-      <h3>PROFIL</h3>
+      <h3>MON PROFIL</h3>
     <% end %>
   </div>
 </div>
@@ -46,7 +46,7 @@
             </div>
           </div>
 
-          <div class="row">
+          <!--<div class="row">
             <div class="resume-icon text-center">
               <div class="col-xs-4 col-sm-3 col-md-3">
                 <%=image_tag 'activity_type/travel.png', width:40, height:40  %>
@@ -60,7 +60,7 @@
                 <p>3 Bons Plans</p>
               </div>
             </div>
-          </div>
+          </div>-->
 
         </div>
       </div>
@@ -105,10 +105,67 @@
       </div>
       <div class="col-xs-12 col-sm-8 col-md-8">
         <div class="desc-content">
-          <p><%= @profile.city %>, <%= @profile.country %></p>
+          <p><%= @profile.city %></p>
         </div>
       </div>
     </div>
     <hr>
+
+    <div class="row">
+      <div class="col-xs-12 col-sm-4 col-md-2 col-md-offset-1"">
+        <div class="desc-title">
+          <h5>Pays</h5>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-8 col-md-8">
+        <div class="desc-content">
+          <p><%= @profile.country %></p>
+        </div>
+      </div>
+    </div>
+    <hr>
+
+    <div class="row">
+      <div class="col-xs-12 col-sm-4 col-md-2 col-md-offset-1"">
+        <div class="desc-title">
+          <h5>Ce qui me fascine dans ma ville</h5>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-8 col-md-8">
+        <div class="desc-content">
+          <p><%= @profile.fascinate %></p>
+        </div>
+      </div>
+    </div>
+    <hr>
+
+    <div class="row">
+      <div class="col-xs-12 col-sm-4 col-md-2 col-md-offset-1"">
+        <div class="desc-title">
+          <h5>Pourquoi devenir un Peetaguide?</h5>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-8 col-md-8">
+        <div class="desc-content">
+          <p><%= @profile.why_guide %></p>
+        </div>
+      </div>
+    </div>
+    <hr>
+
+    <div class="row">
+      <div class="col-xs-12 col-sm-4 col-md-2 col-md-offset-1"">
+        <div class="desc-title">
+          <h5>Fait ou situation improbable</h5>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-8 col-md-8">
+        <div class="desc-content">
+          <p><%= @profile.story %></p>
+        </div>
+      </div>
+    </div>
+    <hr>
+
   </div>
 </div>
