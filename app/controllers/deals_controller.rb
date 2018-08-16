@@ -53,7 +53,7 @@ class DealsController < ApplicationController
       @deal.save
       redirect_to deal_path(@deal)
     else
-      flash[:alert] = "Vous devez vivre à moins de 200km du lieu de votre tour pour pouvoir le proposer"
+      flash[:alert] = "Vous devez vivre à moins de 200km du lieu de votre excursion pour pouvoir la proposer"
       render :new
     end
   end

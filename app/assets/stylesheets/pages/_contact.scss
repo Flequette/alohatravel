@@ -1,0 +1,31 @@
+.contact a {
+  text-decoration: none;
+  color: #404040;
+}
+
+.contact a:hover {
+  text-decoration: none;
+  color: #404040;
+  opacity:0.85
+}
+
+.contact-social-link {
+    margin-bottom: 5px;
+  }
+
+.contact-social-link a {
+    font-size: 12px !important;
+    font-weight: 250;
+    opacity: 0.85;
+    letter-spacing: 1.5px;
+    color: #404040;
+    text-decoration: none;
+    margin-bottom: 10px;
+  }
+
+.contact-social-link a:hover {
+    text-decoration: none;
+    color: #50E3C2;
+    opacity: 0.85;
+    cursor: pointer;
+  }

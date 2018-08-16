@@ -10,12 +10,9 @@
     <% if user_signed_in? %>
       <!-- Links when logged in -->
       <%= link_to "Proposer une excursion", new_deal_path, class: "navbar-wagon-item navbar-wagon-link" %>
-      <%= link_to "Nos excursions", deals_path, class: "navbar2-wagon-item navbar2-wagon-link" %>
-      <%= link_to "Aides", peetaguide_path, class: "navbar2-wagon-item navbar2-wagon-link" %>
+      <%= link_to "Nos excursions", deals_path, class: "navbar2-wagon-item navbar-wagon-link" %>
+      <%= link_to "Aides", peetaguide_path, class: "navbar2-wagon-item navbar-wagon-link" %>
       <!--<%= link_to "PeetaGuide", my_deals_path(current_user.profile), class: "navbar2-wagon-item navbar2-wagon-link" %>-->
-      <%= link_to destroy_user_session_path, method: :delete do %>
-        <i class="fa fa-sign-out"></i>  <%= t(".sign_out", default: "Log out") %>
-      <% end %>
 
       <!-- Avatar with dropdown menu -->
       <div class="navbar-wagon-item">
