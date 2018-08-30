@@ -123,11 +123,14 @@
                 <h5>Langues disponibles</h5>
               </div>
             </div>
+
+            <% if @dela.language.present? %>
             <div class="col-xs-12 col-sm-8 col-md-8">
               <div class="desc-content">
                 <p><%= @deal.language %></p>
               </div>
             </div>
+            <% end %>
           </div>
           <hr>
 
@@ -276,5 +279,3 @@
     </div>
   </div>
  Fin Photo insta bloc -->
-
-
