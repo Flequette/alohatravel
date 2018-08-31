@@ -1,4 +1,5 @@
 //= require jquery
 //= require jquery_ujs
-//= autocomplete
+//= require autocomplete
+//= require flashcard
 //= require_tree .

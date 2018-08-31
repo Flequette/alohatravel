@@ -9,9 +9,9 @@ class Deal < ApplicationRecord
   validates :description, presence: true, length: { maximum:2500 }
   validates :address, presence: true
   validates :price, presence: true, numericality: { only_integer: true }
-  validates :activity_type, inclusion: { in: %w(Culturelle Nature Nautique Hivernale Aérienne),
+  validates :activity_type, inclusion: { in: %w(Culture Nature Nautique Hivernale Aérienne),
 		message: "Veuillez choisir une activité"}
-  validates :time, inclusion: { in: %w(1journée 1/2journée),
+  validates :time, inclusion: { in: %w(1\ journée 1/2\ journée),
     message: "Veuillez choisir une activité"}
   #validates :city, presence: true
   #validates :zip_code, presence: true

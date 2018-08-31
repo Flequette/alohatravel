@@ -1,7 +1,11 @@
 <% @deals.each do |deal| %>
   <div class="col-xs-12 col-sm-6 col-md-6">
     <%= link_to deal_path(deal) do %>
-      <div class="card" style="background-image: url('<%= cl_image_path deal.photo %>')">
+      <% if deal.photo.present? %>
+        <div class="card" style="background-image: url('<%= cl_image_path deal.photo %>')">
+      <% else %>
+        <div class="card">
+      <% end %>
         <div class="card-category"><h3><%= deal.city %></h3></div>
         <div class="card-description">
           <h3><%= deal.name %></h3>
