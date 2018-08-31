@@ -49,11 +49,11 @@ class DealsController < ApplicationController
     puts distance
 
 
-    if distance <= 200
+    if @deal.valid?
       @deal.save
       redirect_to deal_path(@deal)
     else
-      flash[:alert] = "Vous devez vivre à moins de 200km du lieu de votre excursion pour pouvoir la proposer"
+      flash[:alert] = "Erreur"
       render :new
     end
   end
@@ -78,7 +78,7 @@ class DealsController < ApplicationController
     puts "DISTANCE"
     puts distance
 
-    if @deal.update(deal_params) && distance <= 100
+    if @deal.update(deal_params)
       redirect_to deal_path(@deal)
     else
       flash[:alert] = "Vous devez vivre à moins de 100km du lieu de votre tour pour pouvoir le proposer"
